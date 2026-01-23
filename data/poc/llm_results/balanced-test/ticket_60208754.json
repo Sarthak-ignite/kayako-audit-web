@@ -1,0 +1,53 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "There is no clear evidence that an AI-authored customer-facing reply provided incorrect information, made unkept promises, or was demonstrably unhelpful. The only visible automation actions are internal (e.g., placing the ticket on hold / splitting), not substantive AI guidance to the customer.",
+    "evidence": [
+      "Kayako - ticket id 60208754 // Centralsupport-ai-acc commented privately: Placing on hold for 9999 hour(s)",
+      "Kayako - ticket id 60208754 // Centralsupport-ai-acc commented privately: Ticket 60208754 has been splitted to 60219722"
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "The customer did not ask to speak with a human, complain about bot/AI interactions, or show a pattern of being trapped in repetitive automated responses. The thread shows human agent replies and an engineering-led fix deployment.",
+    "evidence": [
+      "Kayako - ticket id 60208754 // Raditya Perdhevi commented publicly: Hi Patti, ... we are opening a separate ticket ... specifically to track the Khoros Care issue",
+      "Kayako - ticket id 60208754 // Pavly Nashed commented publicly: Our Development team has implemented and deployed a fix..."
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "Support acknowledges the customer\u2019s described symptoms (silent Facebook ingestion stoppage and need to reconnect) and ties it to an active incident. While the workaround (reconnect and inform support) is repetitive of what the customer already does, it is framed as a mitigation and escalation path rather than ignoring previously provided info.",
+    "evidence": [
+      "Customer: \"Each time this happens, I remove Facebook, reconnect it, and within minutes the tickets start coming through again. This has happened over 10 times now.\"",
+      "Agent: \"After a detailed analysis, we believe the issue stems from stale or invalid authentication tokens that failed silently on Meta\u2019s side...\"",
+      "Agent: \"If you encounter any issues, please reconnect the Facebook integration and inform us so we can relay it to our Engineering team.\""
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "Although the overall ticket lifecycle is long, there is no explicit customer complaint about slow responses and no clear evidence in the provided context of an unacceptable support silence while the customer was waiting. The customer updates received responses and the fix was communicated after deployment.",
+    "evidence": [
+      "Customer: \"Thank you for your detailed response... Thanks for continuing to look into this with your team.\"",
+      "Agent: \"Our Development team has implemented and deployed a fix...\""
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "The last customer message indicates monitoring rather than an unresolved request for action, and support explicitly stated the ticket would remain open for a week unless the customer replied. There is no evidence the ticket was closed immediately after an unresolved customer report.",
+    "evidence": [
+      "Customer: \"Thanks for the update. I will keep an eye on it and let you know if the issue comes back.\"",
+      "Agent: \"This ticket will stay open for one week unless you reply with 'This ticket can be closed'...\""
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "The support ticket does not explicitly indicate P1/SEV1/critical status or a full outage/all-users-down scenario requiring emergency handling. While an engineering tracker was labeled urgent, that alone is not sufficient evidence of a P1/SEV1 support mishandling in this customer conversation.",
+    "evidence": [
+      "GHI Engineering - 14145 // not-lmrlima labeled as Priority:Urgent",
+      "Customer: \"the issue is still occurring intermittently.\""
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60208754
+}

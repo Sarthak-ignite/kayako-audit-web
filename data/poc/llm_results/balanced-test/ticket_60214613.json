@@ -1,0 +1,53 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "No clear evidence of the AI/agents providing demonstrably incorrect information or making/breaking explicit promises. Some troubleshooting (cache/cookies) may have been generic and not ultimately effective, but it is not clearly wrong based on the ticket record.",
+    "evidence": [
+      "We were unable to reproduce the issue impersonating one of the admin accounts for COID 104983.",
+      "Could you please ask the user to clear cache and cookies, restart the browser and relogin to support portal and try again (or possibly try from another browser)?"
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "The customer did not ask for escalation to a human/technician due to AI limitations, and the conversation shows progress (SF fields populated, backend onboarding performed, then a code fix for email case-sensitivity). There is no pattern of repetitive, looping responses three or more times.",
+    "evidence": [
+      "We have updated the automation backend on our end to onboard the company: 104983",
+      "We identified that the issue was related to case sensitivity in the customer's email address during the automation process. This has now been resolved."
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "Support generally incorporated new information as it was provided (correct Salesforce opportunity, customer email, confirmation that cache/browser steps were attempted). Follow-up questions (e.g., requesting the affected user\u2019s email) were reasonable and not clearly asking for information already provided earlier in the ticket.",
+    "evidence": [
+      "This is the correct Salesforce opportunity: https://trilogy-sales.lightning.force.com/lightning/r/Opportunity/006Ih000004fwJXIAY/view",
+      "If the issue persists, could you please provide email address of the affected user?",
+      "The issue persists. The customer's email is Daniel.Soler@flhealth.gov"
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "There is no clear evidence of >24-hour unaddressed gaps where the customer was actively waiting, nor any customer complaint about slow response. Responses to new customer updates occurred within the same day or by the next day in the visible timeline.",
+    "evidence": [
+      "[2025-10-09T13:30:55+00:00] The customer reports still seeing the following error:",
+      "[2025-10-10T03:21:05+00:00] Dear Andrew, Thank you for your message. We were unable to reproduce the issue..."
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "Although the ticket was later closed, the last support update indicated a fix was deployed and asked the customer to retry; there is no subsequent customer message indicating the issue remained unresolved at the time of closure. Closure after a period of inactivity is not clearly premature based on the provided record.",
+    "evidence": [
+      "This has now been resolved. Could you please ask the customer to try again?",
+      "Status: closed"
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "The issue was marked 'Urgent' in the intake flow, but the ticket does not explicitly indicate P1/SEV1/critical outage criteria (e.g., all users down) and response timing does not show a clear breach of P1 expectations. Support engaged, performed onboarding steps, and delivered a targeted fix (case-sensitivity) without clear undue delay.",
+    "evidence": [
+      "Button selection: [\ud83d\udd34 Urgent]",
+      "We have updated the automation backend on our end to onboard the company: 104983"
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60214613
+}

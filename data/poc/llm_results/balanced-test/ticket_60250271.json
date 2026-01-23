@@ -1,0 +1,52 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": true,
+    "reasoning": "The customer explicitly reports prior AI/chatbot interactions were unhelpful and that the chatbot was unavailable when trying to get help, indicating a clear AI support experience failure (even if the rest of this ticket was handled by humans). This is direct customer feedback about AI not providing effective assistance and blocking support access paths.",
+    "evidence": [
+      "She has already created tickets before and either they did not get created/no response/ or AI chatbot response that was not helpful",
+      "I finally access to this help center without receiving any help, because the chat bot is not available."
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "There is no clear pattern of the customer being trapped in an AI-only loop within this ticket. The thread shows timely, substantive human-agent engagement and iterative troubleshooting rather than repeated AI replies or explicit requests to reach a human that were denied.",
+    "evidence": [
+      "Pavly Nashed commented publicly: Dear Erika, Thank you for reaching out and reporting this.",
+      "Pavly Nashed commented publicly: ...based on your detailed explanation, I have a theory on what might have caused this, so let's test it:"
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "Support\u2019s questions and troubleshooting steps build on new information as it emerges (e.g., testing sequencing between Care and Marketing, then diagnosing a browser/network error). The agent acknowledges provided screenshots/details and does not repeatedly request information that was already clearly provided in the same conversation.",
+    "evidence": [
+      "Thank you for sharing the screenshot. The message you see in Spanish, \u201cNo se puede acceder a este sitio web \u2013 ERR_CONNECTION_RESET\u201d, is a generic Chrome network error.",
+      "The fact that you can access Khoros Marketing in an incognito window on the same computer confirms that your Khoros account and our platform are working correctly..."
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "The initial response appears within a few hours of ticket creation (well under 24 hours), and there are no customer complaints about waiting in this specific ticket. The subsequent back-and-forth occurs within the same or next day during active troubleshooting.",
+    "evidence": [
+      "[2025-11-25T15:09:18+00:00] ... Erika Heredia commented publicly",
+      "[2025-11-25T17:57:34+00:00] ... Pavly Nashed commented publicly: Dear Erika,"
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "The ticket was closed only after the customer explicitly requested closure and confirmed resolution. There is no indication the last customer message before closure described an unresolved issue.",
+    "evidence": [
+      "We can close this ticket.",
+      "Thank you for your message and for confirming that the issue is resolved. As requested, we are closing this ticket."
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "While the subject includes \u201cURGENT,\u201d the ticket does not explicitly indicate P1/SEV1/critical/outage or an all-users-down scenario. Support engagement and troubleshooting cadence do not show a clear failure to respond appropriately to a defined SEV1 incident.",
+    "evidence": [
+      "Asunto: Re: URGENT: Khoros Marketing Login issue",
+      "Pavly Nashed commented publicly: ...I have a theory on what might have caused this, so let's test it:"
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60250271
+}

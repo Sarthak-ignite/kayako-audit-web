@@ -1,0 +1,52 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": true,
+    "reasoning": "The customer asked a specific how-to question (finding the ikelifetime setting via SSH). The AI\u2019s visible response pivots into a support-eligibility gate instead of addressing the question, which is clearly unhelpful for the request. The ticket transcript does not show any actual guidance or steps provided before closure.",
+    "evidence": [
+      "Customer (Javier Pineda): \"How do I find the ikelifetime setting in Kerio using SSH?\"",
+      "AI Assistant: \"Based on your stated intent, it is mandatory that we check the support eligibility through th...[truncated]...\""
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "There is no evidence the customer asked for a human/technician, expressed frustration, or that the AI repeated the same guidance multiple times. The interaction shown is brief and does not demonstrate a looping pattern.",
+    "evidence": [
+      "Customer (Javier Pineda): \"How do I find the ikelifetime setting in Kerio using SSH?\""
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "The transcript does not show the AI asking for information the customer already provided or forcing the customer to restate prior details. While the AI response is off-track, there is not enough evidence of repeated requests or explicit context being ignored across multiple turns.",
+    "evidence": [
+      "Customer (Javier Pineda): \"How do I find the ikelifetime setting in Kerio using SSH?\""
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "No delay is evidenced in the structured data or conversation. The ticket lifecycle is roughly a minute and there are no customer complaints about waiting.",
+    "evidence": [
+      "Ticket Created: 2025-11-05 21:43:10",
+      "Ticket Solved: 2025-11-05 21:44:25",
+      "resolutionTime: 75"
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": true,
+    "reasoning": "The ticket was solved/closed almost immediately even though the customer\u2019s last message is a direct question and the visible AI response does not provide a solution. There is no evidence of customer confirmation of resolution before closure.",
+    "evidence": [
+      "Customer (Javier Pineda): \"How do I find the ikelifetime setting in Kerio using SSH?\"",
+      "Ticket Solved: 2025-11-05 21:44:25",
+      "Ticket Closed: 2025-11-05 21:44:26",
+      "Status: closed"
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "There is no indication the issue was P1/SEV1/critical, no outage language, and no urgency signals from the customer. The request appears to be a configuration/how-to question rather than a service-down event.",
+    "evidence": [
+      "Customer (Javier Pineda): \"How do I find the ikelifetime setting in Kerio using SSH?\""
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60236962
+}

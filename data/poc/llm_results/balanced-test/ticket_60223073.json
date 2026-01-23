@@ -1,0 +1,53 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "The transcript is truncated, so there isn\u2019t clear evidence the AI gave incorrect instructions, broke a promise, or provided an obviously wrong/unhelpful answer to the specific issue. The only visible AI behavior is requesting logs/screenshots, which is a reasonable generic troubleshooting step.",
+    "evidence": [
+      "Customer (Nino Santiago): \"I'm unable to open the license details tab on GFI Appmanager web\"",
+      "AI Assistant: \"If you have any \ud83d\udcc3 log files or \ud83d\uddbc\ufe0f screenshots to upload to help with the troubleshooting, now is the time to d...[truncated]...\""
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "There is no evidence the customer requested a human/technician, expressed frustration with the AI, or that the AI repeated the same guidance multiple times. The interaction shown is a single customer statement followed by an AI prompt.",
+    "evidence": [
+      "Customer (Nino Santiago): \"I'm unable to open the license details tab on GFI Appmanager web\""
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "The customer provided a single symptom and there is no visible back-and-forth where support asks for information already provided or contradicts prior troubleshooting steps. Asking for logs/screenshots is not ignoring context in this snippet.",
+    "evidence": [
+      "Customer (Nino Santiago): \"I'm unable to open the license details tab on GFI Appmanager web\"",
+      "AI Assistant: \"If you have any \ud83d\udcc3 log files or \ud83d\uddbc\ufe0f screenshots to upload to help with the troubleshooting...\""
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "The ticket lifecycle is under a minute and there are no customer complaints or agent apologies about waiting. No evidence of >24h gaps or delay-related impact appears in the provided context.",
+    "evidence": [
+      "Ticket Created: 2025-10-16 22:17:44",
+      "Ticket Solved: 2025-10-16 22:18:43",
+      "resolutionTime: 59"
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": true,
+    "reasoning": "The ticket was marked solved/closed within ~1 minute, but the last visible customer message reports an unresolved problem and there is no visible resolution confirmation or fix provided before closure. This is strong evidence of closure without demonstrating issue resolution in the conversation record provided.",
+    "evidence": [
+      "Customer (Nino Santiago): \"I'm unable to open the license details tab on GFI Appmanager web\"",
+      "Ticket Solved: 2025-10-16 22:18:43",
+      "Ticket Closed: 2025-10-16 22:18:44",
+      "resolutionTime: 59"
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "There is no indication the ticket was labeled P1/SEV1/critical, nor evidence of a complete outage/all-users-down scenario or urgency language that was mishandled.",
+    "evidence": [
+      "Customer (Nino Santiago): \"I'm unable to open the license details tab on GFI Appmanager web\""
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60223073
+}

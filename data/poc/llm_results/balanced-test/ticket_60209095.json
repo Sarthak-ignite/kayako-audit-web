@@ -1,0 +1,54 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "The visible AI content (ATLAS transcript) provides generic troubleshooting questions and plausible causes (e.g., naming, scale, data availability). There is no clear, ticket-contradicted misinformation, no broken AI promise, and no customer complaint about AI accuracy/quality.",
+    "evidence": [
+      "AI Assistant --- ... When you try to generate a subnet report, do you see any error messages, or does the report just not appear at all (e.g., blank, missing graphs, or not downloading)?",
+      "AI Assistant --- Based on your firmware version (v7.6.1), the most common causes for blank subnet graphs are: * Subnet Names with Special Characters ... * Large Number of Subnets ... * Data Availability ..."
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "The customer repeatedly followed up due to lack of response, but they did not complain about being stuck with AI or request a human because of AI. The later conversation is clearly handled by human agents and engineering escalation rather than an AI loop.",
+    "evidence": [
+      "Hi Hermes, kindly share updates and escalation matrix of exinda support. As we are waiting from last 6 days still, we have not received any updates regarding the same.",
+      "Dear Sajeedaly, ... this issue has now been escalated and is actively being investigated by our development team."
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "Support did not repeatedly ask for information already provided in a way that shows they failed to read prior messages. While updates were slow, the responses generally acknowledge the situation (escalation, upgrade history confirmation, dev investigation) rather than contradicting or ignoring provided details.",
+    "evidence": [
+      "Thank you for your confirmation. At this point. I can see that a report has been logged with our development team for an in-depth review.",
+      "Kindly proceed with this history only, there is no other history regarding to the appliances."
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": true,
+    "reasoning": "There are clear, repeated customer complaints about extended waiting with no updates (days to a month+), indicating significant response delays and insufficient cadence of communication. The ticket history shows long gaps before meaningful support updates were posted.",
+    "evidence": [
+      "[2025-10-06] ... we are waiting from last 6 days still, we have not received any updates regarding the same.",
+      "[2025-10-08] ... still we have not received any corrective updates / response regarding the same.",
+      "[2025-11-04] It has been now a month ago but still we haven't received any solution regarding the issue. Although we are not getting any proper update for the same.",
+      "[2026-01-03] This issue has been pending for a long time ... Kindly treat this issue as urgent and provide the latest status at the earliest."
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "The ticket was placed on hold, but there is no evidence it was closed while the issue remained unresolved or while the customer was still actively requesting help. The latest interactions show the case continuing with development investigation.",
+    "evidence": [
+      "Placing on hold for 9999 hour(s)",
+      "At this time, we don\u2019t have a confirmed timeline to share. The resolution depends on the Development team's queue..."
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "Although the customer expresses urgency and an escalation record shows severity as \"data_loss,\" the ticket does not explicitly state P1/SEV1/critical/outage criteria (e.g., full outage/all users down) in a way that meets the detection rule. Therefore, it cannot be confidently flagged as P1/SEV1 mishandling under the balanced standard.",
+    "evidence": [
+      "The severity is: data_loss",
+      "Kindly treat this issue as urgent and provide the latest status at the earliest."
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60209095
+}

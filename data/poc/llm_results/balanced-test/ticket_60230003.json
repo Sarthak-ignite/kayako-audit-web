@@ -1,0 +1,52 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "The AI assistant\u2019s actual troubleshooting/answer content is truncated in the ticket record, so there isn\u2019t clear evidence it provided incorrect or unhelpful guidance. The customer did report a specific issue, but we cannot verify whether the AI addressed it appropriately.",
+    "evidence": [
+      "--- AI Assistant --- I have this\n...[truncated]..."
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "There is no evidence the customer asked for a human, expressed frustration with the AI, or experienced repetitive looping responses. The visible interaction shows a single issue statement from the customer and no repeated back-and-forth.",
+    "evidence": [
+      "After updating to ME 22.2 the outlook spam handler keeps asking for credentials that are already entered and stored, so the add on is essentilly blocked"
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "The customer provided the core problem statement once, but the assistant\u2019s response content is truncated, so we cannot confirm the assistant ignored provided details or asked for already-supplied information. No explicit customer complaint about being unheard is present.",
+    "evidence": [
+      "After updating to ME 22.2 the outlook spam handler keeps asking for credentials that are already entered and stored, so the add on is essentilly blocked",
+      "--- AI Assistant --- I have this\n...[truncated]..."
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "The ticket timeline indicates the ticket was created, updated, solved, and closed within about a minute, with no indication of customer waiting or complaining about delays.",
+    "evidence": [
+      "Ticket Created: 2025-10-27 16:21:13",
+      "Ticket Solved: 2025-10-27 16:22:15",
+      "resolutionTime: 62"
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": true,
+    "reasoning": "The ticket appears to have been solved/closed almost immediately after the customer reported an issue, and there is no visible confirmation of resolution from the customer or documented fix. Closing the ticket while the last visible customer message describes an ongoing, blocking problem is strong evidence of premature closure.",
+    "evidence": [
+      "After updating to ME 22.2 the outlook spam handler keeps asking for credentials that are already entered and stored, so the add on is essentilly blocked",
+      "Ticket Solved: 2025-10-27 16:22:15",
+      "Ticket Closed: 2025-10-27 16:22:15",
+      "resolutionTime: 62"
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "The customer describes a blocked Outlook add-on, but the ticket does not explicitly indicate P1/SEV1/critical severity, nor is there a stated all-users outage. Without explicit severity markers or clear outage scope, P1/SEV1 mishandling cannot be concluded.",
+    "evidence": [
+      "After updating to ME 22.2 the outlook spam handler keeps asking for credentials that are already entered and stored, so the add on is essentilly blocked"
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60230003
+}

@@ -1,0 +1,55 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "The AI interaction shown is limited to intake/menu flow and ticket creation. There is no evidence the AI provided incorrect guidance, made promises it failed to keep, or that the customer complained about AI accuracy/helpfulness.",
+    "evidence": [
+      "Button selection: [\ud83d\udce9 Raise a Ticket]",
+      "Please provide any other additional details we might need to investigate and resolve your issue."
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "There is no indication the customer asked to reach a human, expressed frustration about an AI \u201cwall,\u201d or got stuck in repetitive AI responses. The AI flow appears to successfully create the ticket.",
+    "evidence": [
+      "Button selection: [\ud83d\udce9 Raise a Ticket]",
+      "Please note: the ticket will get created only after you provide the above requested information..."
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "Support did not ask the customer to repeat already-provided details or pursue an already-ruled-out path. The agent recognized the request as a duplicate and redirected it to the main ticket where the license was handled.",
+    "evidence": [
+      "Now I see that this is a duplicate of the main request (where I already generated the license)",
+      "We will add this to the main ticket and share the license with the customer there:  60248261"
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": true,
+    "reasoning": "The ticket was marked urgent and requested help \u201cas soon as possible,\u201d but the first substantive agent response appears ~3+ days after ticket creation. The customer also followed up in the meantime, indicating they were waiting for action.",
+    "evidence": [
+      "[2025-11-21T14:52:03+00:00] ... \"Please help as soon as possible\"",
+      "[2025-11-21T14:52:03+00:00] (ticket created with request details)",
+      "[2025-11-24T21:50:52+00:00] \"Hi team, this is approved by the BU - please execute!\"",
+      "[2025-11-25T07:43:00+00:00] (first public agent reply redirecting to main ticket)"
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "The ticket was resolved by redirecting the work to an existing main ticket where the license would be shared. There is no explicit evidence in this thread that the customer reported the issue remained unresolved after the redirect.",
+    "evidence": [
+      "We will add this to the main ticket and share the license with the customer there:  60248261"
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": true,
+    "reasoning": "The issue was explicitly marked as urgent, and even the agent later described it as urgent, but handling did not occur within hours; the response/action came days later. While not an outage, the stated urgency was not met by the response timeline.",
+    "evidence": [
+      "Button selection: [\ud83d\udd34 Urgent]",
+      "\"Please help as soon as possible\"",
+      "[2025-11-25T07:42:16+00:00] \"Picked this up manually as it's rather urgent.\"",
+      "[2025-11-21T14:52:03+00:00] (initial request) \u2192 [2025-11-25T07:42:16+00:00] (agent pickup)"
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60248266
+}

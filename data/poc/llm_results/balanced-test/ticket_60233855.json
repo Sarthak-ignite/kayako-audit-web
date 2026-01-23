@@ -1,0 +1,52 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": true,
+    "reasoning": "The AI first stated it could not proceed due to a missing GitHub issue URL, yet later completed a GHI lookup for the same issue, indicating the earlier statement was inaccurate. Additionally, the AI sent inconsistent lifecycle messaging (e.g., saying the ticket will be kept open until specific future dates while also stating it will stay open only one week), which can mislead the customer.",
+    "evidence": [
+      "\u201cWe were unable to proceed as the 'DS for Escalated Issue (only GHI!)' field is currently empty. Kindly add the GitHub issue URL\u2026\u201d",
+      "\u201cGHI lookup complete for issue 13744. Project: Khoros Community | Status: Done | Fix Release: 25.12. All Set.\u201d",
+      "\u201cWe will keep this ticket open until January 4, 2026.\u201d",
+      "\u201cThis ticket will stay open for one week unless you reply with \"This ticket can be closed\" or update the status to Completed in the portal.\u201d"
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "Although internal logs mention a redundant acknowledgement loop, there is not clear customer-facing looping (3+ repetitive messages) or customer frustration/request for a human. Customer interactions continued and the AI provided substantive updates rather than repeatedly blocking progress.",
+    "evidence": [
+      "\u201cTerminating loop: The automated release notification flow was completed successfully and no further actions are required, but the conversation entered a redundant acknowledge loop.\u201d"
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "The AI requested the GitHub issue URL because the authoritative custom field was empty, and the customer had not provided the URL in the ticket at that point. After the customer provided URLs, the AI processed each one and returned the corresponding project/status/release details.",
+    "evidence": [
+      "\u201cUnable to proceed with GHI lookup. The custom field 'DS for Escalated Issue (only GHI!)' is empty\u2026\u201d",
+      "\u201cTesting https://github.com/trilogy-group/eng-maintenance/issues/13743 - no release\u201d",
+      "\u201cGHI lookup complete for issue 13743. Project: Khoros Community | Status: Done | Fix Release: None (no release published)\u201d"
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "The initial response time is well under 24 hours and there is no explicit customer complaint about waiting. The timeline shows active follow-ups within minutes/hours during the main interaction window.",
+    "evidence": [
+      "initialResponseTime: 141"
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": true,
+    "reasoning": "Support communicated that the ticket would remain open until a future validation point (stage deployment / Jan 4, 2026), but the ticket was closed on 2025-11-03. There is no customer confirmation of resolution before closure, and the fix was described as not yet deployed (future rollout dates).",
+    "evidence": [
+      "\u201cWe will keep this ticket open until January 4, 2026.\u201d",
+      "\u201cWe will keep this ticket open until the stage deployment, allowing you to validate the fix.\u201d",
+      "Ticket Closed: 2025-11-03 06:53:18",
+      "\u201cscheduled for deployment to the stage environment on December 14, 2025, and to the production environment on January 5, 2026.\u201d"
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "There is no indication the ticket was treated as P1/SEV1, no explicit outage/critical severity language from the customer, and no evidence of urgent-impact claims requiring emergency handling.",
+    "evidence": []
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60233855
+}

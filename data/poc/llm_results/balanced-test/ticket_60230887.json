@@ -1,0 +1,54 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": true,
+    "reasoning": "The initial AI response was generic and did not directly address the customer\u2019s concrete request to restore a missing SFTP-export file. It also introduced potentially incorrect/irrelevant context (EMEA analytics incident) without confirming the customer\u2019s region or tying it to the specific SFTP path and file they provided. The customer\u2019s follow-up indicates the AI reply did not clarify next steps or what was needed from them.",
+    "evidence": [
+      "We are currently aware of an ongoing incident affecting Community Analytics data for the EMEA region, which may be impacting your ability to access the csv data files via SFTP since October 21st, 2025.",
+      "For the latest updates and information on the progress of this incident, please refer to our status page",
+      "The issue is still there we haven\u2019t been able to download the data, I was waiting for you guys to confirm if there was any fix?? Not sure what you wanted from me.."
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "There is no clear pattern of the AI repeating the same guidance 3+ times, and the customer did not explicitly request a human or complain about being stuck with an AI loop. After the initial AI reply, the case appears to move to human/PS handling rather than continued AI-driven back-and-forth.",
+    "evidence": [
+      "I was waiting for you guys to confirm if there was any fix??"
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "Support did not repeatedly ask for details the customer had already provided (hostname/path, directory listing). The follow-ups focused on coordinating with PS/Infrastructure and later asked the customer to verify access after the file was restored, which is a reasonable next step rather than ignoring prior context.",
+    "evidence": [
+      "Our team has confirmed that the LITHCOMMDAILY.zip file is now available again at the SFTP path /home/ciscosupport/communityexport/.",
+      "Could you please verify that you can access the file and confirm whether the data appears complete on your end?"
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": true,
+    "reasoning": "The customer explicitly called out the long wait and repeatedly requested updates/ETA over an extended period (weeks). The ticket shows a prolonged resolution cycle (opened late Oct and resolved mid/late Dec), and support messaging acknowledges coordination without providing timely progress, prompting customer follow-ups.",
+    "evidence": [
+      "Any update on the below request from the professional services team, please let us know.",
+      "Any update on the issue, on when we will have a resolution ??",
+      "Any eta on this request, it\u2019s been a while since we opened this ticket.",
+      "The customer escalated the Case. The customer message is:issue not resolved from last 2 months"
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "Support restored the file and explicitly asked the customer to verify access, then the ticket proceeded to completion/closure after a waiting period. There is no clear evidence that the ticket was closed while the customer\u2019s last message stated the issue was still unresolved after the restoration notice.",
+    "evidence": [
+      "Our team has confirmed that the LITHCOMMDAILY.zip file is now available again at the SFTP path /home/ciscosupport/communityexport/.",
+      "This ticket will stay open for one week unless you reply with \"This ticket can be closed\" or update the status to Completed in the portal."
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "While the customer escalated and the system tagged severity as a core functionality defect, the ticket does not explicitly state P1/SEV1/critical outage nor indicate an all-users-down outage scenario. The evidence does not show a clearly defined P1/SEV1 SLA breach (e.g., >4 hours to first response for a declared P1).",
+    "evidence": [
+      "The customer escalated the Case.",
+      "The severity is: core_functionality_defect"
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60230887
+}

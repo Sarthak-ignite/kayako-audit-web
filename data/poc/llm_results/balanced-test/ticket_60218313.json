@@ -1,0 +1,53 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "The AI (ATLAS) responses are somewhat generic early on, but they are not demonstrably wrong or contradicted by ticket facts. The guidance generally aligns with the symptoms described (VSE failures and UI error), and later the case progresses to engineering-led workaround/fix steps. There is no explicit customer complaint about AI accuracy/quality.",
+    "evidence": [
+      "Based on your report and the attached images, there are two main symptoms: (1) Virus Scanning Engine (VSE) failures resulting in \"Scan Result: Failed [VSE]\" ... and (2) an \u201cunexpected error\u201d in the configuration interface...",
+      "Please note that all the suggested steps have already been completed. Unfortunately, these actions did not resolve the issue, the problem still persists."
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": true,
+    "reasoning": "The customer/partner explicitly asked for a technician/remote session and escalated because the issue persisted and they were effectively without email protection. This indicates they were not getting sufficient progress via standard back-and-forth and needed direct human intervention/escalation handling.",
+    "evidence": [
+      "our partner asked if we can plan a remote session together with one of your technicians.",
+      "The customer has been without email protection for about a week now, so we really need to get this issue fixed soon.",
+      "Our partner has asked for the escalation of this ticket, as the problem continues to affect their environment."
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "Support generally acknowledges the situation and adapts next steps (engineering workaround, then a bug-fix build, then targeted data requests). While some early advice overlaps with already-tried items, the customer does not indicate support is ignoring what they provided, and later requests (event logs, exact time/page, file versions) are reasonable follow-ups rather than repeats.",
+    "evidence": [
+      "Thank you for your update and for confirming that all suggested troubleshooting steps have already been performed.",
+      "I\u2019ve attached a fresh set of logs as requested for further analysis. Could you please review them and let us know the next steps?"
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "There is no explicit complaint about slow responses or waiting, and the initial response appears within about an hour per the CSV. While there are multi-day gaps between some messages, the ticket text does not clearly show the customer calling out delays as a problem.",
+    "evidence": [
+      "initialResponseTime: 61",
+      "Dear Carlos, Thank you for detailed information. Our Engineering team has identified the issue..."
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "The last recorded support action requests additional diagnostic information to proceed, and there is no later customer reply shown. The ticket remained open for days afterward (with \u201cstay open for one week\u201d messaging) before being solved/closed, which is consistent with inactivity rather than closing while an active back-and-forth was ongoing.",
+    "evidence": [
+      "Could you please share the following after reproducing the UI error once more?",
+      "This ticket will stay open for one week unless you reply with \"This ticket can be closed\" or update the status to Completed in the portal."
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "Although the customer describes high impact (no email protection) and an escalation is logged as a core functionality defect, the ticket does not explicitly indicate a P1/SEV1 designation with SLA expectations, nor is there clear evidence of >4-hour critical-response failure after the escalation. Support acknowledged the escalation promptly in the timeline provided.",
+    "evidence": [
+      "The customer escalated the Case. The customer message is:No Mail Security The severity is: core_functionality_defect",
+      "Your escalation has been acknowledged, and the ticket's priority has been adjusted to ensure a more expedited response from our team."
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60218313
+}

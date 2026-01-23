@@ -1,0 +1,48 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": true,
+    "reasoning": "The ATLAS AI interaction shown did not address the customer\u2019s specific port-out question and instead pivoted to requesting troubleshooting artifacts (logs/screenshots), which is not relevant to number porting. This is a clear mismatch between the question asked and the assistance provided.",
+    "evidence": [
+      "Customer (Michael Healy) --- \"My question: Is it possible to please port our numbers back to us. If there is a fee, how much would that be?\"",
+      "AI Assistant --- \"If you have any \ud83d\udcc3 log files or \ud83d\uddbc\ufe0f screenshots to upload to help with the troubleshooting, now is the time\""
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "There is no evidence the customer explicitly requested a human/technician due to the AI, nor a pattern of repetitive AI replies three or more times. The main issue was delayed human response, not an AI loop preventing progress.",
+    "evidence": []
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "Support ultimately answered the exact questions about porting out and fees, and did not repeatedly ask for information the customer had already provided. No clear pattern shows agents failing to read or use the provided context.",
+    "evidence": [
+      "Carlos Encalada --- \"Yes \u2014 it is possible to port your fax numbers away from FaxMaker Online...\"",
+      "Carlos Encalada --- \"There is no fee from GFI/FaxMaker Online to port your numbers out.\""
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": true,
+    "reasoning": "The customer explicitly followed up stating they had not received an answer, and the agent later apologized for the delay. The timeline shows a long gap between the customer\u2019s question (11/13) and the substantive response (11/30).",
+    "evidence": [
+      "Customer --- \"Hello, I still have not received an answer to my question.\"",
+      "Carlos Encalada --- \"Thank you for your patience, and I apologize for the delay in providing a clear answer to your question.\""
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "The ticket closure does not show the customer\u2019s last message indicating an unresolved issue or an open question. The final customer updates were about retirement/hand-off, and the thread appears to have reached a natural stopping point.",
+    "evidence": [
+      "Customer --- \"Thank you for the reply back, FYI I just retired, my teammates will be following up.\"",
+      "Customer --- \"I\u2019ve copied my teammates Darrell, John and Aaron on this email thread. Please work with them.\""
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "No P1/SEV1/critical outage is indicated, and the request is informational/planning (future port-out in summer 2026). There is no evidence of urgent impact or an outage requiring high-severity handling.",
+    "evidence": [
+      "Customer --- \"We would not need to port them over until early summer 2026.\""
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60242814
+}

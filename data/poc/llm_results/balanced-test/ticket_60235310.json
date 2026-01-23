@@ -1,0 +1,49 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "The ticket transcript provided does not include any actual AI troubleshooting or answers\u2014only an automated note and disclaimer\u2014so there is no evidence the AI gave incorrect or unhelpful information.",
+    "evidence": [
+      "ATLAS commented privately: Thanks for chatting earlier with our AI Support!<br>",
+      "Please note: The AI Support Agent is very smart and helpful, but like any GenAI assistant, he may provide incorrect responses from time to time."
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "There is no indication the customer requested a human, expressed frustration, or experienced repeated looping responses. The only visible content is an automated conversation record header.",
+    "evidence": [
+      "Here is a record of your conversation for easy reference:"
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "No back-and-forth troubleshooting is shown, and there are no instances of support asking for information the customer already provided. The transcript is limited to a greeting and general terms notice.",
+    "evidence": [
+      "Hi, Rex Limbrick ! \ud83d\udc4b"
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "No customer complaints about delays are present, and the ticket timestamps show it was created, updated, solved, and closed within roughly a minute, which does not indicate a delay problem.",
+    "evidence": [
+      "Ticket Created: 2025-11-04 05:16:54",
+      "Ticket Solved: 2025-11-04 05:17:59"
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "Although the ticket closed very quickly, there is no visible customer message indicating an unresolved issue at the time of closure. Without the customer\u2019s actual question/issue or a closing statement, premature closure cannot be concluded.",
+    "evidence": [
+      "Status: closed",
+      "Ticket Closed: 2025-11-04 05:17:59"
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "There is no explicit P1/SEV1/critical/outage designation and no urgency language from the customer shown. With the limited transcript, there is no evidence of mishandling a critical incident.",
+    "evidence": [
+      "Status: closed"
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60235310
+}

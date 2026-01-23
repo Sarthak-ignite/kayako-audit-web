@@ -1,0 +1,51 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "The ATLAS transcript is truncated and does not show any clearly incorrect guidance that is contradicted by later facts. The customer reports that enabling HTTPS decryption did not resolve the issue, but that alone is not evidence the AI advice was demonstrably wrong. There are also no customer complaints about AI accuracy or broken promises.",
+    "evidence": [
+      "Customer: \"active la opcion descifrar y filtrar trafico pero sigo pudiendo acceder\"",
+      "Customer: \"hice esto ultimo que me dijiste y tampoco\""
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": true,
+    "reasoning": "The customer explicitly requested contact with a person/human, indicating they were not getting sufficient help through the AI channel. This matches the criteria for human/escalation request.",
+    "evidence": [
+      "Customer: \"puedo crear una solicitud de contacto con una persona?\""
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "The agent\u2019s follow-ups (requesting Support Information and debug logs, and providing a collection guide) are reasonable next steps and do not repeat already-provided information. While the customer disputes the agent\u2019s interpretation of the screenshot/source, this is not a clear pattern of ignoring provided context\u2014more a disagreement about what the screenshots show.",
+    "evidence": [
+      "Agent: \"Based on the screenshots you provided, the filtering rule is not being applied because the \u201cBanned URLs\u201d rule is limited to \u201cGuest interfaces\u201d.\"",
+      "Customer: \"The content filter was correct; I took the screenshot right after making a modification to test it, but the source is random.\"",
+      "Customer: \"I don't know where I can get the support file you mentioned.\"",
+      "Agent: \"Please follow the official guide below to collect everything in one step: ... Gathering Support Information & Debug Logs\""
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": true,
+    "reasoning": "There is a gap of roughly two days between the customer\u2019s response (including a direct question about where to obtain the support file) and the agent\u2019s next reply. Even without an explicit complaint, this is a >24h delay while the customer was awaiting instructions to proceed.",
+    "evidence": [
+      "[2025-12-02T18:14:40+00:00] Customer: \"I don't know where I can get the support file you mentioned.\"",
+      "[2025-12-04T14:34:33+00:00] Agent: \"To continue the investigation, we need the Support Information file and a short set of Debug logs...\""
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "Although the customer\u2019s last message indicates the issue was not resolved, the agent explicitly set an expectation that the ticket would remain open for a week unless the customer replied, and the closure occurred much later (about 10 days after the last agent message). This aligns with standard non-response closure rather than a clearly premature closure.",
+    "evidence": [
+      "Agent: \"This ticket will stay open for one week unless you reply with \\\"This ticket can be closed\\\" or update the status to Completed in the portal.\""
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "No P1/SEV1/critical severity is stated, and the described issue is a filtering/policy application problem rather than a complete outage. The responses provided are troubleshooting-oriented and do not show clear urgency misalignment against a declared critical impact.",
+    "evidence": [
+      "Customer: \"Las politicas no se estan aplicando, tengo filtros configurados tanto por categoria como por url\""
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60254579
+}

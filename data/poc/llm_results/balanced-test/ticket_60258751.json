@@ -1,0 +1,50 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "The transcript only shows the AI assistant\u2019s greeting and a request for more details. There is no customer-stated problem or AI-provided solution to evaluate for correctness or broken promises.",
+    "evidence": [
+      "\u201cWalk me through what's happening or select from the below frequent requests.\u201d",
+      "\u201cDon't hold back on the details \u2013 the more you can share about the issue\u2026 the better equipped I'll be to assist you.\u201d"
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "There is no evidence the customer requested a human/technician, expressed frustration, or experienced repetitive looping responses. The interaction shown is a single AI intake prompt.",
+    "evidence": [
+      "\u201cIf I'm unable to help you, I can patch you through to a Live agent, along with the information you supply to me during this session\u2026\u201d"
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "No issue description or troubleshooting context from the customer is present in the ticket record, so there is nothing for support to have ignored or repeated.",
+    "evidence": [
+      "\u201cAim to give us a bit more context than just a quick 'It's not working.'\u201d"
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "The ticket lifecycle is extremely short (created, solved, and closed within ~1\u20132 minutes), and there is no customer complaint about waiting or any indication of delayed responses.",
+    "evidence": [
+      "Ticket Created: 2025-12-08 15:41:27",
+      "Ticket Solved: 2025-12-08 15:42:49"
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "Although the ticket was closed very quickly, the record does not show any customer message describing an unresolved issue or asking an open question at the time of closure. Without a last customer message indicating the issue remained unresolved, premature closure is not clearly evidenced.",
+    "evidence": [
+      "Ticket Closed: 2025-12-08 15:42:50",
+      "\u201cHere is a record of your conversation for easy reference:\u201d"
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "There is no indication of P1/SEV1/critical severity, outage language, or urgency from the customer in the provided ticket content, so mishandling cannot be supported by evidence.",
+    "evidence": [
+      "Status: closed",
+      "Product: Khoros Flow"
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60258751
+}

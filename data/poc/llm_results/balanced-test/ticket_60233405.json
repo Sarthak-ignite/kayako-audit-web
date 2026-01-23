@@ -1,0 +1,53 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "The AI directly addressed the reported limitation (cross-domain group membership) and provided alternative workarounds. There is no clear evidence in the provided ticket text that the AI\u2019s core claim is incorrect, nor does the customer complain about AI accuracy within this ticket record.",
+    "evidence": [
+      "Customer (Thierry Almy) --- I can't add users from a different domain to a group, the functionality isn't there!",
+      "AI Assistant --- Kerio Connect groups are domain-specific - you can't add users from different domains to a single group."
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "There is only a single customer statement and a single AI response shown, with no repeated cycles, no request for a human, and no expressed frustration about being stuck with AI.",
+    "evidence": [
+      "Thanks for chatting earlier with our AI Support! ... Here is a record of your conversation for easy reference:"
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "Support did not ask the customer to repeat information already provided, and the AI response appears to directly engage with the customer\u2019s stated issue (cross-domain users in a group). No conflicting troubleshooting path is evident in the provided excerpt.",
+    "evidence": [
+      "Customer (Thierry Almy) --- I can't add users from a different domain to a group, the functionality isn't there!",
+      "AI Assistant --- Kerio Connect groups are domain-specific - you can't add users from different domains to a single group."
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "No delay complaint is present, and the ticket timeline indicates same-day handling with closure within a few hours. Nothing indicates the customer was left waiting >24 hours.",
+    "evidence": [
+      "Ticket Created: 2025-10-31 14:37:08",
+      "Ticket Updated: 2025-10-31 16:54:34",
+      "Ticket Solved: 2025-10-31 16:54:35"
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": true,
+    "reasoning": "The ticket is marked solved/closed shortly after the initial report, and there is no visible customer confirmation of resolution after the AI response. Given the customer\u2019s last stated issue was a functional limitation, closing without confirmation or a clear resolution acceptance would reasonably be flagged as potentially premature.",
+    "evidence": [
+      "Status: closed",
+      "Ticket Solved: 2025-10-31 16:54:35",
+      "Ticket Closed: 2025-10-31 16:54:35",
+      "Customer (Thierry Almy) --- I can't add users from a different domain to a group, the functionality isn't there!"
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "No P1/SEV1/critical severity is indicated, and the customer\u2019s issue does not describe a complete outage or all-users-down situation. The timeline also does not show a prolonged delay that would violate a P1 expectation.",
+    "evidence": [
+      "Customer (Thierry Almy) --- I can't add users from a different domain to a group, the functionality isn't there!"
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60233405
+}

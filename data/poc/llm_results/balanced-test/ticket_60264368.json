@@ -1,0 +1,46 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "There is no AI/support response content in the provided interactions, so there is no evidence of incorrect, unhelpful, or unmet AI guidance.",
+    "evidence": []
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "No customer requests for a human/escalation are shown, and there is no back-and-forth indicating repetitive automated responses or looping.",
+    "evidence": []
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "There are no support replies asking for already-provided information or contradicting what the customer stated. Only the customer's initial message is present.",
+    "evidence": []
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "The ticket was solved/closed within seconds per the CSV, and there is no customer complaint about waiting or any evidence of a delayed response in the interaction log.",
+    "evidence": [
+      "Ticket Created: 2025-12-16 12:03:51",
+      "Ticket Solved: 2025-12-16 12:03:55",
+      "resolutionTime: 4"
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": true,
+    "reasoning": "The ticket was solved and closed essentially immediately, while the only customer-provided content describes an active SSL certificate validation issue with user impact and requests others to join a bridge. There is no evidence in the ticket of resolution confirmation before closure.",
+    "evidence": [
+      "Issue : SSL Certificate Validation Error for forum.virginplus.ca",
+      "Impact: Users won\u2019t be able to login virgin plus community forum",
+      "Please join the below bridge:",
+      "Ticket Solved: 2025-12-16 12:03:55",
+      "Ticket Closed: 2025-12-16 12:03:55"
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "The customer describes significant impact (users unable to log in), but the ticket is not explicitly labeled P1/SEV1/critical in the provided data, and the criteria requiring explicit severity and/or a documented slow/insufficient handling pattern is not met based on the available content.",
+    "evidence": [
+      "Impact: Users won\u2019t be able to login virgin plus community forum"
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60264368
+}

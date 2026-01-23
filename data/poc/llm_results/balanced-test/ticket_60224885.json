@@ -1,0 +1,50 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "There is no clear customer question or problem statement in the visible transcript, so it is not possible to show that the AI provided incorrect or clearly unhelpful guidance relative to a stated issue. The AI content shown (incident/status info + request for details) is generic but not demonstrably wrong based on the available evidence.",
+    "evidence": [
+      "\u201c### \ud83d\udd25 Active Incidents for Kerio Connect \u2026 AWS Degraded \u2013 Multiple Services in US-East-1 Region\u201d",
+      "\u201cPlease select from the below or give me a detailed description of what\u2019s happening. Any error messages you\u2019ve seen or steps you\u2019ve already tried would be really helpful.\u201d"
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "There is no evidence the customer asked for a human/technician, expressed frustration, or that the AI repeated the same steps in a looping pattern. The visible exchange is very short and does not show repeated cycles.",
+    "evidence": [
+      "Customer (Kjell Skoglund): \u201c.\u201d"
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "The customer does not provide any substantive context in the visible text (only a single period), so the AI cannot be shown to have ignored provided details. Asking for a description and error messages is a reasonable clarification given the lack of information shown.",
+    "evidence": [
+      "Customer (Kjell Skoglund): \u201c.\u201d",
+      "\u201cPlease select from the below or give me a detailed description of what\u2019s happening.\u201d"
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "Although the ticket spans multiple days per the timestamps, there is no explicit complaint about slow responses, no stated waiting impact, and no agent apology for delays in the provided interaction content. The CSV snippet also does not include metrics like initial response time or documented gaps.",
+    "evidence": [
+      "Ticket Created: \u201c2025-10-20 13:34:14\u201d",
+      "Ticket Solved/Closed: \u201c2025-10-23 14:38:50\u201d"
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "The visible transcript does not show the customer\u2019s last substantive message indicating an unresolved issue at the moment of closure, nor any ongoing troubleshooting exchange that was cut off. With the interaction text truncated, there isn\u2019t clear evidence that closure happened while the customer was still requesting help.",
+    "evidence": [
+      "Status: \u201cclosed\u201d",
+      "Ticket Closed: \u201c2025-10-23 14:38:50\u201d"
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "There is no explicit P1/SEV1/critical labeling and no clear report of a complete outage or urgent business impact in the provided content. The AI surfaced an external incident banner, but that alone is not evidence the customer had a critical outage that was mishandled.",
+    "evidence": [
+      "\u201c### \ud83d\udd25 Active Incidents for Kerio Connect \u2026 AWS Degraded \u2013 Multiple Services in US-East-1 Region\u201d"
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60224885
+}

@@ -1,0 +1,48 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": true,
+    "reasoning": "The customer asked a specific how-to question about the upgrade path from Kerio Control 9.2 to 9.5, but the AI\u2019s next response focused on a license key confirmation instead of addressing the upgrade path. This is clearly unhelpful relative to the customer\u2019s direct question, with no visible attempt to provide the requested upgrade guidance in the shown interaction.",
+    "evidence": [
+      "Customer (Guenter Weidlich): \"what is the correct upgrade path from version 9.2 to 9.5\"",
+      "AI Assistant: \"I have this license key on record: - License: 20339-9FEMI-5GDDV - Expiry date: 2026-06-07. Just to make sure we're on the same page - is this the same system you're reaching out about today?\""
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "There is no evidence the customer requested a human/technician, expressed frustration about the AI, or encountered repetitive looping responses. The provided excerpt shows only a single customer question and a single AI follow-up.",
+    "evidence": []
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "The AI did not ask the customer to repeat information already provided, and the customer had not provided the license key details previously in the visible text. While the AI response is off-target, it is not clearly a case of ignoring already-provided context.",
+    "evidence": [
+      "Customer (Guenter Weidlich): \"what is the correct upgrade path from version 9.2 to 9.5\"",
+      "AI Assistant: \"I have this license key on record... is this the same system you're reaching out about today?\""
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "No customer complaint about waiting is present, and the ticket timestamps indicate the ticket was created, updated, solved, and closed within roughly ~1 hour 12 minutes. Nothing indicates a delay exceeding 24 hours.",
+    "evidence": [
+      "Ticket Created: 2025-11-11 21:25:04",
+      "Ticket Closed: 2025-11-11 22:37:28"
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "Although the ticket is closed quickly, the conversation is explicitly marked as truncated, so there is not clear evidence that the customer\u2019s last message indicated the issue was unresolved at the time of closure. A balanced review cannot conclude premature closure from the partial excerpt alone.",
+    "evidence": [
+      "[\"...[truncated]...\"]",
+      "Status: closed"
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "There is no indication the issue was P1/SEV1, critical, or an outage, and no urgency language is present. The ticket appears to be a general upgrade-path inquiry rather than a service-down incident.",
+    "evidence": [
+      "Customer (Guenter Weidlich): \"what is the correct upgrade path from version 9.2 to 9.5\""
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60240989
+}

@@ -1,0 +1,57 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": true,
+    "reasoning": "Support provided a confident root-cause statement that was later contradicted by internal guidance and the eventual fix. The agent instructed the customer to contact Customer Care for a re-bound license due to Proxmox migration, but the later internal note states this scenario is expected after restoring config to new hardware and requires resetting the AppManager agent. This indicates materially incorrect troubleshooting direction that could delay resolution.",
+    "evidence": [
+      "The issue is clearly with the license registration itself.",
+      "Since you migrated from a hardware box to Proxmox, the license file is still bound to the old hardware box's serial number and won't work properly on the new virtual appliance.",
+      "From Jozef: The issue is misclassification of tickets where the error message ... is mistakenly treated as a license issue.",
+      "Resolution: Reset the AppManager agent \u2014 this is the only valid fix.",
+      "\"Unable to contact AppManager: appliance does not have valid license\""
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": true,
+    "reasoning": "The customer explicitly requested escalation to a technician/human support after being routed through ATLAS/AI, and later expressed frustration about being bounced between support channels. This is consistent with an AI wall experience where the user is pushed to self-service/AI instead of direct assistance.",
+    "evidence": [
+      "customer care send me to Atlas! please make from conversation support request for technician",
+      "i need create ticket",
+      "but I created ticket to this support before you and they saw that I have to create ticket on you and now back to license support. :("
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": true,
+    "reasoning": "Support requested information already provided (screenshots/logs), and later pursued a license-root-cause path even after the customer reported DNS tests and direct connectivity to appmanager.gfi.com via tools like curl/lynx. The customer's updates indicating connectivity was OK were not incorporated into the next diagnostic conclusion, leading to misdirection.",
+    "evidence": [
+      "The problem still persist. I cannot update license ... I sent you screenshots with log.",
+      "If this does not resolve the issue, please share a screenshot of the error that you are receiving and the specifications of the new appliance.",
+      "Hello, without change... 1. test DNS, ok ... 3. outbond access is ok, also from ssh terminal, lynx, curl.. open website appmanager.gfi.com ok",
+      "You've confirmed that DNS, outbound connectivity, and network access are all working properly. The issue is clearly with the license registration itself."
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": true,
+    "reasoning": "After the customer reported the issue still persisted, they followed up again asking for a solution, indicating they were waiting without progress. This is a clear customer signal of delay, even if the initial response time was relatively fast.",
+    "evidence": [
+      "[2025-10-21T05:34:22+00:00] The problem still persist.",
+      "[2025-10-22T18:41:38+00:00] Hello,do you have some solution for me?"
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "The customer confirmed the issue was solved and thanked support before the ticket was closed. There is no evidence the ticket was closed while the latest customer status indicated the problem remained unresolved.",
+    "evidence": [
+      "Hi, your colleague solve this problem, but on the second trying... Thank you and have a nice day."
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "Although an automated escalation mentions 'core_functionality_defect', the ticket does not clearly indicate a P1/SEV1 outage (e.g., all users down) requiring specific urgent handling, nor is there clear evidence of a >4 hour breach against an explicitly critical severity. The timeline shows ongoing troubleshooting rather than a clear critical-incident mishandling.",
+    "evidence": [
+      "The severity is: core_functionality_defect",
+      "The customer message is:Limited services"
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60225231
+}

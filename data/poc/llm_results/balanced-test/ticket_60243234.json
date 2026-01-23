@@ -1,0 +1,50 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "The AI did not provide any demonstrably incorrect information or broken promises. It asked standard intake questions (priority and instance URL) needed to route/troubleshoot the issue, and there is no customer complaint about AI accuracy or helpfulness.",
+    "evidence": [
+      "What's the priority of the issue?",
+      "Could you please provide the Khoros instance URL related to this issue? This URL is necessary to properly identify and troubleshoot the problem."
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "There is no evidence the customer requested a human, expressed frustration, or experienced repetitive looping responses. The interaction is short and linear (menu \u2192 priority \u2192 request for instance URL).",
+    "evidence": [
+      "Welcome to the menu for internal employees.",
+      "Could you please provide the Khoros instance URL related to this issue?"
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "The AI asked for an instance URL, but the customer had not provided it anywhere in the shown conversation. No repeated requests for already-supplied information or disregard of stated troubleshooting steps is evident.",
+    "evidence": [
+      "Could you please provide the Khoros instance URL related to this issue?"
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "No explicit complaint about slow responses appears in the conversation, and the ticket timeline shows same-day creation and closure without any clear >24-hour waiting gaps.",
+    "evidence": [
+      "Ticket Created: 2025-11-14 12:23:21",
+      "Ticket Closed: 2025-11-14 13:59:53"
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "While the ticket is marked closed, the transcript does not show a customer reply indicating the issue remained unresolved at the time of closure, nor does it show the closure action/message itself. Without explicit evidence that the customer was still seeking help, this cannot be confidently flagged.",
+    "evidence": [
+      "Could you please provide the Khoros instance URL related to this issue?",
+      "Status: closed"
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "The interaction shows the customer selected 'High' priority, but there is no explicit P1/SEV1/critical/outage claim or evidence of a complete outage. There is also no indication of an >4-hour delay in responding to a declared critical incident.",
+    "evidence": [
+      "Button selection: [\ud83d\udfe0 High]"
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60243234
+}

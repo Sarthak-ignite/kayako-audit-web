@@ -1,0 +1,60 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": true,
+    "reasoning": "The ATLAS chatbot repeatedly returned the wrong license key even after the customer provided the correct one, indicating incorrect or unhelpful behavior. The customer also explicitly reported that the chatbot was \u201ccrashing\u201d and couldn\u2019t validate the serial number, which is a direct complaint about AI quality.",
+    "evidence": [
+      "Customer: \"It is this: 20339-1LQWD-4A2PV\"",
+      "ATLAS: \"I have this license key on record: * License: 20339-8LMFV-3J3LZ ... is this the same system you're reaching out about today?\"",
+      "Customer: \"Hello the chatbot crashes because he cant check the serial number from my kerio ng120\""
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": true,
+    "reasoning": "The customer clearly sought escalation beyond the chatbot and repeatedly asked for a ticket to be created, indicating they were blocked by the AI flow. There is also a visible looping pattern where ATLAS repeats the same license-key verification message even after the customer corrected it.",
+    "evidence": [
+      "Customer: \"Hello, I needed further assistance than Kerio Control ATLAS could provide. Could you assist me?\"",
+      "Customer: \"Please create me a ticket\"",
+      "Customer: \"Create me a ticket we aleready have all data you need\"",
+      "ATLAS: \"I have this license key on record: ... 20339-8LMFV-3J3LZ ... is this the same system you're reaching out about today?\" (repeated after customer provided a different key)"
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": true,
+    "reasoning": "The customer stated that a video had already been uploaded and that support already had all needed data, yet the workflow continued to request the video as the missing item without acknowledging the customer\u2019s statement. This created a clear mismatch between what the customer said was already provided and what support continued to request.",
+    "evidence": [
+      "Customer: \"Video uploaded\"",
+      "Customer: \"You have aleready all data you need\"",
+      "ATLAS summary: \"One critical item still needed: ... a video showing the physical problem or unexpected behavior is mandatory for RMA approval. Could you please record a short video...\"",
+      "Customer: \"Create me a ticket we aleready have all data you need\""
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": true,
+    "reasoning": "Support explicitly apologized for a delay in providing the rescue image, confirming a service lag. The customer requested the specific build as soon as possible, and the team acknowledged delay in delivering it.",
+    "evidence": [
+      "Central Support Team: \"Thank you for your update, and we sincerely apologize for the delay in providing the rescue image.\"",
+      "Customer: \"Great, please send me the NG120 rescue image build 10:9072 as soon as possible.\""
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "The customer confirmed the original boot problem was resolved (\u201chardware runs now stable\u201d), and asked to create a new ticket for the new routing/NAT issue. Support closed the original ticket while explicitly stating the new issue would be handled in a separate ticket, which is appropriate rather than premature.",
+    "evidence": [
+      "Customer: \"After the rescue image the hardware runs now stable.\"",
+      "Customer: \"Yes this is correct and please creata a new ticket.\"",
+      "Support: \"We have created a new ticket to specifically address the new routing and NAT behavior... As the device is now functioning correctly, we will close this initial ticket related to the boot/UUID issue.\""
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": true,
+    "reasoning": "The issue was a complete device boot failure (likely service outage) and the ticket was treated as URGENT internally, yet the first substantive support action acknowledging and addressing the rescue image appears days after ticket creation. The agent also apologized for the delay, reinforcing that urgent handling was not timely.",
+    "evidence": [
+      "Customer: \"The firewall dosent boot i get a error message from ubuntu\"",
+      "Cu Chulainn summary: \"Step 0: Set to URGENT completed.\"",
+      "Ticket timestamps: \"Ticket Created: 2025-11-12 13:43:24\" vs first detailed rescue-image response on \"2025-11-17T08:22:40+00:00\"",
+      "Central Support Team: \"we sincerely apologize for the delay in providing the rescue image.\""
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60241392
+}

@@ -1,0 +1,55 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": true,
+    "reasoning": "The customer explicitly questioned whether they were receiving bot-based support and complained about \u201cAI time-kill mode,\u201d indicating perceived low-quality/inauthentic assistance. This is clear evidence of an AI-quality concern in the support experience (even if not all replies were AI-generated).",
+    "evidence": [
+      "Can someone take it on a serious note, OR is your support also in AI time-kill mode?",
+      "Is this so-called support still operated by the ChatBot?",
+      "If this is our last year to use Exinda, we will ditch this hatbot-based company & prefer the real one, no robotics."
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": true,
+    "reasoning": "The customer requested human/live-agent help and expressed repeated frustration about not getting real support. The conversation shows a pattern where progress was blocked and the ticket was repeatedly put on long hold while the customer kept re-engaging for action.",
+    "evidence": [
+      "It's business critical & needs human support intervention",
+      "Yes, I request a live agent transfer in this chat,",
+      "Our agents are currently busy assisting other customers at the time, so we'll proceed with ticket creation",
+      "Can someone take it on a serious note, OR is your support also in AI time-kill mode?",
+      "Placing on hold for 9999 hour(s)"
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": true,
+    "reasoning": "Support communicated as if the customer had already downgraded to 7.5.7, but the customer explicitly corrected that this was not true. This indicates support did not accurately track or reflect the customer\u2019s stated situation, creating confusion and rework.",
+    "evidence": [
+      "Thank you for confirming that you have downgraded to version 7.5.7.",
+      "Who said we have downgraded to version 7.5.7 ?\n\nNo, we have not."
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": true,
+    "reasoning": "The customer explicitly complained about waiting 24+ hours with no response on a critical case. Additionally, the provided initialResponseTime (2727 minutes) exceeds 24 hours, reinforcing that the delay was material and noticed by the customer.",
+    "evidence": [
+      "The case was raised in Critical Priority, and no show for 24 hours.",
+      "initialResponseTime: 2727"
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "Although the ticket is shown as closed in the CSV, the provided conversation excerpt does not include the final customer message near closure or any clear indication that the ticket was closed while the customer still had an active unresolved request. With the middle/end interactions omitted, there isn\u2019t enough evidence to flag premature closure.",
+    "evidence": [
+      "Status: closed"
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": true,
+    "reasoning": "The issue was described as business critical / critical priority, and the customer reported no response for 24 hours\u2014well beyond typical P1 expectations. This is clear evidence that urgency was not met with an appropriately fast initial engagement.",
+    "evidence": [
+      "It's business critical & needs human support intervention",
+      "The case was raised in Critical Priority, and no show for 24 hours."
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60232130
+}

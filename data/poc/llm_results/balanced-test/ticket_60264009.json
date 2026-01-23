@@ -1,0 +1,53 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "There is no AI-generated troubleshooting or informational response in the visible ticket content to evaluate for correctness or helpfulness. The ticket appears to be an internal logging record with IVR/call metadata rather than an AI support interaction.",
+    "evidence": [
+      "\u201cThis ticket was created for logging purposes.\u201d",
+      "\u201cThe complete conversation with this customer will be uploaded to this ticket shortly.\u201d"
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "While the IVR repeats menu options, there is no evidence the customer requested a human, expressed frustration about automation/AI, or experienced repeated AI guidance without progress. The repetition shown is consistent with an IVR handling invalid input rather than an AI support loop.",
+    "evidence": [
+      "\u201c(Machine to +14136293927) You can only press numbers from 1 to 9.... Let me repeat the options....\u201d",
+      "\u201c(Machine to +14136293927) ...Let me repeat the options.... If you are calling to get support on Archiver, Press 1... For LanGuard, Press 7...\u201d"
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "No agent troubleshooting dialogue is present where support asks for already-provided information or disregards customer statements. The visible content is limited to internal notes and automated call menu prompts.",
+    "evidence": [
+      "\u201cKayako - ticket id 60264009 // Xavier A Villarroel commented privately: Full conversation with customer 14136293927\u201d",
+      "\u201cCall Metadata\u201d"
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "There is no evidence of customer-facing waiting or complaints about slow responses in the provided interactions. The structured context indicates the ticket was marked solved essentially immediately after creation, and the remaining time to closure appears administrative.",
+    "evidence": [
+      "\u201cTicket Created: 2025-12-15 23:49:36\u201d",
+      "\u201cTicket Solved: 2025-12-15 23:49:59\u201d",
+      "\u201cTicket Closed: 2025-12-19 00:34:39\u201d"
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "The ticket does not show an unresolved customer request at the time of closure; it is explicitly described as being created for logging purposes. No customer message indicating an open issue appears in the visible transcript.",
+    "evidence": [
+      "\u201cThis ticket was created for logging purposes.\u201d",
+      "\u201cTicket Closed: 2025-12-19 00:34:39\u201d"
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "There is no indication of P1/SEV1 severity, outage language, or urgent business impact in the provided content. The record mainly contains automated IVR prompts and internal logging notes rather than an active critical incident response.",
+    "evidence": [
+      "\u201c(Machine to +14136293927) Thank you for calling GFI Support Line....\u201d",
+      "\u201cThis ticket was created for logging purposes.\u201d"
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60264009
+}

@@ -1,0 +1,47 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": true,
+    "reasoning": "The customer asked a specific product/API question, but the AI did not attempt to answer or provide relevant documentation/API endpoints. Instead, it pivoted to requesting logs/screenshots, which is not a helpful or appropriate next step for an API capability inquiry. This would reasonably be flagged as unhelpful handling of the question asked.",
+    "evidence": [
+      "Customer (Kritika Kritika): \"API to fetch groups of which loggedin user is member of\"",
+      "AI Assistant: \"If you have any \ud83d\udcc3 log files or \ud83d\uddbc\ufe0f screenshots to upload to help with the troubleshooting, now is the time to do it \ud83d\udcaa\""
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "There is no evidence the customer requested a human/technician or expressed frustration, and there is no pattern of repetitive AI messages (3+ similar loops). The conversation shown is too short to establish looping.",
+    "evidence": []
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "The AI did not explicitly ask the customer to repeat information they already provided, and there is no back-and-forth showing the customer having to restate details. While the AI response is arguably irrelevant, that aligns more with an AI quality/unhelpfulness issue than clear evidence of ignoring previously provided context.",
+    "evidence": [
+      "Customer (Kritika Kritika): \"API to fetch groups of which loggedin user is member of\""
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "No customer complaint about waiting is present, and the ticket timeline indicates activity and closure within the same hour/day. There is no clear evidence of delays exceeding 24 hours or delay-related apologies.",
+    "evidence": [
+      "Ticket Created: 2025-11-14 14:07:24",
+      "Ticket Solved: 2025-11-14 15:47:56"
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": true,
+    "reasoning": "The ticket was closed without any visible answer to the customer\u2019s API question or confirmation that the issue was resolved. The last visible interaction is the AI asking for uploads rather than providing a solution, which makes closure appear premature from the available record.",
+    "evidence": [
+      "Customer (Kritika Kritika): \"API to fetch groups of which loggedin user is member of\"",
+      "AI Assistant: \"If you have any \ud83d\udcc3 log files or \ud83d\uddbc\ufe0f screenshots to upload to help with the troubleshooting, now is the time to do it \ud83d\udcaa\"",
+      "Status: closed",
+      "Ticket Closed: 2025-11-14 15:47:56"
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "There is no indication of P1/SEV1 severity, outage, or urgent impact (e.g., all users down). The request is an API/how-to question rather than an availability incident.",
+    "evidence": []
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60243347
+}

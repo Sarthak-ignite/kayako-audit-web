@@ -1,0 +1,49 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "There is no AI response in the ticket transcript, and no customer complaint about incorrect or unhelpful AI guidance. The only customer-visible content is an unsubscribe instruction, not an AI-generated support answer to a question.",
+    "evidence": [
+      "Aven Saren commented publicly: To unsubscribe from this group and stop receiving emails from it, send an email to support+unsubscribe@khoros.com."
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "There is no evidence the customer asked for a human/technician or expressed frustration with automated/AI help. The interaction does not show repetitive responses or a back-and-forth loop.",
+    "evidence": [
+      "Aven Saren commented publicly: To unsubscribe from this group and stop receiving emails from it, send an email to support+unsubscribe@khoros.com."
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "Support did not ask the customer to repeat information or pursue troubleshooting that the customer had already ruled out. The agent only performed an administrative closure with no follow-up questions shown.",
+    "evidence": [
+      "ATLAS commented privately: Closing as non-billable"
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "No customer complaint about waiting is present, and the ticket timeline shows it was updated/solved/closed within seconds. There is no evidence of a delay exceeding 24 hours in the visible interactions.",
+    "evidence": [
+      "Ticket Created: 2025-12-01 14:44:09",
+      "Ticket Solved: 2025-12-01 14:44:33",
+      "Ticket Closed: 2025-12-01 14:44:34"
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "While the ticket was closed quickly, the last customer message does not clearly request help or indicate an unresolved issue; it reads like an informational unsubscribe instruction. Without a clear open question/problem from the customer, there is insufficient evidence to call this premature closure.",
+    "evidence": [
+      "Aven Saren commented publicly: To unsubscribe from this group and stop receiving emails from it, send an email to support+unsubscribe@khoros.com.",
+      "ATLAS commented privately: Closing as non-billable"
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "There is no indication the issue was marked P1/SEV1 or described as critical/outage, and no urgent impact is stated. The content is about unsubscribing from emails, not service availability.",
+    "evidence": [
+      "Aven Saren commented publicly: To unsubscribe from this group and stop receiving emails from it, send an email to support+unsubscribe@khoros.com."
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60253689
+}

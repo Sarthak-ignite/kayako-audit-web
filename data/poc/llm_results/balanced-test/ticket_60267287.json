@@ -1,0 +1,54 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "The only clear AI involvement shown is the initial ATLAS chat prompting for license eligibility. There is no explicit evidence that the AI provided demonstrably incorrect technical guidance or that the customer complained about AI accuracy. Most substantive troubleshooting guidance in the thread appears to be provided by human agents.",
+    "evidence": [
+      "Based on your stated intent, it is mandatory that we check the support eligibility through the product license \ud83d\udd11 before moving forward",
+      "Please provide me with your GFI Archiver license key."
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "The customer did not ask to speak with a human, did not express frustration about AI handling the issue, and there is no clear 3+ repetition loop from AI responses. The conversation transitions quickly into human-led troubleshooting steps and log review.",
+    "evidence": [
+      "Action: l1",
+      "Thank you for contacting the GFI Archiver Support Team."
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": true,
+    "reasoning": "After logs indicated a PST import crash tied to Outlook/MAPI/Redemption (0x800401FA), support provided a KB and steps related to MAIS Pickup .Q/.BIN processing hangs, which does not match the stated failure mode. An internal note explicitly acknowledges the mismatch, indicating the provided guidance did not properly reflect the evidence in the logs.",
+    "evidence": [
+      "The exact error sequence when trying to add a PST file: ... System.Runtime.InteropServices.COMException (0x800401FA): Wrong OS or OS version for application",
+      "Kindly refer to the article  The import process hangs and cannot process certain .q-files / bin-files in ..\\MAIS\\Pickup and follow the steps.",
+      "Zubair's .Q/.BIN file cleanup suggestion doesn\u2019t match log errors, but harmless to try as final test before escalation."
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": true,
+    "reasoning": "The authoritative ticket metadata shows an initial response time greater than 24 hours (115,867 seconds). The first public agent response appears on 2025-12-20, more than a day after ticket creation on 2025-12-19.",
+    "evidence": [
+      "Ticket Created: 2025-12-19 15:20:32",
+      "initialResponseTime: 115867",
+      "[2025-12-20T23:31:39+00:00] Kayako - ticket id 60267287 // Toluwani Madamori commented publicly"
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "The ticket shows holds/pending states and an auto-message about staying open for one week, but it does not show the case being closed while the customer\u2019s last message indicated the issue was unresolved. The customer later confirms progress/resolution of a key blocker (bitness key).",
+    "evidence": [
+      "This ticket will stay open for one week unless you reply with \"This ticket can be closed\" or update the status to Completed in the portal.",
+      "the bitness reg key resolved the issue with gettng to the pst file."
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "There is no explicit P1/SEV1 designation and no clear statement of an outage or critical business impact affecting all users. The issue is specific to PST imports and is handled through standard troubleshooting and log collection.",
+    "evidence": [
+      "I am trying to import pst files into GFI and the import app is giving me errors .",
+      "We have reviewed the logs and can see an issue with the import."
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60267287
+}

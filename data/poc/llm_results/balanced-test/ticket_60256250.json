@@ -1,0 +1,53 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": true,
+    "reasoning": "Support provided two back-to-back ATLAS replies that largely repeat the same generic troubleshooting guidance without advancing the investigation (e.g., no specific request for logs from the provided user/session, no next diagnostic milestone, no concrete platform-side checks). This duplication and lack of progression would likely be flagged by a quality reviewer as low-value AI output for a specific, reproducible posting problem.",
+    "evidence": [
+      "ATLAS (2025-12-05 06:13:52): \"This issue could be caused by several factors, including browser caching, script conflicts, or session timeouts.\"",
+      "ATLAS (2025-12-05 06:15:08): \"This behavior can be disrupted by several factors. Below are troubleshooting steps and technical explanations...\"",
+      "ATLAS (2025-12-05 06:13:52): \"Please verify if the issue occurs across multiple browsers... whether it persists in private/incognito mode.\"",
+      "ATLAS (2025-12-05 06:15:08): \"Cached scripts or conflicts from browser extensions can interfere... using an incognito/private window.\""
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "The customer did not ask for a human/engineer escalation and did not express frustration about AI responses. While ATLAS posted two similar messages, it does not reach a clear 3+ repetition pattern or a sustained loop with repeated re-engagement.",
+    "evidence": [
+      "Customer (2025-12-05 06:10:37): \"Community URL:https://community.se.com ... Community Classic\""
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "Support\u2019s initial clarification request (Classic vs Aurora and instance URL) was reasonable because the first customer message did not include the product confirmation or URL. After the customer provided the URL and confirmed Classic, the subsequent responses did not explicitly re-ask for the same already-provided core details.",
+    "evidence": [
+      "Support (2025-12-04 09:52:33): \"could you kindly specify which Khoros product you are referencing... Additionally, please provide the exact community or instance URL\"",
+      "Customer (2025-12-05 06:10:37): \"Community URL:https://community.se.com ... Community Classic\""
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "There is no evidence the customer complained about slow responses, and the recorded initial response time does not indicate a >24-hour delay. Follow-up also occurred promptly after the customer provided the requested details.",
+    "evidence": [
+      "CSV: \"initialResponseTime: 83\"",
+      "Support (2025-12-04 09:52:33): \"Thank you for reaching out to us.\""
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "Although the customer did not explicitly confirm resolution, the customer also did not respond after the troubleshooting guidance. The ticket remained open for days after the last interaction, which is consistent with auto-closure rather than being closed while an active back-and-forth was ongoing.",
+    "evidence": [
+      "Customer last message (2025-12-05 06:10:37): \"I am unable to reply to the post unless I refresh the page.\"",
+      "CSV: \"Ticket Closed: 2025-12-15 07:35:31\""
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "The ticket does not explicitly indicate P1/SEV1 status or a full outage. The customer reported an issue affecting 'some users,' and support responded with standard troubleshooting rather than ignoring an explicitly critical event.",
+    "evidence": [
+      "Customer (2025-12-04 09:51:12): \"Some of the users are facing issues\"",
+      "Customer (2025-12-04 09:51:12): \"Kidly check this asap.\""
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60256250
+}

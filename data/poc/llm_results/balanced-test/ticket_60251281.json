@@ -1,0 +1,55 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "The AI (ATLAS) asked for standard licensing details and documentation to proceed. There is no clear evidence of incorrect technical guidance, broken promises, or customer complaints about AI accuracy. While the initial prompt about uploading logs is somewhat generic for a licensing request, it is not demonstrably wrong or harmful in this ticket.",
+    "evidence": [
+      "Thank you for reaching out and informing us of your need for a replacement Gensym G2 license associated with your 2011 subscription and existing contract.",
+      "To proceed and ensure we process your request efficiently, could you kindly provide the following required details:"
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "There is no explicit request for a human agent due to AI limitations, no expressed frustration about AI, and no repetitive loop of the same AI guidance. After the initial AI interaction, the ticket proceeds with human agent updates and internal coordination.",
+    "evidence": [
+      "I can't login to the site. Can you please just raise the ticket?",
+      "Dear Kai, Thank you for your patience. We have engaged the relevant team for approval."
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "Support\u2019s follow-up questions were reasonable for licensing fulfillment and do not clearly repeat information already provided in the ticket at that point. After the customer provided the authorization form, support progressed the request and did not force the customer to re-provide the same details. When the customer stated upgrading was not their current path, support continued pursuing the requested 2011 licenses via the BU.",
+    "evidence": [
+      "Here is the Authorization Form for these Subscription Licenses needed. These are replacing current perpetual licenses.",
+      "We will be continuing to trouble shoot this upgrade on a dev server, however it is not our path forward currently.",
+      "All four requests are now with the Gensym BU team for generation of G2 2011 subscription licenses."
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "Initial response was within minutes (CSV initialResponseTime=33), and the customer did not complain about slow responses. While there is a long period between delivering the licenses (Dec 5) and formally marking the ticket solved (Dec 25), there is no evidence the customer was waiting for action during that time.",
+    "evidence": [
+      "We will get back to you as soon as we hear from the BU regarding the 2011 licenses.",
+      "Hi Kai, Please find attached the remaining 3 subscription G2 licenses"
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "The customer\u2019s last message did not indicate the issue was unresolved; it acknowledged the update and clarified their preference for 2011 licenses. Support later delivered the remaining licenses and only then marked the ticket as solved, which aligns with completion of the request.",
+    "evidence": [
+      "Thanks for this update Harry.",
+      "Hi Kai, Please find attached the remaining 3 subscription G2 licenses",
+      "As Roger has already shared the license with you in the previous response, and your request has been completed, we will now mark this ticket as Solved."
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "Although urgency is implied (\"Absolutely need it\" and an internal note that the ticket is Urgent), there is no explicit P1/SEV1/outage statement from the customer. The team engaged Sales/BU quickly, provided a partial license promptly, and followed up with the remaining licenses once the BU generated them.",
+    "evidence": [
+      "Absolutely need it and it is covered by contract",
+      "This ticket is set as Urgent and the Sales team has approved the request, so can you please progress this to send the new licenses to the customer.",
+      "Please find attached the license files for the G2 2024 installation."
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60251281
+}

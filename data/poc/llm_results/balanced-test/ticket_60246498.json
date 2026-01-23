@@ -1,0 +1,55 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "The visible portion of the interaction shows the AI following an intake workflow (priority + instance URL). There is no clear incorrect guidance, broken promise, or customer complaint about AI accuracy in the provided text (the conversation is also truncated before any substantive troubleshooting).",
+    "evidence": [
+      "\u201cThis is the Khoros Classic AI Support Agent \ud83e\udd16.\u201d",
+      "\u201cWhat's the priority of the issue?\u201d",
+      "\u201cI found an instance URL on file. Please confirm it's correct or provide a different one:\u201d"
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "There is no evidence the customer asked for a human/technician or expressed frustration with the AI. The snippet does not show repetitive responses or a looped flow; it only shows initial intake steps.",
+    "evidence": [
+      "\u201cButton selection: [\ud83d\udce9 Raise a Ticket]\u201d",
+      "\u201cButton selection: [\ud83d\udfe2 Normal]\u201d"
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "In the visible content, the AI asks for information (priority and instance URL) that the customer had not already provided earlier in the same shown thread. No repeated requests or disregard of previously supplied details are evident in the excerpt.",
+    "evidence": [
+      "\u201cWhat's the priority of the issue?\u201d",
+      "\u201cButton selection: [\ud83d\udfe2 Normal]\u201d",
+      "\u201cI found an instance URL on file. Please confirm it's correct or provide a different one:\u201d",
+      "\u201chttp://resideo.response.lithium.com\u201d"
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "The ticket timeline indicates it was created/updated/solved/closed within about a minute, and there are no statements about slow responses or waiting. No >24h gaps are indicated in the provided context.",
+    "evidence": [
+      "\u201cTicket Created: 2025-11-19 11:53:15\u201d",
+      "\u201cTicket Solved: 2025-11-19 11:54:23\u201d",
+      "\u201cresolutionTime: 68\u201d"
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "Although the ticket closed very quickly, the provided interaction excerpt does not show the customer stating an unresolved issue at the end or asking follow-up questions before closure. With the conversation truncated, there is not clear evidence the closure occurred while the customer was still seeking help.",
+    "evidence": [
+      "\u201cTicket Closed: 2025-11-19 11:54:24\u201d",
+      "\u201cHere is a record of your conversation for easy reference:\u201d"
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "The customer selected Normal priority, and there is no mention of P1/SEV1, critical impact, outage, or urgency in the visible text. Therefore there is no evidence of P1/SEV1 mishandling.",
+    "evidence": [
+      "\u201cButton selection: [\ud83d\udfe2 Normal]\u201d"
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60246498
+}

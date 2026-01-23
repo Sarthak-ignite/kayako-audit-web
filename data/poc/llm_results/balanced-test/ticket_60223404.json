@@ -1,0 +1,58 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "ATLAS provided broadly reasonable initial troubleshooting steps (status page check, browser isolation, simplifying filters) and did not state anything demonstrably false or make specific promises that were later broken. The guidance is somewhat generic, but that alone is not enough to flag as a clear AI quality failure under a balanced standard.",
+    "evidence": [
+      "\u201cAccording to our knowledge base article on FogBugz On-Demand performance issues... this type of error generally indicates a temporary issue on the server side or a problem processing particular filter queries.\u201d",
+      "\u201cCheck for Known Outages or Maintenance... visit the FogBugz Status Page.\u201d",
+      "\u201cClear your browser cache and cookies, then test filtering again.\u201d"
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": true,
+    "reasoning": "The customer explicitly pushed back on the AI flow and indicated they want an agent to handle it rather than being asked for more information by the bot. While there is not a long back-and-forth loop, the explicit request and frustration about having to do the intake work is clear evidence of an AI \u201cwall\u201d experience.",
+    "evidence": [
+      "\u201clog a ticket with an agent this is not my responsibility to do\u201d",
+      "\u201cthe details ive givven are sufficient\u201d",
+      "\u201cTo assist you as efficiently as possible, could you please provide the following information...\u201d"
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": true,
+    "reasoning": "ATLAS requested information that had already been provided in the ticket intake (timing, trigger/action, scope, and environment). Some follow-up questions (business impact) were reasonable, but the request as written re-asked for details that were already supplied, aligning with a clear \u201cnot reading what I already provided\u201d pattern.",
+    "evidence": [
+      "Customer: \u201cIntermittent internal server error 500 errors being recieved\u201d",
+      "Customer: \u201c1. Last 30 min  2. Filtering  3. all users  4. no  5. on demand\u201d",
+      "ATLAS: \u201ccould you please provide the following information... Any particular error messages or codes, aside from \u2018500 internal server error,\u2019 that have appeared.\u201d",
+      "ATLAS file analysis: \u201cThe issue has been occurring for the last 30 minutes... The errors occur specifically when users are performing filter operations... The environment in use is FogBugz On-Demand... The errors affect all users\u201d"
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "The structured data indicates an initial response time of 30 (minutes), and the interaction log shows near-immediate same-day responses. There is no explicit customer complaint about waiting or slow responses in the provided transcript.",
+    "evidence": [
+      "CSV: \u201cinitialResponseTime: 30\u201d",
+      "Timeline: customer message at \u201c2025-10-17T13:36:58+00:00\u201d followed by ATLAS public reply at \u201c2025-10-17T13:37:28+00:00\u201d"
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "The last customer message in the transcript is a brief clarification, and there is no later customer message indicating the issue remained unresolved at the time of closure. The closure appears consistent with inactivity/auto-close behavior rather than closing mid-conversation.",
+    "evidence": [
+      "Customer (last shown): \u201cInternal server errors being experienced when filtering\u201d",
+      "ATLAS: \u201cIf you require additional time to gather these details, please note that your ticket will remain open for one additional week.\u201d",
+      "CSV: \u201cTicket Closed: 2025-10-27 15:37:07\u201d"
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "Although the issue impacted all users, it was described as intermittent and was not explicitly labeled P1/SEV1/critical or a complete outage. Additionally, the initial response was prompt, so there is not clear evidence of severity mishandling.",
+    "evidence": [
+      "\u201cIntermittent internal server error 500 errors being recieved\u201d",
+      "ATLAS: \u201cthis issue is occurring for all users and only during filter operations.\u201d",
+      "CSV: \u201cinitialResponseTime: 30\u201d"
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60223404
+}

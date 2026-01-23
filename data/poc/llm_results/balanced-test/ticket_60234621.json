@@ -1,0 +1,54 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "There is no customer-facing AI response in the ticket to evaluate for incorrectness, broken promises, or unhelpfulness. The only AI-related entries appear to be internal system notes (e.g., status sync/holds), not an AI assistant answering the customer.",
+    "evidence": [
+      "Kayako - ticket id 60234621 // Centralsupport-ai-acc commented privately: JIRA Issue CARESMM-9956 is changed to 'In Queue' , block reason: -",
+      "Kayako - ticket id 60234621 // Centralsupport-ai-acc commented privately: Placing on hold for 9999 hour(s)"
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "The customer did not ask to speak to a human or complain about getting AI/non-human help. There is also no pattern of repeated AI replies; the updates came from named support staff and progressed to escalation and resolution.",
+    "evidence": [
+      "Kayako - ticket id 60234621 // Priyanka Bhotika commented publicly: Dear Customer, We have received your escalation, and our team is currently reviewing the issue.",
+      "Kayako - ticket id 60234621 // Pavly Nashed commented publicly: We have done a preliminary investigation to determine the root cause, and have escalated this to our infrastructure team with the highest priority."
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "Support did not ask for information that the customer had already provided, and they responded directly to the customer\u2019s request for a ticket number. The troubleshooting/investigation aligned with the reported symptom (chat widget not loading) rather than re-suggesting already-ruled-out steps.",
+    "evidence": [
+      "Customer: \"Unable to create a chat via Fortinet.com or Support.fortinet.com as well. Page does not load beyond 'How can we help'\"",
+      "Customer: \"Please share the ticket number\"",
+      "Aamir Merchant: \"Here is the ticket number:  60234621\""
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "The ticket does not show delays over 24 hours, and support acknowledged the escalation and followed up the same day. The customer\u2019s '35 minutes' complaint refers to not receiving chats / inability to start chats on the site, not waiting on support responses.",
+    "evidence": [
+      "Customer: \"We have not received any chat for the past 35minutes\"",
+      "Priyanka Bhotika: \"We have received your escalation, and our team is currently reviewing the issue.\"",
+      "Pavly Nashed: \"We have done a preliminary investigation... escalated this to our infrastructure team with the highest priority.\""
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "There is no indication the ticket was closed while the customer\u2019s last message stated the issue was still unresolved or while the customer was actively asking for further help. After the resolution update, the customer did not reply with additional problems before closure.",
+    "evidence": [
+      "Chintan Parekh: \"We have identified the cause of the chat widget outage and implemented a fix.\""
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "The customer explicitly reported a Severity 1 outage, and support treated it as such: they acknowledged the escalation, escalated to infrastructure with highest priority, and implemented a fix the same day. There is no evidence of a response taking longer than 4 hours or of generic troubleshooting that ignored the outage scope.",
+    "evidence": [
+      "Subject: \"Severity 1- Fortinet-Khoros Outage\"",
+      "Pavly Nashed: \"escalated this to our infrastructure team with the highest priority.\"",
+      "Chintan Parekh: \"We have identified the cause of the chat widget outage and implemented a fix.\""
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60234621
+}

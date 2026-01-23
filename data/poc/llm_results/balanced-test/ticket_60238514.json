@@ -1,0 +1,47 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": true,
+    "reasoning": "Internal automation logs show the device-add workflow encountered an unexpected backend error, yet the agent informed the customer that the activation request was completed. This is a clear contradiction between internal processing results and the customer-facing update, which a quality reviewer would likely flag as potentially inaccurate confirmation of completion.",
+    "evidence": [
+      "Cu Chulainn... **Unexpected backend error during device addition...** Exception: 'NoneType' object has no attribute 'get''; public_message was empty.",
+      "We've completed this request, and you can now see the device listed in the Administration > Devices section of the Web Portal."
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "There is no evidence the customer asked for a human/technician or expressed frustration about AI. The responses also do not show repetitive looping advice 3+ times without progress.",
+    "evidence": []
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "The agent\u2019s follow-up question about the phone number appears to be a reasonable clarification due to a close mismatch (\u20265899 vs \u20265999) and account configuration, rather than ignoring information already provided. The customer then confirmed the correct number and the agent proceeded accordingly.",
+    "evidence": [
+      "We've noticed that there is already a very similar number on your account:  5512175999 as opposed to 5512175899.",
+      "Could you please confirm which of the following is the correct number?",
+      "the correct number is 5512175999"
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "No explicit customer complaints about waiting or slow responses are present. The observed response gaps do not clearly exceed 24 hours while the customer is actively waiting within the conversation shown.",
+    "evidence": []
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "The ticket was marked completed after the customer confirmed the correct number and the agent provided activation instructions (phone number and PIN). The customer\u2019s last messages indicate confirmation, not an unresolved request.",
+    "evidence": [
+      "5512175999 is the correct number",
+      "In that case, kindly direct the user to Activate Their Mobile Application... * Phone Number:  5512175999 * PIN: 69012",
+      "As there are no further actions for the Support Team to take, I'll mark this ticket as completed."
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "Although the internal ATLAS ticket priority selection shows \"Urgent,\" there is no evidence of an outage/critical impact scenario, and support responded quickly the same day. There is no clear mismatch between stated severity and handling based on the provided transcript.",
+    "evidence": [
+      "Button selection: [\ud83d\udd34 Urgent]"
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60238514
+}

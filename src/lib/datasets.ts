@@ -24,7 +24,7 @@ export const DATASETS: Record<DatasetId, DatasetConfig> = {
   },
   balanced: {
     id: "balanced",
-    label: "GPT-5.2 Balanced (34 tickets)",
+    label: "GPT-5.2 Balanced (98 tickets)",
     summaryCsvPath: repoPath("data/poc/poc_llm_balanced_summary.csv"),
     csvMetricsPath: repoPath("data/poc/poc_csv_metrics.csv"),
     ticketMetricsPath: repoPath("data/poc/poc_ticket_metrics.csv"),

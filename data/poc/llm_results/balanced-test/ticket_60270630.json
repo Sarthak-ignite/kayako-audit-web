@@ -1,0 +1,56 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": true,
+    "reasoning": "The customer reported a functional issue (\u201capplication is not opening\u201d), but the AI pivoted to account/email verification and password reset without establishing that login/credentials were the cause. This response is not well-aligned to the reported symptom and does not provide troubleshooting steps for an app failing to open, making it clearly unhelpful for the stated issue.",
+    "evidence": [
+      "\u201cThe street smart application is not opening on our phones\u201d",
+      "\u201cYou didn't provide an email address, it seems?\u201d",
+      "\u201cAs far as I can see, your email address is already validated, so now you only need to reset your password.\u201d",
+      "\u201cIf you need technical support, please click Sign in at the top and you will be through to support.\u201d"
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "There is no evidence the customer asked for a human/technician, expressed frustration with the AI, or encountered repetitive looping responses. The interaction is short and the customer acknowledged receiving the email.",
+    "evidence": [
+      "\u201cButton selection: [\ud83d\udc4d I received the email, thanks!]\u201d"
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": true,
+    "reasoning": "The customer\u2019s initial context was an app not opening, but the AI immediately pursued an email/password workflow instead of addressing the app-launch problem or asking clarifying questions about the failure mode. This indicates the support flow did not meaningfully engage with the reported issue.",
+    "evidence": [
+      "\u201cThe street smart application is not opening on our phones\u201d",
+      "\u201cPlease provide me with your email address:\u201d",
+      "\u201cAs far as I can see, your email address is already validated, so now you only need to reset your password.\u201d"
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "No waiting or delay is evident; the ticket timestamps show it was created, updated, solved, and closed within seconds, and the customer did not complain about response time.",
+    "evidence": [
+      "\u201cTicket Created: 2025-12-26 13:36:38\u201d",
+      "\u201cTicket Solved: 2025-12-26 13:36:41\u201d",
+      "\u201cTicket Closed: 2025-12-26 13:36:41\u201d"
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": true,
+    "reasoning": "The ticket was closed immediately after the AI provided password-reset guidance, but there is no explicit confirmation that the original issue (StreetSmart not opening on phones) was resolved. The customer only confirmed receipt of an email, which does not necessarily indicate the app issue is fixed.",
+    "evidence": [
+      "\u201cThe street smart application is not opening on our phones\u201d",
+      "\u201cButton selection: [\ud83d\udc4d I received the email, thanks!]\u201d",
+      "\u201cMake sure you now follow the steps from the email to create/verify your account, and you're all set!\u201d",
+      "\u201cTicket Closed: 2025-12-26 13:36:41\u201d"
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "The customer did not explicitly indicate P1/SEV1/critical impact or urgency, and while multiple phones are mentioned, there is not enough evidence of an outage/critical incident requiring a specific P1 response standard.",
+    "evidence": [
+      "\u201cThe street smart application is not opening on our phones\u201d"
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60270630
+}

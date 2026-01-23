@@ -1,0 +1,54 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": true,
+    "reasoning": "The customer asked a specific, straightforward question (latest ObjectStore version), but the AI did not answer it and instead replied with generic troubleshooting prompts requesting unrelated details. This is clearly unhelpful for the question asked and would be flagged by a quality reviewer.",
+    "evidence": [
+      "Customer (Asad Khalil): \"Hi. What is the latest version for Objectsore?\"",
+      "AI Assistant: \"Walk me through what's happening or select from the below options.\"",
+      "AI Assistant: \"Don't hold back on the details \u2013 the more you can share about the issue, any error messages you're seeing, or steps you've already tried, the better equipped I'll be to assist you.\""
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "There is no evidence the customer requested a human/technician, expressed frustration, or that the AI repeated the same unproductive guidance multiple times (3+). The transcript shows only a single missed response to the customer\u2019s question.",
+    "evidence": [
+      "Customer (Asad Khalil): \"Hi. What is the latest version for Objectsore?\""
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "While the AI failed to address the customer\u2019s specific question, there is not clear evidence of the AI repeatedly asking for information the customer already provided, or the customer having to restate details. This is better categorized as an AI quality/unhelpful response rather than repeated context-ignoring behavior.",
+    "evidence": [
+      "Customer (Asad Khalil): \"Hi. What is the latest version for Objectsore?\"",
+      "AI Assistant: \"Walk me through what's happening...\""
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "The ticket lifecycle shows it was created, updated, solved, and closed within about a minute, and there are no customer complaints about waiting. There is no evidence of delays impacting the customer experience.",
+    "evidence": [
+      "Ticket Created: 2025-10-16 17:36:38",
+      "Ticket Closed: 2025-10-16 17:37:37",
+      "resolutionTime: 59"
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": true,
+    "reasoning": "The ticket was closed essentially immediately even though the customer\u2019s last message was an open question and the AI did not provide the requested version information. Closing in this state would be considered premature because the customer did not confirm resolution and the issue/request remained unanswered.",
+    "evidence": [
+      "Customer (Asad Khalil): \"Hi. What is the latest version for Objectsore?\"",
+      "Ticket Solved: 2025-10-16 17:37:37",
+      "Ticket Closed: 2025-10-16 17:37:37",
+      "AI Assistant: \"Walk me through what's happening...\""
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "There is no indication of P1/SEV1 severity, outage, or urgent business impact in the customer\u2019s message or the structured context. The request is informational (latest version), not a critical incident.",
+    "evidence": [
+      "Customer (Asad Khalil): \"What is the latest version for Objectsore?\""
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60222887
+}

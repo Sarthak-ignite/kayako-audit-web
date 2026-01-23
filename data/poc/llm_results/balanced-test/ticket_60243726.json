@@ -1,0 +1,53 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": true,
+    "reasoning": "The AI interactions were noticeably unhelpful for the customer\u2019s request (vendor due diligence documents). ATLAS first asked for logs/screenshots (irrelevant to a documentation request) and later asked for document names in a way that did not advance the request, while the real action needed was internal coordination with compliance/BizOps.",
+    "evidence": [
+      "If you have any \ud83d\udcc3 log files or \ud83d\uddbc\ufe0f screenshots to upload to help with the troubleshooting, now is the time to do it \ud83d\udcaa",
+      "To proceed, could you kindly clarify the name of the specific document(s) you require for your due diligence?",
+      "In order to assist you most efficiently, could you please clarify the name(s) of the document(s) you specifically require for your due diligence process?"
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "There is repetition (ATLAS posted essentially the same request twice on 2025-12-03), but it does not reach a clear 3+ looping pattern, and the customer did not explicitly request a human or express clear frustration with the AI. The customer\u2019s follow-ups appear to be about waiting for an update rather than complaining about an AI loop.",
+    "evidence": [
+      "To proceed, could you kindly clarify the name of the specific document(s) you require for your due diligence?",
+      "In order to assist you most efficiently, could you please clarify the name(s) of the document(s) you specifically require for your due diligence process?"
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "Support asked for clarification on the exact documents needed, and while the customer initially requested broad categories (financial report, cyber/data security policies), they had not provided the specific document list until 2025-12-08. The clarification request is therefore not clearly asking for information already provided.",
+    "evidence": [
+      "We need GFI FaxMaker's financial report, Cyber and Data security policies and any other vendor due diligence they provide.",
+      "could you kindly clarify the name of the specific document(s) you require for your due diligence?"
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": true,
+    "reasoning": "The customer waited a long time for progress and had to follow up multiple times before receiving a meaningful public response. An agent explicitly apologized for the delay, which is clear evidence that response/update timing was an issue in this ticket.",
+    "evidence": [
+      "[2025-11-18] I am just checking in for an update on this ticket.",
+      "[2025-11-24] Just checking in for an update on this ticket.",
+      "We apologize for the delay and want to assure you that we are actively looking into it."
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "The ticket was closed only after the customer explicitly confirmed they wanted it closed. The final customer message indicates acceptance/closure rather than an unresolved issue.",
+    "evidence": [
+      "Thank you. You can close out this ticket.",
+      "Thank you for your update; we are closing this ticket as requested."
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "This was a vendor due diligence/documentation request and was not marked as P1/SEV1, nor did it describe an outage or critical service impact requiring emergency handling.",
+    "evidence": [
+      "My company is preforming their vendor due diligence. We need GFI FaxMaker's financial report, Cyber and Data security policies and any other vendor due diligence they provide."
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60243726
+}

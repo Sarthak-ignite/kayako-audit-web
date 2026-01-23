@@ -1,0 +1,62 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "ATLAS initially misunderstood the customer\u2019s intent (licensing vs technical support) but then corrected course and asked for more details. There is no clear, demonstrably incorrect guidance or broken promises captured in the transcript, and the customer did not complain about AI accuracy.",
+    "evidence": [
+      "AI Assistant: \"Since it's a delicate topic, I want to make extra sure: are you seeking assistance with renewing/modifying/cancelling an existing license...\"",
+      "Customer: \"Need tech support\"",
+      "AI Assistant: \"\ud83d\ude33 Sorry about the misunderstanding, let's try again.\""
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": true,
+    "reasoning": "The customer explicitly indicated the bot was insufficient and sought additional (human) assistance. After escalation to L1, the customer continued repeatedly re-engaging with multiple messages (\u201cHi/Hello/Anyone there\u201d) without progress, which reflects a practical wall/loop experience from their perspective.",
+    "evidence": [
+      "Customer: \"Hello, I needed further assistance than Kerio Control ATLAS could provide. Could you assist me?\"",
+      "Kayako: \"ATLAS commented privately: Action: l1\"",
+      "Customer: \"Anyone there\"",
+      "Customer: \"We are facing total outage. Your assistance will be highly appreciated\""
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "When the agent finally responded, they reflected the customer\u2019s situation (expired license, company name, service impact) and used the license key already provided rather than re-asking for it. No clear evidence shows the agent ignored previously provided information or forced the customer to repeat details.",
+    "evidence": [
+      "Agent: \"Thank you for contacting us regarding the expired Kerio Control license for Rooster Poultry. I understand the impact this is having on your services\"",
+      "Agent: \"please include: Your Kerio Control license key: 20339-Z6JHP-2QUX8\"",
+      "Customer: \"20339-z6jhp-2qux8\""
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": true,
+    "reasoning": "The customer made multiple follow-ups over many hours indicating they were waiting without a response, including explicit check-ins like \u201cAnyone there.\u201d The first human reply appears the next day, after numerous customer messages, which a reviewer would likely flag given the urgency described.",
+    "evidence": [
+      "Customer: \"Anyone there\"",
+      "Customer: \"Hi\"",
+      "Customer: \"Hello\"",
+      "Customer: \"We are facing total outage. Your assistance will be highly appreciated\"",
+      "Agent (first response shown): \"[2025-11-30T13:19:12+00:00]\""
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "Although the ticket is marked solved/closed later, the conversation provided does not show the customer\u2019s final message indicating the issue was still unresolved at the time of closure, nor a closure event occurring mid-discussion. There isn\u2019t enough explicit evidence in the transcript to conclude it was closed prematurely.",
+    "evidence": [
+      "Agent: \"This ticket will stay open for one week unless you reply with \\\"This ticket can be closed\\\" or update the status to Completed in the portal.\"",
+      "Structured CSV: \"Ticket Solved: 2025-12-07 13:37:10\"",
+      "Structured CSV: \"Ticket Closed: 2025-12-10 14:35:59\""
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": true,
+    "reasoning": "The customer described a complete outage and services being down, indicating high severity. Despite this, there was a long wait with repeated customer follow-ups before any agent response, which does not match P1/SEV1 urgency expectations.",
+    "evidence": [
+      "Customer: \"Our services are down.\"",
+      "Customer: \"We are facing total outage.\"",
+      "Customer: \"Anyone there\"",
+      "Agent (first response shown): \"[2025-11-30T13:19:12+00:00]\""
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60252864
+}

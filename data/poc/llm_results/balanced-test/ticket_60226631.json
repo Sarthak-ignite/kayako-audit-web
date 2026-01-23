@@ -1,0 +1,52 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "There is no clear evidence of customer-facing AI responses providing incorrect information or making unkept promises. The identifiable responses to the customer are from named agents and are consistent with the incident timeline (escalation, resolution, and follow-up explanation). Internal automation notes (e.g., status changes) do not show an AI giving wrong guidance to the customer.",
+    "evidence": [
+      "Dear Manju, ... this has been escalated to our infrastructure team with the highest priority, and we will let you know once we receive further feedback from them.",
+      "We\u2019re pleased to inform you that the recent service disruption affecting the Khoros Care platform has been resolved."
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "The customer did not request a human in response to an AI interaction, nor express frustration about \u201cAI\u201d or \u201cbots.\u201d There is also no pattern of repetitive automated troubleshooting responses; the case moves from report \u2192 escalation \u2192 resolution \u2192 follow-up clarification.",
+    "evidence": [
+      "Issue is happening again now. Can you look into this on priority.",
+      "We have investigated the root cause of the issue, and this has been escalated to our infrastructure team with the highest priority"
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "Support did not ask the customer to re-provide information already given (instance, region, symptoms) and did not push a troubleshooting path the customer had ruled out. Responses acknowledge the disruption and provide a follow-up explanation addressing recurrence concerns.",
+    "evidence": [
+      "We have investigated the root cause of the issue, and this has been escalated to our infrastructure team with the highest priority",
+      "The disruption was triggered by background data processing placing unexpected load on our search infrastructure, which delayed system operations."
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "Initial response and subsequent replies occurred within minutes to under an hour during the active incident, and the follow-up question on 2025-10-23 was answered the same day. There is no explicit customer complaint about slow support responses in the conversation.",
+    "evidence": [
+      "[2025-10-22T10:26:48+00:00] ... your ticket has been assigned to an agent. You will receive an update soon",
+      "[2025-10-22T12:49:34+00:00] ... the recent service disruption ... has been resolved."
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "The last visible customer message (2025-10-23) asked about preventing recurrence, and support responded with an explanation and a plan to strengthen monitoring/controls. There is no evidence in the provided thread that the ticket was closed while the customer\u2019s last message indicated an unresolved issue without a response.",
+    "evidence": [
+      "Kindly confirm whether the fix you have implemented will prevent this issue from recurring in the future.",
+      "We\u2019re strengthening monitoring and controls to catch similar performance issues earlier ... to prevent recurrence."
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "While the customer described a production-impacting outage, support treated it urgently (phone triage, rapid escalation, and same-day restoration). There is no evidence of a >4 hour delay for initial response, nor of generic troubleshooting replacing incident handling.",
+    "evidence": [
+      "I called the Outage Phone Line: +1 347-282-2200 and spoke to Deebanshu; he informed that the ticket is being escalated.",
+      "We\u2019re pleased to inform you that the recent service disruption affecting the Khoros Care platform has been resolved."
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60226631
+}

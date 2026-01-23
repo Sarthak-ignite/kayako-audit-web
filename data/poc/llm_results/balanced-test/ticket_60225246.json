@@ -1,0 +1,49 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "There is no AI-generated support response to evaluate for correctness or helpfulness. The visible content is internal ticket logging and IVR call metadata, not an AI troubleshooting interaction.",
+    "evidence": [
+      "This ticket was created for logging purposes."
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "There is no evidence the customer asked for a human/technician or expressed frustration about AI. The only repeated content is the phone system (IVR) repeating menu options, which is not an AI support loop within the ticket conversation.",
+    "evidence": [
+      "(Machine to +15705844508) Thank you for calling GFI Support Line....",
+      "(Machine to +15705844508) You can only press numbers from 1 to 9.... Let me repeat the options...."
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "No support troubleshooting dialogue is present where an agent (or AI) ignores customer-provided information or asks for already-provided details. The ticket contains only internal notes and call metadata without a problem statement.",
+    "evidence": [
+      "The complete conversation with this customer will be uploaded to this ticket shortly.",
+      "This ticket was created for logging purposes."
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "There is no evidence of customer waiting for a response, no complaint about delays, and no agent apology for slowness. The timeline shown does not include an active back-and-forth requiring response SLAs.",
+    "evidence": [
+      "Ticket Created: 2025-10-20 19:34:39",
+      "Ticket Closed: 2025-10-23 20:36:51"
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "Although the ticket is marked closed, the content indicates it was created for logging purposes and does not show an unresolved customer request at the end of the thread. There is no customer message in the ticket stating the issue remains unresolved when it was closed.",
+    "evidence": [
+      "This ticket was created for logging purposes."
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "There is no indication the issue was P1/SEV1, critical, or an outage, and no urgency language from the customer. The ticket lacks a described incident impact, so mishandling of a high-severity case cannot be evidenced.",
+    "evidence": [
+      "This ticket was created for logging purposes."
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60225246
+}

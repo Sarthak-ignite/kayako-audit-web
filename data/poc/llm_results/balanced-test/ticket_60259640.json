@@ -1,0 +1,53 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "The AI interaction shown is limited to basic intake questions (priority and instance URL selection). There is no demonstrably incorrect guidance, no unmet promise, and no customer complaint about AI quality in the provided content.",
+    "evidence": [
+      "AI Assistant: What's the priority of the issue?",
+      "AI Assistant: I found instance URLs on file. Please select yours or provide a different one:"
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "There is no evidence the customer asked for a human/escalation, expressed frustration, or encountered repeated looping responses. The conversation is very short and does not show repeated cycles.",
+    "evidence": [
+      "Button selection: [\ud83d\udce9 Raise a Ticket]",
+      "Button selection: [\ud83d\udfe0 High]"
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "No instance of support re-asking for information the customer already clearly provided is present. The AI asked for priority and then for instance selection, which is a reasonable next step given the limited information shown.",
+    "evidence": [
+      "AI Assistant: What's the priority of the issue?",
+      "AI Assistant: I found instance URLs on file. Please select yours or provide a different one:"
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "The ticket was created, solved, and closed within about a minute, and there are no customer complaints about waiting. There is no evidence of delayed responses in the provided timestamps.",
+    "evidence": [
+      "Ticket Created: 2025-12-09 15:40:45",
+      "Ticket Solved: 2025-12-09 15:41:56",
+      "Ticket Closed: 2025-12-09 15:41:57"
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": true,
+    "reasoning": "The ticket appears to have been solved/closed immediately after an intake-style AI prompt asking the customer to select/provide an instance URL, with no evidence the customer answered or that the issue was addressed. Closing at that point would reasonably be flagged as premature because the intake process was not completed and no resolution is documented in the interaction shown.",
+    "evidence": [
+      "AI Assistant: I found instance URLs on file. Please select yours or provide a different one:",
+      "Ticket Solved: 2025-12-09 15:41:56",
+      "Ticket Closed: 2025-12-09 15:41:57"
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "While the customer selected 'High' priority, there is no explicit P1/SEV1/critical/outage indicator and no description of impact (e.g., complete outage/all users down). Without explicit P1/SEV1 context, mishandling cannot be concluded here.",
+    "evidence": [
+      "Button selection: [\ud83d\udfe0 High]"
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60259640
+}

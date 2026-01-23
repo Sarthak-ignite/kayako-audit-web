@@ -1,0 +1,52 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "The customer requested a human rather than asking a product/how-to question, and there is no explicit complaint about incorrect or low-quality technical guidance. The AI responses shown are generic intake prompts, but not demonstrably wrong based on the available ticket text (the later AI message is truncated, so quality can\u2019t be fairly assessed).",
+    "evidence": [
+      "Walk me through what's happening or select from the below options.",
+      "Don't hold back on the details \u2013 the more you can share about the issue, any error messages you're seeing, or steps you've already tried, the better equipped I'll be to assist you."
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": true,
+    "reasoning": "The customer explicitly requested a real human. That is clear evidence of an escalation request / AI refusal scenario, regardless of whether looping occurred multiple times.",
+    "evidence": [
+      "give me a real human"
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "The customer did not provide issue details beyond requesting a human, so there is no clear case of support asking for information already provided or pursuing a path the customer ruled out. The AI asking for more details/logs is consistent with the limited context shown.",
+    "evidence": [
+      "give me a real human",
+      "Walk me through what's happening or select from the below options."
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "The ticket was created, solved, and closed within about a minute, and there is no complaint about waiting. The CSV shows a 62-second resolution time.",
+    "evidence": [
+      "Ticket Created: 2025-10-02 11:26:36",
+      "Ticket Solved: 2025-10-02 11:27:38",
+      "resolutionTime: 62"
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": true,
+    "reasoning": "The ticket appears to have been solved/closed essentially immediately after the customer\u2019s last message requesting a human, with no evidence the request was fulfilled or the customer confirmed resolution. Closing while the last customer intent is still an open request is a reasonable quality flag.",
+    "evidence": [
+      "give me a real human",
+      "Ticket Solved: 2025-10-02 11:27:38",
+      "Ticket Closed: 2025-10-02 11:27:39"
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "There is no indication of P1/SEV1 severity, outage, or urgent impact in the provided ticket content. The customer did not describe production impact or critical downtime.",
+    "evidence": [
+      "give me a real human"
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60212281
+}

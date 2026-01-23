@@ -1,0 +1,53 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": true,
+    "reasoning": "The customer asked a specific process/status question about why a prior chat ticket was closed without any human response. The AI replied with unrelated license-key information, which is clearly unhelpful for the question asked and indicates a failure to address the customer\u2019s request.",
+    "evidence": [
+      "Why is chat Ticket ID: #60230003 marked as closed when I have not had an answer or a conversation with a human agent?",
+      "I have this license key on record:"
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": true,
+    "reasoning": "The customer explicitly highlights that they have not had a conversation with a human agent and is questioning closure without human interaction, which is a clear signal they want/expect escalation to a person. Even without multiple turns, this reflects frustration with not reaching a human.",
+    "evidence": [
+      "Why is chat Ticket ID: #60230003 marked as closed when I have not had an answer or a conversation with a human agent?"
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": true,
+    "reasoning": "The AI did not engage with the context of the customer\u2019s question (ticket closure and lack of human contact) and instead pivoted to license information. This is a direct mismatch to the customer\u2019s stated issue and indicates the provided context was not used.",
+    "evidence": [
+      "Why is chat Ticket ID: #60230003 marked as closed when I have not had an answer or a conversation with a human agent?",
+      "I have this license key on record:"
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "There is no evidence of waiting or slow responses in the provided record; the ticket shows a very short resolution/closure timeline and no customer complaint about response time delays.",
+    "evidence": [
+      "resolutionTime: 62",
+      "Ticket Created: 2025-10-28 08:39:02",
+      "Ticket Closed: 2025-10-28 08:40:05"
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": true,
+    "reasoning": "The ticket was closed essentially immediately after the customer raised an unresolved concern (why another ticket was closed without human contact). There is no evidence the customer\u2019s question was answered or that the customer confirmed resolution before closure.",
+    "evidence": [
+      "Why is chat Ticket ID: #60230003 marked as closed when I have not had an answer or a conversation with a human agent?",
+      "Status: closed",
+      "Ticket Solved: 2025-10-28 08:40:04",
+      "Ticket Closed: 2025-10-28 08:40:05"
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "There is no indication the issue was marked as P1/SEV1 or that the customer reported a critical outage/all-users-down scenario. The request is about ticket status/closure rather than a service-impacting emergency.",
+    "evidence": [
+      "Why is chat Ticket ID: #60230003 marked as closed when I have not had an answer or a conversation with a human agent?"
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60230438
+}

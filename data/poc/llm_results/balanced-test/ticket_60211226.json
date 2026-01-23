@@ -1,0 +1,54 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": true,
+    "reasoning": "The ATLAS response did not provide the direct, actionable information the customer asked for (whether 9.13.x would receive a security fix path and when Evoq 10 would be available). It also appears to conflict with later internal engineering notes indicating an Evoq 9.13 security-fix release is being prepared and that Evoq 10 timing guidance exists. The customer then escalated explicitly asking for a better answer from the team.",
+    "evidence": [
+      "Customer: \"I need to know what is being done to address the several security advisories ... Are we able to apply a hot fix or do we have to wait for Evoq 10 to be released? If so, when can we expect it to be released?\"",
+      "ATLAS: \"At this time, there is no documentation or release notice indicating the availability of individual hotfixes or backported patches for security advisories from version 10 to Evoq 9.13.9 outside the regular release cycle.\"",
+      "ATLAS: \"Public documentation does not provide a specific release date for Evoq 10.\"",
+      "Customer escalation: \"We need a better answer from the team directly regarding critical vulnerabilities\"",
+      "Engineering: \"An Evoq 9.13 release with security fixes is in the making and will be published short term. Also, Evoq 10 is expected to be available towards the end of the year.\""
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "The ticket shows one substantive ATLAS response followed by human handling and engineering engagement. While the customer escalated for a better answer, there is no clear pattern of repeated AI replies, looping, or the customer repeatedly requesting a human due to being stuck in AI interactions.",
+    "evidence": [
+      "ATLAS commented publicly: \"Dear PTA, Thank you for your detailed inquiry...\" (single substantive AI response before escalation/agent updates)"
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "Support responses generally track the customer\u2019s stated concerns (security advisories, hotfix/backport availability, and release timing). There is no clear evidence of agents asking the customer to re-provide information already given or pursuing a path the customer had already ruled out.",
+    "evidence": [
+      "Priyanka Bhotika: \"We are currently reviewing the details with the team internally to confirm if the latest version addresses all the reported vulnerabilities.\"",
+      "Denis Spirin: \"Our team is actively reviewing the concerns regarding the security advisories and hotfixes for Evoq 9.13.9.\""
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": true,
+    "reasoning": "There was a long gap between the Oct 2 acknowledgment and the substantive customer-facing resolution update on Oct 24. The customer explicitly escalated citing slow response, which is direct evidence of perceived/actual delay impacting the case.",
+    "evidence": [
+      "Priyanka Bhotika [2025-10-02]: \"We will share an update with you as soon as we have more information.\"",
+      "Customer escalation [2025-10-24]: \"Slow response\"",
+      "Pablo Ambram [2025-10-24]: \"Our engineering team is working on updates for the Evoq 9.13 line that include security fixes...\" (first substantive update after the wait)"
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "Although the customer had escalated for slow response, support provided a substantive update (planned 9.13 security-fix minor release and Evoq 10 timeline guidance) and invited the customer to reply to reopen. There is no explicit customer statement after that indicating the issue remained unresolved at the moment of closure.",
+    "evidence": [
+      "Pablo Ambram: \"As there is no further action required on this ticket at the moment, we will proceed with a closure. If you have any additional questions, please reply to this message and we will reopen the case.\""
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "The customer raised serious security concerns, but the ticket does not show an explicit P1/SEV1/outage scenario (e.g., service down, all users impacted) with required rapid-response expectations. While there were delays, the evidence does not clearly meet the P1/SEV1 mishandling criteria as defined.",
+    "evidence": [
+      "Customer escalation severity field: \"The severity is: core_functionality_defect\"",
+      "Customer issue framing: \"several outstanding security advisories\" (security risk discussion rather than an active outage)"
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60211226
+}

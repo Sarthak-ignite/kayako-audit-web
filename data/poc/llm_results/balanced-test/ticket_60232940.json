@@ -1,0 +1,56 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "There\u2019s no clear evidence that an AI agent provided demonstrably incorrect technical guidance or made/failed promises. The automation suggested draft text, but the actual customer-facing replies were reasonable and later actions (providing the right ticket links and attachments) aligned with what the customer requested.",
+    "evidence": [
+      "Kayako Automations commented privately: \"GPT has suggested the following reply: ...\"",
+      "Muhammad Rizwan commented publicly: \"The ticket is accessible via the following links: * https://support.ignitetech.com/conversation/view/4389067 * https://gensym-ignitetech.kayako.com/conversation/view/4389067\""
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "The customer did not explicitly ask to speak to a human due to AI issues, and there is no clear loop of repeated AI answers. The ticket progressed through internal follow-ups and ultimately delivered a definitive product-team position plus requested historical ticket materials.",
+    "evidence": [
+      "Customer: \"I want to raise a new ticket to talk to the development team.\"",
+      "Priyanka Bhotika commented publicly: \"We are checking with the team internally... We will update you as soon we have more information from the team.\""
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "Support generally tracked the customer\u2019s evolving requests (ETA/feature status, then restoring access to the old ticket, then retrieving attachments) and responded to each with relevant next steps. While there was initial confusion about the customer\u2019s inability to access the old ticket link, support followed up with working Kayako links and then provided the missing attachments.",
+    "evidence": [
+      "Customer: \"I can't view Ticket #4389067 now. Please check the following link. https://support.ignitetech.com/hc/requests/4389067\"",
+      "Muhammad Rizwan commented publicly: \"The ticket is accessible via the following links: * https://support.ignitetech.com/conversation/view/4389067 * https://gensym-ignitetech.kayako.com/conversation/view/4389067\"",
+      "Customer: \"I would like to review the attachments of ticket #4389067 as well... Can you attach it to this ticket?\"",
+      "Muhammad Rizwan commented publicly: \"As requested, please find all the attachments related to ticket #4389067... attached below.\""
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": true,
+    "reasoning": "The ticket shows a very long delay before the first substantive agent response and a prolonged overall timeline. Even without an explicit customer complaint about waiting, the conversation and timestamps indicate the customer had to wait weeks for an initial update and the agent language (\u201cThank you for your patience\u201d) corroborates that delays occurred.",
+    "evidence": [
+      "Customer [2025-10-31T00:18:57+00:00]: \"When ITPEF-413(#4389067) will be fixed?\"",
+      "Priyanka Bhotika commented publicly [2025-11-27T19:33:37+00:00]: \"Thank you for your patience.\"",
+      "Structured CSV context: \"initialResponseTime: 85289\"",
+      "Structured CSV context: \"resolutionTime: 4837492\""
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "The ticket was closed only after the customer confirmed they had reviewed the attachments and explicitly requested closure. The closing response aligns with the customer\u2019s final instruction.",
+    "evidence": [
+      "Customer: \"Please close this ticket.\"",
+      "Phronesis commented publicly: \"As requested, we are closing this ticket.\""
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "There is no indication the issue was reported as P1/SEV1, a production outage, or otherwise critical/urgent. The request centered on a feature/behavior (menu ordering) and access to a prior ticket and its attachments.",
+    "evidence": [
+      "Customer: \"When ITPEF-413(#4389067) will be fixed?\"",
+      "Dmitri Hrapof (side conversation): \"Currently user menu choices are ordered alphabetically.\""
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60232940
+}

@@ -1,0 +1,52 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "There is no visible AI-generated support guidance or troubleshooting in the provided interactions\u2014only internal ticket notes and IVR call transcript. Without any AI answer to evaluate, there is no clear evidence of incorrect or unhelpful AI output.",
+    "evidence": [
+      "The complete conversation with this customer will be uploaded to this ticket shortly.",
+      "This ticket was created for logging purposes."
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "No customer messages show requests for a human/technician, frustration with AI, or repeated AI replies. The only repetition present is the phone IVR repeating menu options, which is not evidence of an AI support chat loop.",
+    "evidence": [
+      "(Machine to +14846034063) Thank you for calling GFI Support Line.... If you are calling to get support on Archiver, Press 1.... For LanGuard, Press 7....",
+      "(Machine to +14846034063) You can only press numbers from 1 to 9.... Let me repeat the options...."
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "The ticket content does not include an actual support dialogue or troubleshooting exchange where support asked for already-provided details. Since the ticket is explicitly for logging and the conversation is not present, there is no clear evidence that support ignored customer-provided context.",
+    "evidence": [
+      "The complete conversation with this customer will be uploaded to this ticket shortly.",
+      "This ticket was created for logging purposes."
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "There is no explicit customer complaint about waiting, no agent apology for delays, and no visible back-and-forth showing the customer was awaiting a response. The ticket was marked solved almost immediately after creation in the metadata, so there is no clear evidence of response delay impacting the customer.",
+    "evidence": [
+      "Ticket Created: 2025-10-18 21:59:37",
+      "Ticket Solved: 2025-10-18 22:00:01"
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "No customer-facing conversation is provided showing an unresolved issue at the time of closure. The ticket states it was created for logging purposes, so closure does not clearly appear premature based on the available evidence.",
+    "evidence": [
+      "This ticket was created for logging purposes.",
+      "Status: closed"
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "There is no mention of P1/SEV1/critical severity, outage, or urgent business impact in the provided text. Without explicit urgency indicators or an outage report, there is no evidence of mishandling a high-severity incident.",
+    "evidence": [
+      "Brand: GFI",
+      "Product: LanGuard"
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60224201
+}

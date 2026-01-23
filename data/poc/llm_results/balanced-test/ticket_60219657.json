@@ -1,0 +1,52 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "The transcript provided is truncated before the AI\u2019s actual answer, so there isn\u2019t clear evidence that the AI gave incorrect or clearly unhelpful information. The available content only shows the AI\u2019s intake prompt and the customer\u2019s question.",
+    "evidence": [
+      "\u201c--- AI Assistant ---<\n...[truncated]...\u201d",
+      "\u201cI'm wandering what the personalisation options are for e-mails in aurora\u201d"
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "There is no evidence the customer asked for a human agent, expressed frustration, or encountered repetitive looping responses. Only a single customer question is visible.",
+    "evidence": [
+      "\u201cI'm wandering what the personalisation options are for e-mails in aurora\u201d"
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "The conversation shown does not include follow-up questions from support that repeat information already provided, nor any indication the customer had to restate details. With the AI response truncated, there\u2019s no clear pattern of context being ignored.",
+    "evidence": [
+      "\u201cDon't hold back on the details \u2013 the more you can share about the issue\u2026 the better equipped I'll be to assist you.\u201d"
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "The ticket lifecycle is under a minute end-to-end, and there are no customer complaints about waiting. The CSV shows a resolution time of 59 seconds, which does not indicate delay.",
+    "evidence": [
+      "\u201cresolutionTime: 59\u201d",
+      "\u201cTicket Created: 2025-10-13 08:41:41\u201d",
+      "\u201cTicket Solved: 2025-10-13 08:42:40\u201d"
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": true,
+    "reasoning": "The ticket appears to have been solved/closed almost immediately after the customer asked a question, with no visible confirmation that the question was answered or the issue was resolved. Closing within ~1 minute while the last visible customer message is an open question is a strong indicator of premature closure.",
+    "evidence": [
+      "\u201cI'm wandering what the personalisation options are for e-mails in aurora\u201d",
+      "\u201cTicket Solved: 2025-10-13 08:42:40\u201d",
+      "\u201cTicket Closed: 2025-10-13 08:42:41\u201d",
+      "\u201cresolutionTime: 59\u201d"
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "There is no indication of P1/SEV1 severity, outage, or urgent business impact in the provided content. The customer\u2019s question is informational rather than critical/urgent.",
+    "evidence": [
+      "\u201cI'm wandering what the personalisation options are for e-mails in aurora\u201d"
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60219657
+}

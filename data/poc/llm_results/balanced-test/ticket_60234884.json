@@ -1,0 +1,54 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": true,
+    "reasoning": "The customer reported the AI chatbot could not locate the license for the provided serial number, preventing emergency/demo license generation. An internal support note later confirms the license existed and was successfully generated, indicating the AI provided incorrect/unhelpful output for the customer\u2019s request.",
+    "evidence": [
+      "Unable to get an emergency license for 45873 for CGX with hardwareID XgIUlSoAqbLA.",
+      "I can not use your AI chat for this as it says it can not locate a license for Serial number 45873.",
+      "So this is for a change in Hardware ID.  No idea why the ATLAS chat one couldn't find it.  It's there.",
+      "License Generated successfully:"
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "While the customer states the AI chat could not locate the license, there is not clear evidence of the AI looping with repetitive responses (3+ times) or the customer explicitly requesting a human due to being stuck in an AI loop. The main issue appears to be AI failure plus delayed human response, not an AI wall/looping interaction pattern.",
+    "evidence": [
+      "Ive tried when i opened this and today for both emergency license and Demo license all with the same results."
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "The support team did not ask the customer to re-provide details after engaging; when they responded, they generated the requested license using the information already present. The customer repeated the request, but that is attributable to lack of response rather than agents ignoring information already provided in an active exchange.",
+    "evidence": [
+      "Can we please get an emergency license cut for CGX with serial number 45873 and hardwareID XgIUlSoAqbLA with 10 users on version 2023.6.1?"
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": true,
+    "reasoning": "There was a multi-day gap between ticket creation and the first public support response, during which the customer followed up multiple times and escalated due to 'No Response'. The agent also explicitly apologized for the delay when providing the license.",
+    "evidence": [
+      "[2025-11-03T16:40:58+00:00] ... Unable to get an emergency license...",
+      "[2025-11-07T17:16:38+00:00] Can we please get an emergency license cut...",
+      "[2025-11-10T15:25:47+00:00] Please, Please, Please can we get an emergency license...",
+      "The customer message is:No Response",
+      "We apologize for the delay in providing this license."
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "The ticket was closed after the license was provided with full details, and there is no subsequent customer message indicating the issue remained unresolved or additional help was needed at the time of closure.",
+    "evidence": [
+      "Please find below the details for your new Xinet license key that you can start using immediately."
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "Although the escalation indicates 'complete_outage', support acknowledged the escalation within minutes. There is no clear evidence that the P1/SEV1 escalation itself was handled with an unacceptably slow initial response (>4 hours) or with inappropriately generic handling after it was marked critical.",
+    "evidence": [
+      "[2025-11-10T15:26:35+00:00] The severity is: complete_outage",
+      "[2025-11-10T15:37:21+00:00] We have received your escalation and we are currently working on it."
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60234884
+}

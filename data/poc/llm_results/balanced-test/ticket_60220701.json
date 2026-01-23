@@ -1,0 +1,52 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "The ATLAS chat interaction was minimal (requesting uploads) and there is no clear evidence it provided incorrect guidance, made unkept promises, or triggered customer complaints about AI accuracy. The substantive troubleshooting and resolution steps were handled by human agents later in the ticket.",
+    "evidence": [
+      "AI Assistant -- If you have any \ud83d\udcc3 log files or \ud83d\uddbc\ufe0f screenshots to upload to help with the troubleshooting, now is the time to do it \ud83d\udcaa"
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "There is no evidence the customer was stuck in an AI loop, repeatedly receiving the same AI guidance, or explicitly requesting escalation away from AI due to frustration. The customer engaged with human agents for keys, log review, and a meeting.",
+    "evidence": [
+      "Hi Randall, Please provide us with the shell license key to execute these commands."
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "Support generally built on the customer\u2019s prior ticket context and asked for targeted command output and diagnostics. While the customer asked again for the shell key, the agent responded by resending/providing a new key rather than continuing without addressing the request, so this does not rise to a clear \u201cignoring context\u201d pattern.",
+    "evidence": [
+      "Previous ticket#60192334",
+      "Please provide us with the shell license key to execute these commands.",
+      "I am resending this last response, which did include the shell unlock key. I am sending a new key."
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": true,
+    "reasoning": "There are clear signs of slow follow-up: the customer (and internal stakeholders) repeatedly requested urgent updates/ASAP responses, and an agent explicitly apologized for delayed response. The timeline also shows multi-day gaps during active back-and-forth (e.g., after Oct 30 and WebEx requests until Nov 3/4).",
+    "evidence": [
+      "Please any update here? Can you provide the below request ASAP.",
+      "Please can you get back to us ASAP on the requested Webex call?",
+      "Thank you for joining me on the call today, and I sincerely apologize for the delayed response on this ticket."
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "The visible conversation shows a meeting occurred and remediation steps were taken, after which no further customer messages are shown indicating the issue remained unresolved. While auto-reminder language about closing was sent earlier, there is not clear evidence the ticket was closed while the customer\u2019s last message indicated an unresolved problem.",
+    "evidence": [
+      "During our session, we observed that the appliance was running slowly... After applying these configuration changes and deleting the unnecessary log files, we observed a significant improvement in appliance performance, resolving the lag that was present earlier.",
+      "This ticket will stay open for one week unless you reply with \"This ticket can be closed\" or update the status to Completed in the portal."
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "Although the customer side expressed urgency (\u201ccritical stage\u201d / \u201cASAP\u201d), the ticket does not explicitly state P1/SEV1, a complete outage, or \u201call users down.\u201d Without explicit severity labeling or outage impact, it would be speculative to score this as P1/SEV1 mishandling.",
+    "evidence": [
+      "We are at critical stage and must expediate all the tasks and activities along with closing this project within this month itself.",
+      "Please need your support here urgently."
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60220701
+}

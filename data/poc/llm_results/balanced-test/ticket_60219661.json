@@ -1,0 +1,48 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "There is no evidence AI was used in this ticket, and no customer complaint about AI accuracy or quality. The support responses were not demonstrably incorrect based on the ticket record.",
+    "evidence": [
+      "Keyur Saxena commented publicly: Hello Daniel, I can see that https://r1.community.samsung.com/html/assets/Brazil_COMMUNITY_GALAXY-A_Hero.jpg now loads up fine."
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "The customer did not ask for a human/technician or escalation, and there is no clear repetitive \u201cAI loop\u201d pattern (no 3+ repeated canned answers with no progress). The conversation is short and appears to resolve once the URL works.",
+    "evidence": [
+      "Daniel An: Yesterday, it showed the 404 error message. So wired but thanks a lot to hear from you about this."
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "Support did not clearly ignore information the customer provided; they validated the reported 404 and then asked a reasonable clarification when the URL appeared to be working. The customer\u2019s later reply also indicates the issue was intermittent and then not reproducible, which supports the need for clarification.",
+    "evidence": [
+      "Customer: But it shows \"HTTP Status 404-\" in https://r1.community.samsung.com/html/assets/Brazil_COMMUNITY_GALAXY-A_Hero.jpg",
+      "Support: I can see that https://r1.community.samsung.com/html/assets/Brazil_COMMUNITY_GALAXY-A_Hero.jpg is not returning 404. Can you clarify exactly what is pending for this request?"
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": true,
+    "reasoning": "The authoritative CSV context shows an initial response time greater than 24 hours (272,656 seconds), which is a clear response-delay indicator under the rubric. Even though the customer did not explicitly complain about waiting, the metric alone meets the detection criteria provided.",
+    "evidence": [
+      "initialResponseTime: 272656"
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "The ticket was solved after the customer indicated the problem was no longer present (\u201cthanks\u2026\u201d) and support asked to report if issues persist. There is no evidence the last customer message indicated an unresolved problem at the time of solve/close.",
+    "evidence": [
+      "Daniel An: Yesterday, it showed the 404 error message. So wired but thanks a lot to hear from you about this.",
+      "Balaji Jayaraman: Thanks for the update. Please let us know if you still see issues."
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "The ticket does not indicate P1/SEV1/critical severity, and the described issue is a single asset returning 404 intermittently rather than a confirmed outage for all users. No explicit urgency language or severity classification is present.",
+    "evidence": [
+      "Customer: But it shows \"HTTP Status 404-\" in https://r1.community.samsung.com/html/assets/Brazil_COMMUNITY_GALAXY-A_Hero.jpg"
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60219661
+}

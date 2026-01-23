@@ -1,0 +1,53 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "The only AI content is the ATLAS chat transcript, which mainly shows intake/guidance and does not contain clearly incorrect technical claims. There is no explicit customer complaint about AI accuracy or broken AI promises. Most troubleshooting and conclusions were provided by human agents, not the AI assistant.",
+    "evidence": [
+      "Kayako - ticket id 60252140 // ATLAS commented privately: Here is a transcript of the customer's recent interaction with ATLAS chat:"
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "The customer requested a remote session, but this was addressed by human agents rather than an AI system blocking escalation. There is no clear evidence of repetitive AI responses (3+ times) or the customer expressing frustration about being stuck with AI instead of a human.",
+    "evidence": [
+      "Customer: \"Hi keyur, can we request a remote session for this issue?\"",
+      "Andriy Rybalchenko: \"Before we analyze the logs reproducing the issue and additional diagnostic data, a remote session is not needed and won't be productive.\""
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": true,
+    "reasoning": "Support drew conclusions from the customer's video as if it reflected the client/target machine, but the customer later clarified it was taken on the reseller\u2019s own machine. This indicates a clear misread of provided context and led to an incorrect premise in the troubleshooting narrative.",
+    "evidence": [
+      "Ibiso Barimalaa: \"Your video confirms these updates are installed in Windows Update.\"",
+      "Customer: \"just to clarify, the video was taken on my machine, not on the client\u2019s machine. On the client\u2019s side, the client/end user mentioned that the remediation was not successful.\""
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": true,
+    "reasoning": "There were multi-day gaps while the customer was actively waiting for analysis after uploading logs, and the customer followed up multiple times requesting updates. An agent explicitly apologized for the delayed response, reinforcing that the delay was material.",
+    "evidence": [
+      "Customer: \"Hi, I\u2019ve already uploaded the logs to the FTP folder. Kindly check them.\"",
+      "Customer: \"Hi is there any updates for this?\"",
+      "Customer: \"Hello, good day i just want to follow up this ticket\"",
+      "Keyur Saxena: \"Apologies for the delayed response here.\""
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": true,
+    "reasoning": "The ticket was closed even though the customer's last messages indicate the issue was still unresolved and they were requesting a remote session. There is no customer confirmation of resolution (e.g., 'can be closed') shown in the thread prior to closure.",
+    "evidence": [
+      "Status: closed",
+      "Customer: \"HI, i already send a lot of logs here in the case ticket that's why the client want also to have a remote session if it's possible\"",
+      "Customer: \"May we request a remote session so you can check and verify the issue directly?\""
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "The ticket does not explicitly indicate P1/SEV1/critical severity, nor does the customer describe a complete outage or all-users impact. While delays occurred, there is not enough evidence that this was a declared high-severity incident mishandled under P1 expectations.",
+    "evidence": [
+      "Issue description: \"GFI LanGuard deployment timeout for large package\""
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60252140
+}

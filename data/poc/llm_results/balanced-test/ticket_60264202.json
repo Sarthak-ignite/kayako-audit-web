@@ -1,0 +1,48 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "There is no customer question or problem statement in the visible thread, and the only public message is an automation note stating a report is attached. Without a stated request or outcome, there is no clear evidence the AI response was wrong, misleading, or unhelpful.",
+    "evidence": [
+      "Kayako Automations commented publicly: Hi Team, Your requested report is attached. Best regards, Kayako Automation"
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "No one asked for a human/technician, expressed frustration, or showed a repeated back-and-forth with unproductive AI replies. The ticket contains a single automated public response.",
+    "evidence": [
+      "Kayako Automations commented publicly: Hi Team, Your requested report is attached. Best regards, Kayako Automation"
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "There is no support follow-up asking for already-provided details, and no customer messages indicating prior steps or context that support ignored. The thread does not show any repeated questions or contradictions.",
+    "evidence": [
+      "Kayako - ticket id 60264202 // Kayako Automations commented privately: Initial ticket creation."
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "The timestamps show an almost immediate automated response and closure within seconds, and there is no complaint about waiting. There is no evidence of >24h gaps or delay acknowledgments.",
+    "evidence": [
+      "Ticket Created: 2025-12-16 08:00:53",
+      "Ticket Solved: 2025-12-16 08:00:56",
+      "Ticket Closed: 2025-12-16 08:00:57"
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "Although the ticket was solved/closed very quickly, there is no customer message indicating an unresolved issue, question, or request for further help at the time of closure. With only an automation note about an attached requested report, there is insufficient evidence to conclude the closure was premature.",
+    "evidence": [
+      "Kayako Automations commented publicly: Hi Team, Your requested report is attached. Best regards, Kayako Automation",
+      "Ticket Solved: 2025-12-16 08:00:56",
+      "Ticket Closed: 2025-12-16 08:00:57"
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "The ticket content does not mention P1/SEV1, outage, or critical impact, and there is no urgency language from the customer. Therefore, there is no basis to assess P1/SEV1 handling failures.",
+    "evidence": []
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60264202
+}

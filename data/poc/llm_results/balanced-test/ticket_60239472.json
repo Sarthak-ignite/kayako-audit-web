@@ -1,0 +1,64 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "The AI guidance was generic but plausibly relevant (permissions/DCOM/service account and later Patch Management DB availability). There is no clear contradiction with facts in the ticket, no broken promises, and the customer did not complain about AI accuracy; the issue was ultimately resolved after the later fix was applied.",
+    "evidence": [
+      "\u201cmanual and time-based scans (under Configuration) are working, but the scheduled scans in the OU aren't. Nothing is showing up in the activity log either.\u201d",
+      "\u201cThis specific issue is often related to permission configurations or the account used to initiate scheduled scans.\u201d",
+      "\u201cscheduled scans are working for some machines, but others in the OU fail with the error \\\"Patch-Management-Datenbank nicht verf\u00fcgbar\\\"\u201d",
+      "\u201csieht gut aus.\u201d"
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "The customer did not request escalation to a human or express frustration about being stuck with AI. While there were multiple back-and-forth messages, there is no clear looping/repetition pattern (same advice repeated 3+ times) attributable to AI responses.",
+    "evidence": [
+      "\u201cIch versuche es mal auf Deutsch,\u201d",
+      "\u201cWoher wei\u00df ich, welche xml noch ... fehlen?\u201d",
+      "\u201cPlease apply this fix on all new and existing agents...\u201d",
+      "\u201cDanke f\u00fcr Eure Unterst\u00fctzung!\u201d"
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "Support responses generally track the evolving symptoms (scheduled scans not starting \u2192 partial scans \u2192 patch management database unavailable). There is no clear instance where support asked for information already provided or pushed a path the customer explicitly ruled out in a way a quality reviewer would flag.",
+    "evidence": [
+      "\u201cafter reinstalling LanGuard ... you now see that scheduled scans are working for some machines, but others ... fail with the error \\\"Patch-Management-Datenbank nicht verf\u00fcgbar\\\"\u201d",
+      "\u201cNach wie vor nur Patch-Management-Datenbank nicht verf\u00fcgbar\u201d",
+      "\u201cAlle anderen auf der Seite beschriebenen Schritte funktionieren einwandfrei.\u201d",
+      "\u201cScan again after the fix to see if this is resolved, if not, provide the agent logs for review\u201d"
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "There is no customer complaint about waiting or slow responses, and the recorded initial response time (55) does not indicate a >24h delay. No agent apology or narrative evidence suggests problematic delays affecting troubleshooting.",
+    "evidence": [
+      "\u201cinitialResponseTime: 55\u201d",
+      "\u201cTicket Created: 2025-11-10 10:35:05\u201d",
+      "\u201c[2025-11-10T10:36:00+00:00] ... ATLAS commented publicly\u201d",
+      "\u201c[2025-11-12T07:24:25+00:00] Keyur Saxena commented publicly\u201d"
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "The last customer message indicates the situation is resolved (\u201csieht gut aus\u201d) and expresses thanks. Closing the ticket after that does not appear premature based on the final state of the conversation.",
+    "evidence": [
+      "\u201csieht gut aus.\u201d",
+      "\u201cDanke f\u00fcr Eure Unterst\u00fctzung!\u201d",
+      "\u201cTicket Solved: 2025-11-14 09:01:19\u201d",
+      "\u201cTicket Closed: 2025-11-17 09:34:36\u201d"
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "No P1/SEV1/critical/outage severity is stated, and while patching impact is discussed, the customer does not declare an immediate outage or urgent business-critical downtime requiring P1 handling. The support approach (apply known fix, request logs if needed) is consistent with non-P1 troubleshooting.",
+    "evidence": [
+      "\u201cPatch-Management-Datenbank nicht verf\u00fcgbar\u201d",
+      "\u201cIch bin allerdings doch \u00fcberrascht, dass der Fehler nicht schon fr\u00fcher entdeckt wurde.\u201d",
+      "\u201cIst ja ein heftiger Bug ...\u201d",
+      "\u201cPlease apply this fix ... Scan again after the fix\u201d"
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60239472
+}

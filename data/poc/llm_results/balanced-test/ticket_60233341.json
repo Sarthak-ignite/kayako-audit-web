@@ -1,0 +1,52 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "The transcript provided only shows the AI greeting/prompt and the customer's initial question, but not the AI\u2019s actual answer. Without the AI\u2019s response content, there isn\u2019t clear evidence the AI gave incorrect or unhelpful guidance or that the customer complained about AI quality.",
+    "evidence": [
+      "\u201cWhen we receive a comment under one of our posts on tiktok that contains an image, that image does not flow through khoros care. Why?\u201d",
+      "\u201cWalk me through what's happening or select from the below frequent requests.\u201d"
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "There is no evidence the customer requested a human/technician or expressed frustration with the AI, and there\u2019s no visible repetition/looping in the provided snippet.",
+    "evidence": [
+      "\u201cWhen we receive a comment under one of our posts on tiktok that contains an image, that image does not flow through khoros care. Why?\u201d"
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "The customer provided a single issue statement and there is no follow-up from support shown that repeats questions or ignores already-provided details. The AI prompt asks for more detail, but that\u2019s a general intake request rather than a clear repetition of answered questions.",
+    "evidence": [
+      "\u201cDon't hold back on the details \u2013 the more you can share about the issue, any error messages you're seeing, or steps you've already tried, the better equipped I'll be to assist you.\u201d",
+      "\u201cWhen we receive a comment under one of our posts on tiktok that contains an image, that image does not flow through khoros care. Why?\u201d"
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "The CSV indicates the ticket was created, updated, solved, and closed within about a minute, and there are no customer complaints about slow response or waiting.",
+    "evidence": [
+      "\u201cTicket Created: 2025-10-31 14:56:33\u201d",
+      "\u201cTicket Closed: 2025-10-31 14:57:37\u201d",
+      "\u201cresolutionTime: 64\u201d"
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": true,
+    "reasoning": "The ticket appears to have been solved/closed essentially immediately after the customer asked a substantive \u201cwhy\u201d question, and the provided conversation snippet does not show any resolution, answer, or customer confirmation. A reasonable reviewer would likely flag closure as premature based on the last visible customer message indicating an unresolved issue.",
+    "evidence": [
+      "\u201cWhen we receive a comment under one of our posts on tiktok that contains an image, that image does not flow through khoros care. Why?\u201d",
+      "\u201cTicket Solved: 2025-10-31 14:57:37\u201d",
+      "\u201cTicket Closed: 2025-10-31 14:57:37\u201d"
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "There is no explicit P1/SEV1 designation, no stated outage, and no expressed urgency/critical impact in the provided context.",
+    "evidence": [
+      "\u201cWhen we receive a comment under one of our posts on tiktok that contains an image, that image does not flow through khoros care. Why?\u201d"
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60233341
+}

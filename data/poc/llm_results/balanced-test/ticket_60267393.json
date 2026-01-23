@@ -1,0 +1,52 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "The AI responses are somewhat generic, but they address the reported symptom (different queue visibility between two agents) with plausible causes (Smart Views, work queues, permissions/assignment) and actionable steps. There is no clear contradiction with ticket facts, and the customer did not complain about accuracy or usefulness.",
+    "evidence": [
+      "\u201cWe\u2019re experiencing an issue in our Khoros Care dashboard\u2026 Leanne has 11 conversations in her queue, but I have none. We should see the same conversations.\u201d",
+      "\u201cThis behavior is most often caused by queue configuration settings or agent-specific filtering\u2026\u201d",
+      "\u201cEnsure both agents are using the same Smart View and work queue filters\u2026\u201d"
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "There is no request for a human/engineer escalation, no expressed frustration about AI, and no clear looping pattern (only two AI responses, with the second largely a recap after the customer paused troubleshooting).",
+    "evidence": [
+      "\u201cThanks for the response and troubleshooting advice. Right now, due to PTO, we are unable to troubleshoot.\u201d"
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "Support acknowledges the screenshots and the stated discrepancy, and does not ask for information already clearly provided. The troubleshooting guidance is aligned with the scenario described rather than contradicting or ignoring customer context.",
+    "evidence": [
+      "\u201cThank you for reaching out and for providing detailed screenshots illustrating the queue discrepancy between your agent view and your colleague's.\u201d",
+      "\u201cThe diagnostic screenshots you provided help confirm that you should both be able to see the same conversations\u2026\u201d"
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "The initial response time in the CSV (154) does not clearly exceed 24 hours, and the customer does not complain about waiting. While the ticket spans multiple days, the only explicit delay mentioned is the customer being unable to troubleshoot due to PTO.",
+    "evidence": [
+      "\u201cRight now, due to PTO, we are unable to troubleshoot. We will be able to dig in after the holidays.\u201d",
+      "\u201cinitialResponseTime: 154\u201d"
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": true,
+    "reasoning": "The ticket was solved/closed without any customer confirmation of resolution, and the customer\u2019s last message indicates troubleshooting would occur later (implying the issue was not yet verified as resolved). With no follow-up showing the problem was fixed, closing appears premature from a quality-review standpoint.",
+    "evidence": [
+      "\u201cRight now, due to PTO, we are unable to troubleshoot. We will be able to dig in after the holidays.\u201d",
+      "\u201cTicket Solved: 2025-12-29 18:35:42\u201d",
+      "\u201cTicket Closed: 2026-01-01 06:06:35\u201d"
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "There is no explicit P1/SEV1/critical designation, no stated outage affecting all users, and no urgency language from the customer that would require P1-level handling.",
+    "evidence": [
+      "\u201cWe\u2019re experiencing an issue in our Khoros Care dashboard.\u201d"
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60267393
+}

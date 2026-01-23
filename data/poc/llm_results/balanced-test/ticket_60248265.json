@@ -1,0 +1,52 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "There is no customer-facing AI response in the transcript to evaluate for correctness or helpfulness. The only AI entries are internal/private notes and hold actions, and the customer did not complain about AI accuracy or behavior.",
+    "evidence": [
+      "Centralsupport-ai-acc commented privately: The customer (Antonio Orellano) is requesting additional information about migrating their instance to the cloud.",
+      "Centralsupport-ai-acc commented privately: Placing on hold for 48 hour(s)"
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "The customer did not request a human or complain about interacting with AI, and there is no pattern of repetitive AI replies to the customer. The thread shows a normal escalation to an internal stakeholder (Product VP) rather than an AI loop.",
+    "evidence": [
+      "Andriy Rybalchenko commented privately: Yes, similar question was sent to Csaba in https://central-supportdesk.kayako.com/agent/conversations/60248073",
+      "Andriy Rybalchenko commented publicly: We\u2019ve reached out to our Product VP, who is currently discussing the details of the migration process with the relevant internal teams."
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "Support did not ask the customer to repeat information already provided, nor did they pursue a troubleshooting path the customer had ruled out. The agent acknowledged the request and indicated they were waiting on internal confirmation.",
+    "evidence": [
+      "Andriy Rybalchenko commented publicly: Thank you for your patience. We\u2019ve reached out to our Product VP..."
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": true,
+    "reasoning": "The initial response time and the visible timeline show the customer waited multiple days before receiving a public update. The customer explicitly followed up, and the agent apologized for the wait, indicating a delay that a quality reviewer would likely flag.",
+    "evidence": [
+      "initialResponseTime: 85485",
+      "Customer (2025-11-25T22:24:20+00:00): Hello Hermes, Would like to follow-up this request.",
+      "Andriy Rybalchenko (2025-11-26T09:15:17+00:00): Thank you for your patience."
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": true,
+    "reasoning": "The customer\u2019s request was for detailed information about the migration process, support assistance, and potential professional service costs, but the final response primarily redirects to Sales and then closes the ticket without providing those details. The customer did not confirm resolution before closure, so this may be viewed as closing while the request remained unanswered by Support.",
+    "evidence": [
+      "Centralsupport-ai-acc commented privately: he wants to understand what the migration process involves, what type of assistance we can provide during the migration, and whether there are any associated professional service costs.",
+      "Andriy Rybalchenko commented publicly: Please reach out directly to sales@ignitetech.com to proceed with the next steps, including feasibility and pricing discussions.",
+      "Andriy Rybalchenko commented publicly: As there are no actions left with the Support Team, we\u2019ll proceed with the ticket closure."
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "There is no indication this was a P1/SEV1, outage, or urgent production-impacting event. The ticket is a migration information request, and no critical severity language appears in the thread.",
+    "evidence": [
+      "The customer (Antonio Orellano) is requesting additional information about migrating their instance to the cloud."
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60248265
+}
