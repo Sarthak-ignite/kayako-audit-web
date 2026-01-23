@@ -17,11 +17,11 @@ ai_count,employee_count,customer_count,general_count,atlas_count,hermes_count,fi
 9,1,1,7,0,0,2025-11-10T18:00:48,2025-11-13T13:13:39,241123.0,23.0,231795.0,0,1,4,5,True,False,False,False,60239883,18,aurea_languard
 53,60,2,15,7,0,2025-11-07T15:53:05,2025-11-19T16:54:45,702.0,49.0,548959.14,1,1,4,2,False,False,True,False,60238457,130,khoros_care
 1,2,3,0,1,0,2025-09-30T15:50:42,2025-10-31T14:06:39,2671536.0,53.0,2671256.0,0,1,1,1,False,False,False,False,60210541,6,aurea_kerio_control
-2,43,0,0,1,0,2025-05-27T10:30:28,2025-07-23T09:44:47,0.0,4417408.0,693173.0,9,9,2,0,False,False,False,False,60144719,45,khoros_care
+26,19,0,0,1,0,2025-05-27T10:30:28,2025-07-23T09:44:47,412.0,0.0,693173.0,9,9,4,3,False,False,False,False,60144719,45,khoros_care
 1,0,0,0,1,0,2025-11-06T11:06:38,2025-11-06T11:06:38,,0.0,0.0,0,0,1,1,False,False,False,False,60237327,1,khoros_classic
 4,2,0,0,4,0,2025-09-30T08:48:23,2025-10-28T12:04:02,2406283.0,0.0,2214594.0,0,2,4,4,False,False,False,False,60210131,6,fogbugz
 4,0,2,0,4,0,2025-12-08T19:06:03,2025-12-08T19:12:56,,4.0,329.0,0,0,3,4,False,False,False,False,60258962,6,aurea_languard
-4,4,2,0,2,0,2025-10-28T01:06:35,2025-11-05T21:25:04,561513.0,5.0,561431.0,0,2,3,3,False,False,False,False,60230303,10,khoros_aurora
+5,3,2,0,2,0,2025-10-28T01:06:35,2025-11-05T21:25:04,561513.0,5.0,561431.0,0,2,3,3,False,False,False,False,60230303,10,khoros_aurora
 1,0,0,0,1,0,2025-12-04T22:59:16,2025-12-04T22:59:16,,0.0,0.0,0,0,1,1,False,False,False,False,60256854,1,aurea_languard
 0,0,1,0,0,0,2025-11-26T13:31:43,2025-11-26T13:31:43,,,0.0,0,0,0,0,False,False,False,False,60250996,1,dnn
 1,0,2,0,1,0,2025-10-29T14:10:26,2025-10-29T14:10:51,,23.0,23.0,0,0,1,1,False,False,False,False,60231535,3,aurea_languard
@@ -48,7 +48,7 @@ ai_count,employee_count,customer_count,general_count,atlas_count,hermes_count,fi
 1,0,0,0,1,0,2025-11-04T05:17:56,2025-11-04T05:17:56,,0.0,0.0,0,0,1,1,False,False,False,False,60235310,1,khoros_classic
 6,0,5,0,6,0,2025-07-22T20:49:37,2025-08-07T18:45:23,,22.0,697271.0,1,2,2,6,False,False,False,False,60149875,11,khoros_classic
 6,2,2,2,4,0,2025-12-10T06:21:10,2025-12-29T04:58:26,1636480.0,6.0,1322761.0,1,2,3,6,False,False,False,False,60260239,12,gensym
-8,2,1,6,0,0,2025-12-23T08:18:31,2025-12-23T11:52:14,69.0,24.0,12166.0,0,0,4,1,True,False,False,False,60269018,17,aurea_languard
+9,1,1,6,0,0,2025-12-23T08:18:31,2025-12-23T11:52:14,123.0,24.0,12166.0,0,0,4,5,True,False,False,False,60269018,17,aurea_languard
 4,7,5,0,3,0,2025-10-01T16:35:30,2025-10-10T15:48:46,127021.0,7.0,531444.0,1,1,2,3,False,False,False,False,60211680,16,streetsmart
 0,0,1,0,0,0,2025-12-16T12:03:53,2025-12-16T12:03:53,,,0.0,0,0,0,0,False,False,False,False,60264368,1,khoros_care
 1,0,0,0,1,0,2025-10-02T11:27:35,2025-10-02T11:27:35,,0.0,0.0,0,0,1,1,False,False,False,False,60212281,1,khoros_classic
@@ -75,7 +75,7 @@ ai_count,employee_count,customer_count,general_count,atlas_count,hermes_count,fi
 6,1,2,0,6,0,2025-09-02T19:12:07,2025-09-24T16:18:51,147118.0,0.0,1742640.0,1,1,4,5,False,False,False,False,60185126,9,aurea_kerio_control
 6,7,5,6,1,0,2025-09-19T09:10:42,2025-10-27T06:04:54,916138.0,26.0,1971550.0,0,4,2,1,False,False,False,False,60201836,24,aurea_appmanager
 1,0,0,0,1,0,2025-10-27T16:22:12,2025-10-27T16:22:12,,0.0,0.0,0,0,1,1,False,False,False,False,60230003,1,aurea_mailessentials
-34,3,4,11,2,0,2025-08-21T06:01:20,2025-11-03T06:52:51,5718597.0,2020410.0,3692969.0,0,4,8,1,True,False,False,False,60233855,52,khoros_classic
+36,1,4,11,2,0,2025-08-21T06:01:20,2025-11-03T06:52:51,5718597.0,2020410.0,3692969.0,0,4,14,1,True,False,False,False,60233855,52,khoros_classic
 10,9,18,0,4,0,2025-09-29T17:38:44,2025-10-03T02:26:46,3711.0,0.0,161255.0,1,0,3,5,False,True,True,False,60209553,37,aurea_appmanager
 1,0,0,0,1,0,2025-11-14T14:07:25,2025-11-14T14:07:25,,0.0,0.0,0,0,1,1,False,False,False,False,60243347,1,khoros_classic
 5,1,10,0,5,0,2025-11-10T10:35:05,2025-11-13T09:19:12,161360.0,4.0,93287.0,2,0,3,5,False,False,False,False,60239472,16,aurea_languard
@@ -102,7 +102,7 @@ ai_count,employee_count,customer_count,general_count,atlas_count,hermes_count,fi
 7,0,4,0,7,0,2025-07-11T07:14:40,2025-07-11T11:17:08,,0.0,11122.0,0,0,3,7,False,False,False,False,60100448,11,aurea_kerio_control
 1,0,2,0,1,0,2025-10-20T19:34:39,2025-10-20T19:34:58,,9.0,10.0,0,0,1,1,False,False,False,False,60225246,3,aurea_faxmaker
 2,9,6,0,2,0,2025-11-13T22:15:03,2025-12-09T19:20:41,1469947.0,5.0,1039711.0,1,3,2,2,False,False,False,False,60242814,17,aurea_faxmaker_online
-18,21,8,22,9,0,2025-09-11T15:18:22,2025-10-22T12:47:56,12473.0,141461.0,971993.0,5,6,5,0,False,False,True,False,60208754,69,khoros_marketing
+19,20,8,22,9,0,2025-09-11T15:18:22,2025-10-22T12:47:56,12473.0,141461.0,971993.0,5,6,5,0,False,False,True,False,60208754,69,khoros_marketing
 5,0,2,0,5,0,2025-10-17T13:36:58,2025-10-17T13:38:49,,6.0,29.0,0,0,3,5,False,False,False,False,60223404,7,fogbugz
 37,4,9,10,1,0,2025-11-12T13:43:24,2025-11-19T09:05:13,417120.0,9.0,340163.0,1,1,5,30,False,False,True,False,60241392,60,aurea_kerio_control
 1,0,0,0,1,0,2025-11-19T11:54:20,2025-11-19T11:54:20,,0.0,0.0,0,0,1,1,False,False,False,False,60246498,1,khoros_classic
@@ -126,5 +126,5 @@ ai_count,employee_count,customer_count,general_count,atlas_count,hermes_count,fi
 51,90,3,16,4,0,2025-08-08T15:15:13,2025-09-03T15:35:10,881.0,49.0,342541.0,2,4,16,1,False,False,True,False,60164071,160,khoros_care
 18,20,12,10,7,0,2025-09-12T07:13:56,2025-12-10T15:48:26,107656.0,0.0,1209728.0,7,13,3,3,False,False,False,False,60196166,60,aurea_kerio_control
 7,0,2,0,2,0,2025-12-04T09:51:12,2025-12-05T06:15:08,,25.0,73084.0,0,0,4,7,True,False,False,False,60256250,9,khoros_classic
-28,84,32,7,8,0,2025-09-29T12:54:57,2026-01-06T22:03:21,3113292.0,0.0,2365033.0,7,12,3,4,False,False,False,False,60209095,151,aurea_exinda_network_orchestrator
+29,83,32,7,8,0,2025-09-29T12:54:57,2026-01-06T22:03:21,3113292.0,0.0,2365033.0,7,12,3,4,False,False,False,False,60209095,151,aurea_exinda_network_orchestrator
 5,4,2,0,5,0,2025-07-03T15:12:43,2025-07-10T13:02:58,51263.0,0.0,253667.0,0,2,5,5,False,False,True,False,60094192,11,aurea_mailessentials
