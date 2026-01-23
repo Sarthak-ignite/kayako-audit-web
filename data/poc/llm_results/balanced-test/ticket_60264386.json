@@ -1,0 +1,41 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "The visible transcript only shows the AI agent greeting the customer and asking for details/files. There is no specific customer question answered incorrectly, no contradictory guidance, and no customer complaint about AI accuracy in the provided content.",
+    "evidence": [
+      "Walk me through what's happening or select from the below frequent requests.",
+      "Don't hold back on the details \u2013 the more you can share about the issue, any error messages you're seeing, or steps you've already tried, the better equipped I'll be to assist you."
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "There is no evidence the customer asked for a human/technician, expressed frustration, or encountered repetitive looping responses. The excerpt only shows the opening intake flow.",
+    "evidence": [
+      "If I'm unable to help you, I can patch you through to a Live agent, along with the information you supply to me during this session"
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "The provided excerpt does not show the customer giving substantive troubleshooting context that support later ignored or re-asked for. The AI\u2019s prompts for details/logs appear to be initial intake rather than repetition.",
+    "evidence": [
+      "If you have any \ud83d\udcc3 log files or \ud83d\uddbc\ufe0f screenshots to upload to help with the troubleshooting, now is the time to do it \ud83d\udcaa"
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "The ticket was created and solved the same day within roughly 1.4 hours (resolutionTime 5174 seconds). There is no indication of >24h response gaps, no apology for delays, and no customer complaint about waiting in the visible transcript.",
+    "evidence": []
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "While the ticket was closed quickly, the provided conversation snippet does not show a final customer message indicating the issue was unresolved, nor an ongoing back-and-forth that was cut off. With the transcript truncated, there is not clear evidence to flag premature closure.",
+    "evidence": []
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "There is no explicit P1/SEV1/critical/outage designation, and the visible content does not describe a full outage or urgent business impact. Without stated severity/urgency, this cannot be flagged.",
+    "evidence": []
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60264386
+}

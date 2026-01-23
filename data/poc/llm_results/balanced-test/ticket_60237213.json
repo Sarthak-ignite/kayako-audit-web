@@ -1,0 +1,44 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "There is no agent/AI reply shown in the interaction log, so there is no AI-provided information to evaluate for correctness or helpfulness.",
+    "evidence": []
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "No evidence of an AI \u201cwall\u201d or looping behavior appears because the ticket shows only a customer message and no back-and-forth responses. The customer did express frustration about lack of reply, but not specifically about AI or repeated automated responses.",
+    "evidence": [
+      "We had tried to reach out a few times now without a reply."
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "There is no support response asking for already-provided information or steering troubleshooting against stated facts. With only the customer message visible, ignoring-context behavior cannot be evidenced.",
+    "evidence": []
+  },
+  "RESPONSE_DELAYS": {
+    "detected": true,
+    "reasoning": "The customer explicitly states they have attempted to reach support multiple times without receiving a reply, indicating a perceived response delay. This is clear, direct evidence from the customer.",
+    "evidence": [
+      "We had tried to reach out a few times now without a reply.",
+      "Usually when this happens, it means our products is not a priority right now."
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": true,
+    "reasoning": "The ticket was closed immediately even though the customer's last message was a live request for engagement/clarification, not a resolution confirmation. Closing at essentially the same time as ticket creation strongly suggests closure without addressing the customer\u2019s questions.",
+    "evidence": [
+      "Is it safe for me to assume that\u2032s the case here?",
+      "If you\u2032d rather we follow up in the future when you have more bandwidth, we are happy to do that as well.",
+      "Ticket Closed: 2025-11-06 08:30:24",
+      "Ticket Created: 2025-11-06 08:30:20"
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "There is no indication the issue was P1/SEV1, an outage, or otherwise critical, and no urgency markers or severity tags are present. The content appears to be a business inquiry rather than a service-impacting incident.",
+    "evidence": []
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60237213
+}

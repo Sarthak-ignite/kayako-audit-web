@@ -1,0 +1,50 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "There is no AI-generated response content in this ticket to evaluate for correctness, broken promises, or unhelpfulness. The only new interaction shown is the customer asking to reopen the ticket.",
+    "evidence": [
+      "Customer: \"Need this ticket reopened.\""
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "The customer does not ask for a human/technician due to AI issues, and there is no pattern of repeated/looping automated responses in the ticket. Only a single reopen request is present.",
+    "evidence": [
+      "Customer: \"Need this ticket reopened.\""
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "There is no support reply in this ticket that asks for already-provided information or contradicts what the customer stated. With only a reopen request shown, there is not enough evidence of context being ignored.",
+    "evidence": [
+      "Customer: \"Need this ticket reopened.\""
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "The ticket lifecycle appears to complete within seconds, and there is no customer complaint about waiting. The timestamps do not indicate a delay >24 hours within this ticket.",
+    "evidence": [
+      "Ticket Created: 2025-10-15 21:23:14",
+      "Ticket Solved: 2025-10-15 21:23:17",
+      "resolutionTime: 3"
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": true,
+    "reasoning": "The ticket was closed even though the customer's last (and only) message explicitly indicates the issue is not resolved and requests reopening. Closing immediately after a reopen request would be flagged as premature by a reasonable quality reviewer.",
+    "evidence": [
+      "Customer: \"Need this ticket reopened.\"",
+      "Customer message timestamp: \"[2025-10-15T21:23:16+00:00]\"",
+      "Ticket Closed: 2025-10-15 21:23:17"
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "There is no explicit P1/SEV1/critical designation in the provided ticket content, and no clear outage/all-users-down statement. Therefore, severity mishandling cannot be evidenced here.",
+    "evidence": [
+      "Status: closed"
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60222138
+}

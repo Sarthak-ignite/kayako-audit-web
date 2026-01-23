@@ -1,0 +1,52 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": true,
+    "reasoning": "The AI transcript appears to be tied to a different end user name than the ticket\u2019s stated customer, indicating a clear identity/context mismatch. This is a material quality issue because it suggests the assistant may be operating on (or logging) the wrong customer context.",
+    "evidence": [
+      "Customer: Raymond Guirguis",
+      "<p>Hi, Daniel Soler ! \ud83d\udc4b</p>",
+      "<p><strong>--- Customer (Daniel Soler) ---</strong></p>"
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "There is no evidence the customer asked for a human, expressed frustration with the AI, or experienced repetitive looping responses. The conversation is short and progresses to a standard information request (phone number).",
+    "evidence": [
+      "<p>Please provide me with the phone number. Make sure to provide only 1 phone number at a time.</p>"
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "The AI asked for a phone number that was not previously provided in the visible conversation, which is a reasonable next step for adding a device. No repeated questions or disregard of previously shared details are shown.",
+    "evidence": [
+      "<p>Please provide me with the phone number. Make sure to provide only 1 phone number at a time.</p>"
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "The ticket lifecycle is extremely short (about a minute) and there are no customer complaints or agent apologies related to waiting. The provided timestamps do not indicate delay issues.",
+    "evidence": [
+      "resolutionTime: 63",
+      "Ticket Created: 2025-10-31 12:22:52",
+      "Ticket Solved: 2025-10-31 12:23:55"
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": true,
+    "reasoning": "The ticket was solved/closed immediately after the AI requested additional required information (the phone number), with no subsequent customer response shown. Closing at that point likely prevented completion of the requested action (adding a new device) and would be reasonably flagged as premature.",
+    "evidence": [
+      "<p>Please provide me with the phone number. Make sure to provide only 1 phone number at a time.</p>",
+      "Ticket Solved: 2025-10-31 12:23:55",
+      "Ticket Closed: 2025-10-31 12:23:56"
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "There is no indication of P1/SEV1 severity, outage, or urgent/critical impact. The interaction is about adding a new device/license flow rather than a service-down event.",
+    "evidence": [
+      "<p><em>Button selection:</em> [\u2795 Add New Device]</p>"
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60233211
+}

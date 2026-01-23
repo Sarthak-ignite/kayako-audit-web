@@ -1,0 +1,50 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "There is no AI support response content in the ticket to evaluate for correctness, promises, or helpfulness. The only visible content is internal logging notes and an automated phone menu transcript.",
+    "evidence": [
+      "This ticket was created for logging purposes.",
+      "The complete conversation with this customer will be uploaded to this ticket shortly."
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "While the IVR menu repeats, there is no evidence the customer requested a human/technician, expressed frustration, or experienced repetitive AI chat responses. The repetition shown appears to be a phone keypad input validation loop, not an AI support loop.",
+    "evidence": [
+      "(Machine to +12394812391) You can only press numbers from 1 to 9.... Let me repeat the options....",
+      "(Machine to +12394812391) You can only press numbers from 1 to 9.... Let me repeat the options...."
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "No agent troubleshooting dialogue is present, so there is no instance of support asking for already-provided information or contradicting what the customer stated. The ticket explicitly indicates the real conversation is not included here.",
+    "evidence": [
+      "The complete conversation with this customer will be uploaded to this ticket shortly."
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "There is no customer-facing thread showing the customer waiting for responses or complaining about delays. The structured context indicates the ticket was effectively solved immediately after creation (within seconds).",
+    "evidence": [
+      "Ticket Created: 2025-10-29 14:10:26",
+      "Ticket Solved: 2025-10-29 14:10:51",
+      "resolutionTime: 25"
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "The visible content does not include any customer request for help or indication of an unresolved issue at the time of closure. The ticket is explicitly described as being created for logging purposes, so closure does not clearly conflict with an active customer conversation (as shown).",
+    "evidence": [
+      "This ticket was created for logging purposes."
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "There is no indication of P1/SEV1 severity, outage language, or urgent impact in the provided content. The only visible data is an IVR transcript and internal notes.",
+    "evidence": [
+      "(Machine to +12394812391) Thank you for calling GFI Support Line...."
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60231535
+}

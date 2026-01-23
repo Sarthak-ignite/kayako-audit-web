@@ -1,0 +1,48 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": true,
+    "reasoning": "The AI assistant identified the requested feature as \u201cReport Inappropriate Content,\u201d but the customer explicitly corrected that they meant \u201cRequest Moderator Assistance.\u201d This indicates the AI provided incorrect/help-mismatched guidance relative to the customer\u2019s stated need.",
+    "evidence": [
+      "AI Assistant: \"The feature you're referring to is \\\"Report Inappropriate Content\\\" (which may also appear as \\\"Request Moderator Assistance\\\" ...)\"",
+      "Customer (Erika Dominguez): \"it's not report inappropriate content, that is different. I'm talking about Request Moderator Assistance\""
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "There is no clear evidence the customer asked for a human/technician or expressed frustration about being stuck with AI, and the provided excerpt does not show 3+ repeated cycles of the same guidance.",
+    "evidence": []
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "While the AI was incorrect about the feature, the excerpt does not show a pattern of the support flow repeatedly asking for already-provided information or repeatedly disregarding the customer\u2019s stated constraints. The customer corrected the AI, but the remainder of the AI response is truncated so a sustained context-ignoring pattern can\u2019t be confirmed.",
+    "evidence": [
+      "Customer (Erika Dominguez): \"it's not report inappropriate content, that is different. I'm talking about Request Moderator Assistance\"",
+      "AI Assistant: \"The feature you're referring to is \\\"Report Inappropriate Content\\\" ...\""
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "No explicit complaint about waiting appears in the ticket content, and the ticket was created and solved within the same day/time window shown. There\u2019s no evidence of >24 hour gaps impacting the customer.",
+    "evidence": [
+      "Ticket Created: 2025-11-14 21:57:36",
+      "Ticket Solved: 2025-11-14 23:36:10"
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": true,
+    "reasoning": "The ticket is marked solved/closed even though the last visible customer message indicates the issue is not resolved (they state the AI identified the wrong feature). There is no shown confirmation of resolution from the customer before closure.",
+    "evidence": [
+      "Customer (Erika Dominguez): \"it's not report inappropriate content, that is different. I'm talking about Request Moderator Assistance\"",
+      "Status: closed",
+      "Ticket Solved: 2025-11-14 23:36:10",
+      "Ticket Closed: 2025-11-14 23:36:10"
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "There is no indication of P1/SEV1 severity, outage, or urgent/critical impact in the provided context, so mishandling of a critical incident cannot be supported by evidence.",
+    "evidence": []
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60243765
+}

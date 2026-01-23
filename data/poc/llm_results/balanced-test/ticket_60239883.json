@@ -1,0 +1,45 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": true,
+    "reasoning": "Support stated the vulnerability was \"fully resolved\" after Engineering upgraded Apache, but the linked Engineering thread indicates the change still required development review/build/test/deploy before it would be fully resolved for customers. This creates a clear risk of misinformation about the actual remediation status/availability.",
+    "evidence": [
+      "Engineering has created pull request #3499 with updated Apache 2.4.65 binaries and OpenSSL 3.5.1, but the Development team needs to review, build, test, and deploy the changes before the security vulnerability is fully resolved.",
+      "We are pleased to inform you that our Engineering team has successfully upgraded the Apache version in the GFI LanGuard agent to 2.4.65, effectively resolving the reported security vulnerability. This matter has been fully resolved."
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "There is no evidence the customer requested a human/technician due to AI friction, expressed frustration about AI responses, or experienced repetitive looping responses. The ticket shows a single customer message followed by status updates.",
+    "evidence": []
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "Support did not ask the customer to repeat already-provided details and did not pursue troubleshooting that the customer had already ruled out. The response path (engagement with Engineering) aligned with the customer\u2019s reported product security issue.",
+    "evidence": []
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "The initial response occurred within a short time window and the customer did not complain about waiting. No clear, evidenced delay pattern affecting the customer is present in the conversation.",
+    "evidence": [
+      "initialResponseTime: 126"
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": true,
+    "reasoning": "The ticket was marked as fully resolved/closed without customer confirmation and despite internal evidence that the fix still required downstream development actions (review/build/test/deploy). Closing while the remediation may not yet be available to the customer is a reasonable quality concern.",
+    "evidence": [
+      "Engineering has created pull request #3499 with updated Apache 2.4.65 binaries and OpenSSL 3.5.1, but the Development team needs to review, build, test, and deploy the changes before the security vulnerability is fully resolved.",
+      "This matter has been fully resolved.",
+      "Status: closed"
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "Although the customer described the issue as a \"high security concern\" and urgent, the ticket is not explicitly labeled P1/SEV1/critical outage, and support engaged Engineering promptly. There is no clear evidence of mishandling against a P1/SEV1 standard.",
+    "evidence": [
+      "This is a high security concern and we need to fix this as soon as possible."
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60239883
+}

@@ -1,0 +1,54 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": true,
+    "reasoning": "The AI provided advice that conflicts with information already present in the ticket\u2019s own configuration evidence. Specifically, it claimed a wildcard Apple domain entry was missing and recommended adding it, while the provided screenshots/file analysis show that wildcard entry already exists. This makes the guidance materially unreliable for moving troubleshooting forward.",
+    "evidence": [
+      "ATLAS: \"Most relevant Apple CDN and update domains are included (...), but there is no broad *.apple.com entry.\"",
+      "ATLAS: \"Action: Add *.apple.com to both your \\\"HTTPS exclusions\\\" IP address group and your update-related URL groups.\"",
+      "FILE ANALYSIS RESULTS (Adressgroup.jpeg_1583972): \"Multiple Apple-related domains are included in the HTTPS exclusions IP address group: appldnld.apple.com, *.apple.com, apple.com, *.cdn-apple.com...\""
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": true,
+    "reasoning": "The customer explicitly requested a technician/technical team to take a closer look and later escalated the case as not workable. This indicates the customer was not getting effective progress via the existing support flow and pushed for human/escalated handling.",
+    "evidence": [
+      "Customer: \"Could a technician from your team please take a closer look at this issue?\"",
+      "Customer: \"Given that the customer has been experiencing this problem for over a week now, could someone from your technical team please take a closer look at this case?\"",
+      "Customer: \"The partner has asked me to strongly request that this ticket be escalated. According to the partner, it is currently not possible to work with this product.\""
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": true,
+    "reasoning": "Support/AI pursued a path that the customer\u2019s provided evidence already contradicted, effectively re-suggesting a configuration change that appears to already be in place. This shows failure to properly incorporate the customer\u2019s screenshots/file-analysis context before recommending next steps.",
+    "evidence": [
+      "ATLAS: \"there is no broad *.apple.com entry.\"",
+      "FILE ANALYSIS RESULTS (Adressgroup.jpeg_1583972): \"...*.apple.com...\"",
+      "Customer: \"we already tried that. Unfortunately, it didn\u2019t work.\""
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": true,
+    "reasoning": "There is clear evidence of delayed responses: the initial response time exceeds 24 hours, and the customer explicitly followed up noting two weeks without concrete feedback. This is the kind of delay a quality reviewer would flag, especially for a core functionality impact.",
+    "evidence": [
+      "Structured CSV context: \"initialResponseTime: 68\"",
+      "Customer: \"It has now been two weeks since our last communication, and unfortunately, we have not received any concrete feedback on the issue.\""
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "The ticket closure was explicitly requested by the customer after L2 asked for additional diagnostics. There is no evidence the ticket was closed against the customer\u2019s wishes in their final message.",
+    "evidence": [
+      "Customer: \"Ticket can be closed\""
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "While the customer described serious impact and later requested escalation, the ticket does not show an explicit P1/SEV1/outage designation with a clearly missed urgent-response SLA (e.g., >4 hours after P1 marking). Once escalated, support responded with an L2 data request the same day.",
+    "evidence": [
+      "Centralsupport-ai-acc: \"[customer_escalation] ... severity is: core_functionality_defect\"",
+      "Mike Kebede: \"We\u2019ve escalated this case to the L2 team and raised the priority to High.\""
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60220499
+}

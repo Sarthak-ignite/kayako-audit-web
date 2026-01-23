@@ -1,0 +1,53 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "The AI response is generic, but it does directly acknowledge the customer\u2019s request to open a ticket and indicates a handoff to a human. There\u2019s no clear incorrect information, broken promise, or customer complaint about AI quality in the provided text.",
+    "evidence": [
+      "I'd like to open a ticket",
+      "Thanks for letting me know you'd like to open a ticket! ... A human colleague will be happy to assist you further"
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "There is only a single customer message and a single AI response, with no repetition, no explicit request to escalate beyond what was already offered, and no frustration expressed.",
+    "evidence": [
+      "I'd like to open a ticket",
+      "A human colleague will be happy to assist you further"
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "There\u2019s no evidence of support asking for already-provided information or forcing the customer to repeat details. The interaction is too brief to show context being ignored.",
+    "evidence": [
+      "I'd like to open a ticket",
+      "Thanks for letting me know you'd like to open a ticket!"
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "No one mentions waiting or delays, and the timestamps show the ticket was created and closed within the same day. There is no evidence of a >24h gap or an apology for slowness.",
+    "evidence": [
+      "Ticket Created: 2025-10-02 20:19:29",
+      "Ticket Closed: 2025-10-02 21:39:02"
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": true,
+    "reasoning": "The ticket was closed even though the customer\u2019s last/only stated need (\u201cI\u2019d like to open a ticket\u201d) does not indicate resolution, and there is no visible human follow-up or confirmation that their issue/request was completed. A reasonable reviewer would flag this as closure without demonstrated resolution.",
+    "evidence": [
+      "I'd like to open a ticket",
+      "Status: closed",
+      "Ticket Closed: 2025-10-02 21:39:02",
+      "A human colleague will be happy to assist you further"
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "There is no indication of P1/SEV1 severity, outage, or urgent/critical impact. The customer did not describe downtime or business-critical failure.",
+    "evidence": [
+      "I'd like to open a ticket"
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60212784
+}

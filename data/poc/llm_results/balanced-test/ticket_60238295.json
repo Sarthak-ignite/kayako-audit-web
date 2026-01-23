@@ -1,0 +1,51 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "There is no clear evidence that an AI provided incorrect or misleading information in this ticket. The agent guidance (contact Customer Care for licensing; try a new trial with a different email) is not demonstrably wrong based on the ticket content, even if it may be limited in helpfulness.",
+    "evidence": [
+      "the support team is unable to help with obtaining new licenses or adjusting any other license, and the correct avenue for solving this would be contacting the GFI Customer Care team here: https://customercare.gfi.com/hc/en-us/requests/new."
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "The customer shows frustration about lack of progress, but there is no explicit request for a human/technician due to AI, and no clear pattern of repetitive AI responses within this ticket (only one substantive support reply appears).",
+    "evidence": [
+      "I have not received a licence or any helpful feedback.",
+      "Are you actually working on this?\u001f"
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "Support did not repeatedly ask for information the customer had already provided, nor did the customer explicitly complain that support failed to read prior details. While the customer said they 'did as asked' earlier, the later agent reply does not clearly contradict or ignore a specific provided detail in a way that would meet the threshold for this flag.",
+    "evidence": [
+      "I did as asked, but I can't track the message I've sent properly."
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": true,
+    "reasoning": "There was a long gap between the customer\u0019s messages and the first substantive public support response (customer wrote on 2025-11-07 and again on 2025-11-11; support replied publicly on 2025-11-24). The customer explicitly complained about not receiving feedback, and the agent apologized for the delay.",
+    "evidence": [
+      "[2025-11-11T13:25:41+00:00] ... I have not received a licence or any helpful feedback.",
+      "[2025-11-11T13:25:41+00:00] ... Are you actually working on this?\u001f",
+      "[2025-11-24T12:15:38+00:00] Please accept my sincere apologies for the delay in getting back to you; since the ticket was raised via email follow-up, it attained a low priority."
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": true,
+    "reasoning": "The ticket is marked closed even though the last customer message in the thread indicates the issue was not resolved and they were still waiting for help. There is no customer confirmation of resolution shown before closure.",
+    "evidence": [
+      "Status: closed",
+      "I have not received a licence or any helpful feedback.",
+      "Are you actually working on this?\u001f"
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "The ticket concerns a trial license/piracy warning scenario and is not described as P1/SEV1, critical, or an outage. The customer expresses dissatisfaction, but not an explicit business-critical impact requiring P1 handling.",
+    "evidence": [
+      "so the issue is a piracy warning that the customer is getting for trial license \u00104512-Z56RC-71G7M"
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60238295
+}

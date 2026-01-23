@@ -1,0 +1,59 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "While some responses were generic and slow, there is not clear evidence that an AI gave demonstrably incorrect technical guidance to the customer. The main factual guidance provided (that NG520/NG521 ship with and require v10) is not contradicted within the ticket record. Customer frustration focuses on lack of timely human contact and escalation handling rather than explicit complaints about AI accuracy.",
+    "evidence": [
+      "Additionally build number 10.0.0 is correct, New Kerio Control NG appliances (NG 520 and NG 521) ship with Kerio Control v10 preinstalled"
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "The customer repeatedly requested a live person/manager call and expressed strong frustration, but the record does not show a clear pattern of the customer being trapped in an AI-only loop or explicitly blaming AI responses. Most visible replies are from named agents and focus on investigation/log collection rather than repeated AI chatbot prompts.",
+    "evidence": [
+      "Yes please connect me to a live agent. Thank you.",
+      "I cannot reach you by telephone and no one is responding to escalation requests."
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": true,
+    "reasoning": "Support responses did not adequately reflect key context the customer had already provided (that they had already downgraded and the unit was not booting, and later that they had restored with a rescue image). The customer explicitly called out that support was not reviewing prior comments, indicating a clear perception that context was being missed.",
+    "evidence": [
+      "We attempted to downgrade to 9.5.0 patch 3 build 9017 but now it appears the NG520 is not booting.",
+      "We have already downgraded.",
+      "This ticket needs to remain open until I speak with someone in your management team. We have restored with the rescue image, but AppManager still does not register the serial of the NG520 hardware.",
+      "How about you look back through the comments in this case, and you tell me what my concerns are. . ."
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": true,
+    "reasoning": "The customer explicitly complained multiple times about not getting responses and being unable to reach anyone during an outage, and support apologized for the delay. This is clear evidence of response timeliness issues impacting the customer experience.",
+    "evidence": [
+      "I cannot reach you by telephone and no one is responding to escalation requests. Customer is completely down.",
+      "Please have a manager call me immediately.",
+      "It is completely unacceptable in a network down emergency to be unable to reach anyone in your support team.",
+      "I apologize for the delay."
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": true,
+    "reasoning": "The ticket was closed even though the customer\u2019s last updates in the thread indicate the issue remained unresolved (serial still UNKNOWN and updates failing) and they were asking for next steps. There is no customer confirmation of resolution (\u201ccan be closed\u201d) in the provided conversation.",
+    "evidence": [
+      "Serial number still reporting UNKNOWN> unknown Serial number",
+      "ALSO updates are reporting to fail> Kerio Control Update failed",
+      "What are next steps on this issue?",
+      "Status: closed"
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": true,
+    "reasoning": "The case was explicitly escalated as a complete outage and the customer stated they were completely down, but received delayed, generic 'investigating' responses and struggled to obtain real-time contact (phone/manager) during the emergency. This indicates urgency was not matched by the support engagement, aligning with P1/SEV1 mishandling criteria.",
+    "evidence": [
+      "The severity is: complete_outage",
+      "I cannot reach you by telephone and no one is responding to escalation requests. Customer is completely down.",
+      "Please have a manager call me immediately.",
+      "We\u2019ve received your escalation regarding ticket 60209553 and we are investigating the issue."
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60209553
+}

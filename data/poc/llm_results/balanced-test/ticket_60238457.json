@@ -1,0 +1,48 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": true,
+    "reasoning": "The initial AI response attributed the chatbot delays primarily to third\u2011party telemetry/analytics calls and recommended reducing third\u2011party scripts. Later engineering findings identified a product defect in the chat widget\u2019s real-time message delivery/optimistic UI flow as the root cause, making the AI\u2019s diagnosis materially inaccurate/misleading for resolution.",
+    "evidence": [
+      "\u201cwe observed multiple telemetry and tracking requests\u2014primarily from monitoring scripts like New Relic...\u2014which are creating frequent background XHR and image beacon requests... can impact browser responsiveness... directly affecting the responsiveness of web-based chat systems such as Khoros Care.\u201d",
+      "\u201cRecommended Steps to Mitigate: * Reduce the number of simultaneous third-party scripts loaded on your Care instance...\u201d",
+      "\u201cThe root cause is a defect in the proactive-chat-widget v2.105.0's optimistic UI update flow...\u201d"
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "There is no clear pattern of the customer requesting a human/technician due to AI, nor repeated looping AI replies (same advice 3+ times). The ticket progresses into engineering investigation and deployment rather than cycling on AI responses.",
+    "evidence": []
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "Support generally acknowledged the reported behavior and environment, and did not repeatedly ask for information already provided. Follow-ups (e.g., confirming DNS incident unrelated) addressed customer questions rather than ignoring prior details.",
+    "evidence": []
+  },
+  "RESPONSE_DELAYS": {
+    "detected": true,
+    "reasoning": "The authoritative CSV shows an initial response time of 72 hours, which is a significant delay for an active production issue. The customer also explicitly complained about lack of updates after a long gap (\u201c12h since the last update\u201d), indicating they were waiting.",
+    "evidence": [
+      "\u201cinitialResponseTime: 72\u201d",
+      "\u201cWe are still waiting on a fix on this issue, it\u2019s been 12h since the last update.\u201d"
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "The customer explicitly confirmed closure was acceptable after the fix/deployment, and support closed only after that confirmation. There is no evidence the ticket was closed while the customer\u2019s last message indicated the issue was unresolved.",
+    "evidence": [
+      "\u201cWe can close this case\u201d",
+      "\u201cWe will go ahead and close this ticket as requested.\u201d"
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": true,
+    "reasoning": "The customer explicitly requested P1 handling, and the authoritative CSV indicates a 72-hour initial response time\u2014well beyond the 4-hour threshold for P1/SEV1. Additionally, internal engineering noted the customer treated it as an outage, reinforcing criticality.",
+    "evidence": [
+      "\u201cPlease treat this as a P1 situation.\u201d",
+      "\u201cinitialResponseTime: 72\u201d",
+      "\u201cTHe customer treats this as outage.\u201d"
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60238457
+}

@@ -1,0 +1,55 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "The AI response appears directly related to the customer\u2019s observation (old .ICAL and .BODY files in the queue) and provides a plausible explanation (orphaned fragments) plus referenced documentation. There is no explicit customer complaint or clear contradiction with ticket facts in the provided excerpt.",
+    "evidence": [
+      "Customer: \"I'm still seeing 4 files in the D:\\Program Files\\GFI\\MailArchiver\\Core\\Queue directory, but they appear to be over a year old. There are 2 .ICAL and 2 .BODY files.\"",
+      "AI Assistant: \"You've found exactly what I suspected - orphaned files that got stuck over a year ago.\"",
+      "AI Assistant: \"According to Processing Orphaned Files in Core\\Queue or MAIS\\Queue... when emails are processed, they're split into parts...\""
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "There is only a single customer message and a single AI reply in the provided interaction log, with no evidence of repeated loops, re-engagement attempts, or requests for a human/escalation.",
+    "evidence": [
+      "Kayako - ticket id 60247413 // ATLAS commented privately: Thanks for chatting earlier with our AI Support!"
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "The AI response addresses the exact file types and location the customer described and does not ask for information the customer already provided. No customer feedback indicates support missed or ignored prior details.",
+    "evidence": [
+      "Customer: \"...4 files in the ...\\Core\\Queue directory... 2 .ICAL and 2 .BODY files.\"",
+      "AI Assistant: \"If you only have .ICAL and .BODY files without their corresponding .eml and .envelope files, these are orphaned fragments...\""
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "The ticket timeline indicates near-immediate handling (created/updated/solved/closed within ~1 minute), and there is no complaint about waiting or slow response.",
+    "evidence": [
+      "Ticket Created: 2025-11-20 14:01:26",
+      "Ticket Solved: 2025-11-20 14:02:34",
+      "Ticket Closed: 2025-11-20 14:02:35",
+      "resolutionTime: 68"
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": true,
+    "reasoning": "The ticket was closed essentially immediately after the customer raised a question/concern and the AI provided guidance, without any visible customer confirmation that the issue was resolved. A quality reviewer could reasonably flag this as closure without confirmation/verification.",
+    "evidence": [
+      "Customer (2025-11-20T14:02:32+00:00): \"I'm still seeing 4 files in the ...\\Core\\Queue directory...\"",
+      "Ticket Solved: 2025-11-20 14:02:34",
+      "Ticket Closed: 2025-11-20 14:02:35"
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "There is no indication the issue was marked P1/SEV1/critical, nor any statement of outage or urgent business impact. The handling time was also extremely fast.",
+    "evidence": [
+      "Status: closed",
+      "resolutionTime: 68"
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60247413
+}

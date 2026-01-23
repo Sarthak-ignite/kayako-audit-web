@@ -1,0 +1,50 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": true,
+    "reasoning": "The ATLAS AI response was not well-matched to the customer\u2019s billing/finance question and immediately requested logs/screenshots, which is typically irrelevant for an invoice/payment confirmation inquiry. This is a clear unhelpful response to the specific problem described, even if not factually \u201cwrong.\u201d",
+    "evidence": [
+      "Customer (Cedric Dubie) --- received a mail about billing not being received",
+      "AI Assistant --- If you have any \ud83d\udcc3 log files or \ud83d\uddbc\ufe0f screenshots to upload to help with the troubleshooting, now is the time to do it \ud83d\udcaa"
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "There is no evidence the customer asked for a human, expressed frustration with AI, or experienced repetitive AI loops. The AI interaction appears brief and does not show repeated cycles.",
+    "evidence": [
+      "Customer (Cedric Dubie) --- received a mail about billing not being received"
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "Support\u2019s eventual response directly addressed the customer\u2019s stated need (confirming payment and no pending invoices). There is no clear instance of agents asking for information already provided or forcing the customer to restate details.",
+    "evidence": [
+      "Issue description: * received a mail about billing not being received",
+      "We can confirm that the payment has been received and you have no pending invoices from us."
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": true,
+    "reasoning": "There is a clear multi-week gap between ticket creation and the first public agent response to the customer, which exceeds 24 hours by a wide margin and would typically be flagged as an excessive delay for a billing clarification.",
+    "evidence": [
+      "Ticket Created: 2025-09-30 08:47:20",
+      "[2025-10-28T12:04:02+00:00] Kayako - ticket id 60210131 // Randall Shawver commented publicly: Dear Cedric,"
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "The ticket appears to have been closed after support provided an answer and after a waiting period, and the last customer message did not indicate ongoing troubleshooting or follow-up questions. There\u2019s no clear evidence the customer replied indicating the issue remained unresolved at the time of closure.",
+    "evidence": [
+      "This ticket will stay open for one week unless you reply with \"This ticket can be closed\" or update the status to Completed in the portal."
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "No P1/SEV1 severity, outage, or urgent impact is stated. The request is a billing/payment validation inquiry and does not describe critical service downtime.",
+    "evidence": [
+      "received a mail about billing not being received",
+      "need to get in touch with sales or finance to validate"
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60210131
+}

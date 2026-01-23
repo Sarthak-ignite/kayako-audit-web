@@ -1,0 +1,38 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": true,
+    "reasoning": "The customer asked a specific technical question about setting up VPN over IPv6 (OpenSSL or Kerio VPN). The AI did not address IPv6 VPN feasibility/configuration at all and instead redirected to license-key collection and a generic option prompt, which is clearly unhelpful relative to the question asked.",
+    "evidence": [
+      "Customer (Michael Pubantz): \"i want a VPN Connection over ipv6 (open SSL or Kerio VPN)\"",
+      "AI Assistant: \"While not mandatory, it may be useful for troubleshooting if you provide me with the Kerio Control license key for which you are contacting us.\"",
+      "AI Assistant: \"Please select the option that applies below \ud83d\udc47\""
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "There is no evidence the customer asked for a human/technician or expressed frustration about AI support, and the visible snippet does not show repetitive looping responses.",
+    "evidence": []
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "The AI did not explicitly ask the customer to repeat information already provided, and there is no clear instance in the visible content of the AI contradicting or overlooking stated constraints/steps already tried.",
+    "evidence": []
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "The ticket timestamps show the ticket was created and solved within roughly 2 hours, and there are no customer complaints about slow responses or waiting.",
+    "evidence": []
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "Although the ticket was closed quickly, the provided interaction log is truncated, so there is not clear evidence that the customer\u2019s last message indicated the issue was still unresolved at the time of closure.",
+    "evidence": []
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "There is no explicit indication of P1/SEV1 severity, critical outage, or urgent business impact in the visible customer messages or the structured context.",
+    "evidence": []
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60261219
+}

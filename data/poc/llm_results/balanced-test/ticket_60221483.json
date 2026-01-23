@@ -1,0 +1,52 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "The AI interaction shown is generic intake guidance and does not provide a specific (wrong) solution or make any promises. There is no explicit customer complaint about AI accuracy or helpfulness in the provided content.",
+    "evidence": [
+      "\u201cWalk me through what's happening or select from the below frequent requests.\u201d",
+      "Customer: \u201cI need access to Atlas. my email is zhaddad@graphisoft.com. my full na ...[truncated]...\u201d"
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "There is no evidence the customer requested a human/technician, expressed frustration with the AI, or that the AI repeated the same guidance multiple times. The transcript only shows the initial AI prompt and the customer\u2019s first request.",
+    "evidence": [
+      "Customer: \u201cI need access to Atlas. my email is zhaddad@graphisoft.com. my full na ...[truncated]...\u201d"
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "No follow-up messages from support are shown that repeat already-provided questions or ignore details the customer provided. The available content does not demonstrate a back-and-forth where context was missed.",
+    "evidence": [
+      "Customer: \u201cI need access to Atlas. my email is zhaddad@graphisoft.com. my full na ...[truncated]...\u201d"
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "There is no customer complaint about slow responses, and the ticket timestamps indicate it was updated/solved/closed within about a minute. This does not meet delay criteria.",
+    "evidence": [
+      "\u201cTicket Created: 2025-10-15 07:52:27\u201d",
+      "\u201cTicket Solved: 2025-10-15 07:53:26\u201d",
+      "\u201cresolutionTime: 59\u201d"
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": true,
+    "reasoning": "The ticket appears to have been solved/closed almost immediately after the customer requested access, with no visible support response addressing the request or confirming resolution. Closing at that point would reasonably be flagged as premature because the last customer message indicates an open need.",
+    "evidence": [
+      "Customer: \u201cI need access to Atlas. my email is zhaddad@graphisoft.com. my full na ...[truncated]...\u201d",
+      "\u201cTicket Solved: 2025-10-15 07:53:26\u201d",
+      "\u201cTicket Closed: 2025-10-15 07:53:27\u201d",
+      "Customer timestamp: \u201c[2025-10-15T07:53:24+00:00]\u201d"
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "No severity (P1/SEV1/critical/outage) is indicated, and the customer request is for access rather than reporting a confirmed outage. The available data does not support a P1/SEV1 mishandling finding.",
+    "evidence": [
+      "Customer: \u201cI need access to Atlas.\u201d"
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60221483
+}

@@ -1,6 +1,6 @@
 import { repoPath } from "@/lib/paths";
 
-export type DatasetId = "v6_sample" | "v6_gt";
+export type DatasetId = "v6_sample" | "v6_gt" | "balanced";
 
 export type DatasetConfig = {
   id: DatasetId;
@@ -15,11 +15,20 @@ export type DatasetConfig = {
 export const DATASETS: Record<DatasetId, DatasetConfig> = {
   v6_sample: {
     id: "v6_sample",
-    label: "GPT-5.2 v6 (sample)",
+    label: "GPT-5.2 v6 Recall-first (99 tickets)",
     summaryCsvPath: repoPath("data/poc/poc_llm_v6_sample_summary.csv"),
     csvMetricsPath: repoPath("data/poc/poc_csv_metrics.csv"),
     ticketMetricsPath: repoPath("data/poc/poc_ticket_metrics.csv"),
     resultsDir: repoPath("data/poc/llm_results/gpt-5.2-v6-sample"),
+    rawDir: repoPath("data/poc/raw"),
+  },
+  balanced: {
+    id: "balanced",
+    label: "GPT-5.2 Balanced (34 tickets)",
+    summaryCsvPath: repoPath("data/poc/poc_llm_balanced_summary.csv"),
+    csvMetricsPath: repoPath("data/poc/poc_csv_metrics.csv"),
+    ticketMetricsPath: repoPath("data/poc/poc_ticket_metrics.csv"),
+    resultsDir: repoPath("data/poc/llm_results/balanced-test"),
     rawDir: repoPath("data/poc/raw"),
   },
   v6_gt: {

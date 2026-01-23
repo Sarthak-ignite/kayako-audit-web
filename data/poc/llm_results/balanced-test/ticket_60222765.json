@@ -1,0 +1,52 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "No evidence that the AI provided incorrect technical guidance or misleading information. The AI/customer-facing updates were generic status updates and aligned with the eventual engineering fix (upgrade to Jive 12.7). The customer did not complain about AI accuracy.",
+    "evidence": [
+      "\u201cWe have contacted the Engineering team and will keep you informed as soon as we receive additional information from them.\u201d",
+      "\u201cThe solution is now available in the Jive 12.7 release, and we recommend upgrading to this version to take advantage of the fix.\u201d"
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "There is no pattern of repetitive AI responses, nor did the customer ask to reach a human or express frustration about an AI loop. The case was quickly escalated to Engineering after the initial report.",
+    "evidence": [
+      "\u201cHello, I needed further assistance than Jive ATLAS could provide. Could you assist me?\u201d",
+      "\u201cWe have contacted the Engineering team and will keep you informed as soon as we receive additional information from them.\u201d"
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "Support did not ask the customer to re-provide information that was already shared, and there is no evidence of a troubleshooting path that contradicts what the customer said. The ticket moved to Engineering escalation based on the provided error context.",
+    "evidence": [
+      "Customer: \u201conce the webhook is created and we try to reconnect the addon... it breaks with the following error.\u201d",
+      "Internal: \u201cI agree that we need ENG to investigate this issue.\u201d"
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "While the overall time to resolution was long due to Engineering work and release timing, there is no explicit customer complaint about waiting or slow responses. The ticket was put on hold for Engineering escalation, which reasonably explains gaps without clear evidence of an unaddressed customer wait state.",
+    "evidence": [
+      "\u201cWe have contacted the Engineering team and will keep you informed as soon as we receive additional information from them.\u201d",
+      "Engineering: \u201cThe fix is now released in Jive 12.7.\u201d"
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "The last customer message was not indicating an unresolved issue (the customer said 'Thanks'). The closure followed a communicated fix availability; there is no customer reply indicating the issue persisted at the time of closure.",
+    "evidence": [
+      "Customer: \u201cThanks\u201d",
+      "\u201cWe're pleased to inform you that the issue ... has been successfully addressed. The solution is now available in the Jive 12.7 release...\u201d"
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "The customer did not report an outage/critical service down scenario, and the ticket does not explicitly indicate P1/SEV1 severity from the customer perspective. Although Engineering later labeled it urgent, support behavior shown (quick ENG escalation) does not demonstrate clear P1 mishandling.",
+    "evidence": [
+      "Customer describes a specific add-on reconnection failure scenario: \u201conce the webhook is created and we try to reconnect the addon... it breaks with the following error.\u201d",
+      "Internal action: \u201cTicket placed on hold for Engineering escalation.\u201d"
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60222765
+}

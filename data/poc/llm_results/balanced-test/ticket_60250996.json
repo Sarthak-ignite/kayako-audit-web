@@ -1,0 +1,56 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "The ticket content only contains the AI assistant\u2019s greeting/terms and does not include any troubleshooting answers or customer questions. With no substantive AI guidance shown, there is no clear evidence of incorrect, unhelpful, or broken-promises behavior.",
+    "evidence": [
+      "\u201cHere is a record of your conversation for easy reference:\u201d",
+      "\u201c--- AI Assistant ---\u201d",
+      "\u201cThis is the DNN ATLAS support chat.\u201d",
+      "\u201cATLAS is very smart and helpful, but like any GenAI assistant, he may provide incorrect responses from time to time.\u201d"
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "There is no evidence the customer requested a human/technician, expressed frustration, or encountered repetitive looping responses. The visible content is only the initial AI intro message.",
+    "evidence": [
+      "\u201cThanks for chatting earlier with our AI Support!\u201d",
+      "\u201cThis is the DNN ATLAS support chat.\u201d",
+      "\u201cIf you're unable to find a solution through our interaction, you will be guided through the steps to get additional support.\u201d"
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "No back-and-forth troubleshooting content is present, so there\u2019s no clear instance of support re-asking for already-provided details or ignoring customer-provided context.",
+    "evidence": [
+      "\u201cHere is a record of your conversation for easy reference:\u201d",
+      "\u201c--- AI Assistant ---\u201d"
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "Although the ticket lifecycle spans multiple days per the timestamps, the transcript does not show the customer waiting on replies or complaining about slow response, and no agent delay apology is present. Based on the provided interaction text alone, a delay issue is not clearly evidenced.",
+    "evidence": [
+      "\u201cTicket Created: 2025-11-26 13:31:43\u201d",
+      "\u201cTicket Solved: 2025-11-29 13:42:12\u201d",
+      "\u201cTicket Closed: 2025-11-29 13:42:12\u201d"
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "The last visible customer entry is an auto-inserted record of an AI chat greeting; there is no customer statement indicating an unresolved issue at the end, nor any ongoing question that was closed out mid-conversation.",
+    "evidence": [
+      "\u201cThanks for chatting earlier with our AI Support!\u201d",
+      "\u201cHere is a record of your conversation for easy reference:\u201d"
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "There is no indication of P1/SEV1 severity, outage language, or urgent impact in the provided ticket content. Without an explicit severity/critical-outage report, mishandling cannot be substantiated.",
+    "evidence": [
+      "\u201cStatus: closed\u201d",
+      "\u201cLevel Solved: L1 Agent\u201d"
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60250996
+}

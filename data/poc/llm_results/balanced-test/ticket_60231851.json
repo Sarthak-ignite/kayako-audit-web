@@ -1,0 +1,57 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": true,
+    "reasoning": "The AI initially anchored on whitelist/blocklist guidance despite the customer repeatedly stating the problem was the Information Store Protection page, and the customer explicitly stated the bot was not helping. The customer also indicated they expected a human follow-up per what the AI communicated, but instead kept receiving AI/automated responses. This is a clear, customer-confirmed quality failure in usefulness and expectation-setting.",
+    "evidence": [
+      "My issues is not with the whitelist but with the Information Store Protection.",
+      "We been though all these steps already with the AI bot?",
+      "The BOT AI is not helping\u2026",
+      "I was suppose to be in contact with a support representative on this request after hour on this one, not AI again\u2026"
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": true,
+    "reasoning": "The customer explicitly requested a human multiple times and showed escalating frustration over repeatedly getting automated/AI responses and no human engagement. There is a clear pattern of the customer re-contacting support over days/weeks with \u201cstill waiting\u201d messages, indicating a loop with no progress and no effective handoff.",
+    "evidence": [
+      "So once again, CAN I SPEAK TO A HUMAN\u2026.This is getting tired some and going no where\u2026.",
+      "I\u2019ve been waiting for a support representative to reach out..",
+      "Unreal and frustrating dealing with support ever since AI\u2026 Unbearable..",
+      "STILL WAITING\u2026",
+      "STILL WAITING FOR SUPPORT.."
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": true,
+    "reasoning": "Support (via AI) continued to push steps and framing that the customer said were already done, and initially referenced whitelist/blocklist guidance even after the customer clarified the affected page was Information Store Protection. The customer directly called out that they had already gone through the suggested steps, indicating the responses were not incorporating prior context.",
+    "evidence": [
+      "My issues is not with the whitelist but with the Information Store Protection.",
+      "We been though all these steps already with the AI bot?",
+      "Like I\u2019ve stated\u2026. THIS WAS ALL done via the bot\u2026",
+      "Not helpful\u2026 Where is my support representative who was suppose to contact me as AI said so\u2026."
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": true,
+    "reasoning": "There were prolonged periods without a human response while the customer repeatedly followed up, explicitly stating they were waiting and frustrated. An agent later apologized for the delay, which corroborates the service-level issue.",
+    "evidence": [
+      "So I guess support on this ticket is going to go nowhere like my last one.",
+      "I\u2019ve been waiting for a support representative to reach out..",
+      "STILL WAITING FOR SUPPORT..",
+      "We apologize for the delay on this, I ve escalated it internally for faster resolution."
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "While the customer did not explicitly say \u201cthis ticket can be closed,\u201d their last updates were positive (dev build functioning; installed 22.3) and they did not indicate an unresolved problem at the end. There is not clear evidence the ticket was closed against an explicitly unresolved last customer statement."
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "The ticket does not indicate a full outage or explicitly marked critical severity. The customer even noted mail flow was working, which does not support a P1/SEV1 classification.",
+    "evidence": [
+      "Email seem to be flowing properly",
+      "Thank god I'm not in a down situation."
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60231851
+}

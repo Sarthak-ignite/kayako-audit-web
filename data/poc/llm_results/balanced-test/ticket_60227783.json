@@ -1,0 +1,47 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "The AI response is generic, but it is not demonstrably incorrect and it does provide a relevant next step (the status page) while indicating an active incident. The requested RCA was ultimately delivered later in the ticket, so there is no clear broken promise or proven misinformation attributable to the AI.",
+    "evidence": [
+      "ATLAS commented publicly: \"For the most up-to-date information, including the root cause analysis, event timelines, affected system components, and implemented preventive measures, we kindly ask you to refer to our official status page\""
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "There is no evidence the customer asked for a human, expressed frustration with AI, or experienced repetitive AI loop responses. The interaction is short and proceeds to ticket creation and a single AI reply.",
+    "evidence": []
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "Support does not repeatedly ask for information already provided, and the AI/agent correctly references the instance URL and the reported disruption context. There is no clear sign the customer had to restate details or that support pursued a path already ruled out.",
+    "evidence": [
+      "Customer: \"https://fortinet.response.lithium.com/\"",
+      "ATLAS: \"...affecting your EMEA production instance of the Khoros platform (https://fortinet.response.lithium.com).\""
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "The structured data shows an initial response time of 22 (which is not >24 hours), and the conversation contains no customer complaint about waiting. While the RCA took several days, there is no explicit evidence the customer was actively waiting or escalating due to delay within this ticket.",
+    "evidence": [
+      "Structured CSV context: \"initialResponseTime: 22\""
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "The ticket was closed after the RCA was provided, and there is no final customer message indicating the issue remained unresolved. There is also no evidence the customer objected to closure or continued asking questions after the RCA delivery.",
+    "evidence": [
+      "Balaji Jayaraman commented publicly: \"Please find attached the customer-facing RCA for the Khoros Care incident.\"",
+      "Structured CSV context: \"Status: closed\""
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "Although the ticket was raised as \"Urgent\" via the AI menu, there is no explicit P1/SEV1/critical/outage designation in the ticket content that meets the detection criteria, and the initial response was not delayed beyond 4 hours. The request is primarily for an RCA, and support did respond quickly with a status-page reference and later delivered the RCA.",
+    "evidence": [
+      "ATLAS chat transcript: \"Button selection: [\ud83d\udd34 Urgent]\"",
+      "ATLAS commented publicly (same minute as ticket creation): \"For the most up-to-date information... refer to our official status page\""
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60227783
+}

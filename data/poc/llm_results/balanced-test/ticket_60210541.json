@@ -1,0 +1,50 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": true,
+    "reasoning": "The initial AI response stayed at a generic \u201clikely firewall/routing\u201d diagnosis and recommended standard port/NAT checks without addressing the customer\u2019s core point: the issue appears only after upgrading to v10 and disappears after downgrading with no config changes. The customer explicitly indicated the guidance was not relevant to what they reported, signaling the AI response was not helpful for the actual scenario.",
+    "evidence": [
+      "Customer: \"all those steps are not to the point as update to v10 brakes it, downgrade to 9.5p3 fixes it. there are no config changes at all. Only version is chaning.\"",
+      "ATLAS: \"Based on the log details provided\u2014especially the timeout during the Let's Encrypt certificate authorization process\u2014the most likely root cause relates to firewall or network routing impacting connectivity\""
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "There is no clear loop of repeated AI responses (3+ repetitions), and the customer did not request a human or escalation due to AI handling. After the initial AI reply, a human agent later engaged and progressed the ticket.",
+    "evidence": [
+      "Kayako - ticket id 60210541 // Ciprian Nastase commented publicly: \"Dear Jozef, ... can you please confirm if this issue wasn't actually related to the GFI Software Status...\""
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": true,
+    "reasoning": "The customer stated they already disabled IPS/GeoIP/AV/AppFilter and the problem still occurred, but the AI response suggested steps in the same direction (disabling/excluding inspection/filtering) rather than engaging with the key differential: v10 vs 9.5 SP3 with unchanged configuration. This indicates the response did not sufficiently incorporate the provided troubleshooting context.",
+    "evidence": [
+      "Customer: \"the problem also occurred with all ips/geoip/antivirus/appfilter disabled.\"",
+      "ATLAS: \"If you have SSL filtering or HTTPS inspection enabled, consider temporarily excluding Let's Encrypt domains and ACME challenge URLs\"",
+      "ATLAS: \"If your PBX is behind Kerio Control using NAT, confirm that port-forwarding rules are in place and not blocked by any other rules.\""
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": true,
+    "reasoning": "After the customer pushed back on Sep 30, the next support reply in the ticket appears only on Oct 31, indicating an extended gap in agent follow-up. Even without an explicit customer complaint, a month-long silence during an unresolved technical report would typically be flagged by a quality reviewer as a significant response delay.",
+    "evidence": [
+      "[2025-09-30T15:55:22+00:00] Customer: \"all those steps are not to the point...\"",
+      "[2025-10-31T13:59:15+00:00] Ciprian Nastase: \"Dear Jozef, ... can you please confirm if this issue wasn't actually related to the ... status page?\""
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "The customer explicitly confirmed the issue was related to the known status incident and stated it can be considered solved. Closure after that confirmation is consistent with a resolved ticket.",
+    "evidence": [
+      "Customer: \"yes, it was related ... we can consider this as solved.\""
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "The ticket does not explicitly indicate P1/SEV1/critical severity or a complete outage, and there is no clear urgent language requiring expedited handling. While the issue impacted PBX/certificate renewal, the severity level and urgency are not stated in a way that meets the P1/SEV1 criteria.",
+    "evidence": [
+      "Customer: \"voip trunk and plesk ssl certificate renew with version 10 build 9018 doesnt work\""
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60210541
+}

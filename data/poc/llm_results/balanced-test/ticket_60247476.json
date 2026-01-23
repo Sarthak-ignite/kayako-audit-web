@@ -1,0 +1,45 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "The AI/public guidance was somewhat generic (browser/cache/extensions/shortcuts) but there is no clear evidence it provided demonstrably false information, made unkept promises, or triggered a customer complaint about AI accuracy. The eventual root cause being backend token fetch failures does not directly prove the earlier AI troubleshooting tips were wrong\u2014just incomplete.",
+    "evidence": [
+      "ATLAS commented publicly: \"Here are some additional troubleshooting steps and relevant best practices that may help minimize disruption while this behavior persists:\""
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "There is no evidence the customer asked for a human/technician due to AI, expressed frustration about AI responses, or experienced a clear 3+ cycle loop of repetitive AI replies. The thread shows progression to investigation, escalation, and resolution.",
+    "evidence": []
+  },
+  "IGNORING_CONTEXT": {
+    "detected": true,
+    "reasoning": "Support appears to have pursued (and kept insisting on) a customer-side network/proxy theory despite the customer providing evidence that ruled that out (HAR from an agent outside the corporate network). An internal note explicitly acknowledges this misstep, indicating support did not properly use/acknowledge provided context early enough.",
+    "evidence": [
+      "Pavly Nashed (private): \"We should have not kept insisting on network proxy issues on their side when they shared a HAR file of an agent working outside of their corporate network.\"",
+      "Pavly Nashed (private): \"We had a clear conversation ID, just looking this up on Sumo Logic would have pointed you to the issue.\""
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": false,
+    "reasoning": "The ticket received an initial public response within minutes, and the issue was communicated and resolved within about a day. While the agent apologized for 'back and forth,' there is not clear evidence of support response delays (e.g., >24h initial response or customer complaining about waiting on support).",
+    "evidence": [
+      "Pavly Nashed commented publicly: \"I sincerely apologize for the inconvenience this issue has caused your team and for the back and forth over the last day\""
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": false,
+    "reasoning": "The ticket was not closed while the customer reported the issue as unresolved. The customer explicitly indicated there were no further complaints and requested closure.",
+    "evidence": [
+      "Don Kempt commented publicly: \"We have not received any further complaints. Please go ahead and close this this case.\""
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "Although the issue impacted agent ability to respond (high impact), the ticket does not explicitly state P1/SEV1/critical/outage, and support acted with apparent urgency (rapid response, escalation, and confirmation of fix). Therefore, there is insufficient clear evidence to flag P1/SEV1 mishandling.",
+    "evidence": [
+      "Pavly Nashed commented publicly: \"We have escalated this now to our infrastructure team with the highest priority, and they are actively working to resolve the issue\""
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60247476
+}

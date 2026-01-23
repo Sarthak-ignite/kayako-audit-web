@@ -1,0 +1,53 @@
+{
+  "AI_QUALITY_FAILURES": {
+    "detected": false,
+    "reasoning": "The AI content shown is limited to intake/routing questions for ticket creation and does not provide troubleshooting guidance or factual claims that can be proven wrong. There is no customer complaint about AI accuracy or unhelpful AI answers.",
+    "evidence": [
+      "ATLAS commented privately: Here is a transcript of the customer's recent interaction with ATLAS chat:",
+      "AI Assistant: \"Could you please provide the Khoros instance URL where the issue is occurring?\""
+    ]
+  },
+  "AI_WALL_LOOPING": {
+    "detected": false,
+    "reasoning": "There is no evidence the customer asked to reach a human/technician due to AI issues, nor a pattern of repetitive AI responses causing a loop. The ticket proceeds to human action without the customer expressing AI-related frustration.",
+    "evidence": [
+      "Customer (Lucy Liu) --- Button selection: [\ud83d\udce9 Raise a Ticket]"
+    ]
+  },
+  "IGNORING_CONTEXT": {
+    "detected": false,
+    "reasoning": "Support\u2019s response aligns with the reported issue (restart/cache/plugin reload) and does not visibly ask the customer to repeat information already provided. The follow-up from the customer introduces a new/remaining problem area (moderation tab), but there is no evidence support ignored previously provided details in the visible conversation.",
+    "evidence": [
+      "Santhosh M: \"I\u2019ve restarted the Atlas production instance, cleared the backend cache, and reloaded the plugins. Please check and let us know if you\u2019re still able to reproduce the issue.\"",
+      "Lucy: \"The overall forum speed has greatly improved... However the moderation tab takes a long while to load or not load at all.\""
+    ]
+  },
+  "RESPONSE_DELAYS": {
+    "detected": true,
+    "reasoning": "The first substantive support action/response appears on 2025-11-03, while the ticket was created on 2025-10-28\u2014well over 24 hours later. Even without an explicit customer complaint, this gap is large enough that a quality reviewer would typically flag it for responsiveness on an active production-impacting UX issue.",
+    "evidence": [
+      "Ticket Created: 2025-10-28 01:06:35",
+      "Santhosh M commented privately: [2025-11-03T13:05:08+00:00] \"Initiated a restart...\"",
+      "Santhosh M commented publicly: [2025-11-03T13:36:55+00:00] \"I\u2019ve restarted the Atlas production instance...\""
+    ]
+  },
+  "PREMATURE_CLOSURE": {
+    "detected": true,
+    "reasoning": "The customer\u2019s last visible message (2025-11-05) asks for a solution to an ongoing issue with the moderation tab. The ticket shows as solved/closed afterward without any visible customer confirmation or documented resolution to that follow-up issue, which a reviewer would likely consider premature closure.",
+    "evidence": [
+      "Lucy: [2025-11-05T21:25:04+00:00] \"However the moderation tab takes a long while to load or not load at all... Is there any solution to this?\"",
+      "Ticket Solved: 2025-11-10 14:37:41",
+      "Ticket Closed: 2025-11-13 15:35:57"
+    ]
+  },
+  "P1_SEV1_MISHANDLING": {
+    "detected": false,
+    "reasoning": "While the intake flow indicates 'High' priority, there is no explicit P1/SEV1/critical/outage designation in the ticket content provided, and the issue described is degraded page loading rather than a complete outage. Therefore, mishandling of a declared P1/SEV1 is not clearly evidenced.",
+    "evidence": [
+      "Customer (Lucy Liu) --- Button selection: [\ud83d\udfe0 High]",
+      "Customer description: \"pages not loading properly until reloaded\""
+    ]
+  },
+  "_model": "gpt-5.2-balanced",
+  "_ticket_id": 60230303
+}
